@@ -209,3 +209,117 @@ desert-night identity stays mine.
 
 Begin at **Layer 1** — wait for me to confirm before starting, then produce
 the structure map + hero copy as text only, and stop.
+
+
+------
+
+# Add-on: Oak Harbor homage hero (desert remix) — focus for this session
+
+This **focuses the current session** on one direction instead of three. For
+now, replace the "3 directions" exploration in the brief with the single
+composition below — an Oak Harbor-caliber hero, my desert-night remix. We can
+branch variations later. Everything else in `BRIEF.md` still applies
+(fidelity-layer method, palette, positioning, quality floor, copy guardrails).
+
+## What I'm going for
+
+Get close to the **caliber and structure** of the Oak Harbor hero (see
+`reference/` and `assets/hero_inspiration/`), but as mine: a dark starry sky
+with a **warm dawn glow sitting on the horizon line**, CSS stars + comets,
+and a **low-fi desert silhouette** (mesas + saguaro cacti) across the horizon
+instead of their pine treeline. Left: hero text + CTAs. Right: an original
+illustration that represents *my* work (not a website mockup). Below the
+hero: the start of the first content section ("What I do" + a bold statement).
+
+Reuse Oak Harbor's lightweight *techniques*, but build **original art** —
+do NOT lift their laptop/phone PNG or their UFO. The horizon silhouette and
+the right-side illustration are hand-authored SVGs of mine.
+
+## Hero composition (two-column)
+
+```
+┌────────────────────────────────────────────────────────────┐
+│  [logo wordmark]      Home  Services  Work  About   [Book a call] │  ← nav
+│                                                              │
+│   CUSTOM AI & SOFTWARE · AUSTIN, TX        ╭───────────────╮ │  ← eyebrow
+│                                            │               │ │
+│   Get back the hours your                  │   RIGHT-SIDE  │ │  ← headline
+│   team loses to busywork.                  │  ILLUSTRATION │ │
+│                                            │  (see below)  │ │
+│   One senior engineer who automates        │               │ │  ← subhead
+│   the repetitive work — without an         ╰───────────────╯ │
+│   in-house tech team.                                        │
+│                                                              │
+│   [ Book a free 20-min call ]   About me →                   │  ← CTAs
+│                                                              │
+│  · · · stars · · ·   ☄ comet · · · · · · · · · · · · · · · · │
+│ ╱╲___ dawn glow on horizon ___╱╲___🌵__╱‾‾╲___🌵____________ │  ← desert SVG
+│ ▓▓▓ darker desert foreground fading down to next section ▓▓▓ │
+└────────────────────────────────────────────────────────────┘
+```
+
+- Left column: eyebrow (small-caps, tracked) · large condensed Oswald
+  headline · one-line subhead · olivine pill primary CTA + quiet text link
+  beside it (mirrors my `lowfi_mobile.jpg`).
+- Right column: the illustration, vertically centered, floating slightly.
+- On mobile: stack — text first, illustration below.
+
+## Background layer stack (back → front)
+
+1. **Sky gradient:** deep gunmetal/eerie-black at top → slightly warmer
+   toward the horizon, with a **navajo-white/soft-orange dawn glow** blooming
+   right at the horizon line (the signature Oak Harbor move).
+2. **Stars:** scattered, twinkling on opacity (staggered keyframes). Denser
+   up top, thinning toward the glow.
+3. **Comet(s):** one or two slow shooting comets on a long loop. Optional
+   faint Milky Way band.
+4. **Desert horizon SVG (frozen asset):** layered low-poly mesas (gunmetal →
+   eerie for depth) with a few **saguaro cactus silhouettes**; the dawn glow
+   sits behind/through this ridge. This replaces their pine treeline.
+5. **Foreground desert** fading downward into the next section's dark
+   background (sets up the later full-page "descent to black sand").
+
+## Right-side illustration — represents AI/software, not "websites"
+
+Oak Harbor shows a laptop+phone because they sell websites. Mine should say
+"I automate messy manual work." Options, in order of how well they fit —
+**pick one and I'll build it as a frozen SVG:**
+
+- **(Recommended) Automation flow:** a small low-poly scene of messy inputs
+  (stack of papers / invoices / an inbox) flowing through a glowing
+  olivine node into clean, organized output (a tidy table / check). Literally
+  depicts my value prop, on-theme with the desert's geometric style.
+- **Laptop, code/dashboard:** an Oak-Harbor-parallel floating laptop, but the
+  screen shows a clean automation dashboard or terminal, not a website. Safe,
+  familiar, reads "software."
+- **Constellation-as-pipeline:** the right-side stars connect into a subtle
+  node-graph/pipeline constellation — ties the illustration into the sky
+  itself. Most distinctive, most abstract.
+
+Keep it geometric/low-poly, palette-tied, with restrained glow. It floats
+gently (subtle motion added at the motion layer).
+
+## Section below the hero (start it, don't finish the page)
+
+Mirror Oak Harbor's "WHAT WE DO / NEVER WORRY..." beat, in my voice. Just the
+eyebrow + statement headline + a line or two — enough to see the transition
+out of the hero. Headline options (pick/iterate):
+- "WHAT I DO — Stop paying people to do work a computer can do."
+- "WHAT I DO — Never do that by hand again."
+- "WHAT I DO — Put the busywork on autopilot."
+
+## How this maps to the layers (still build in order, stop between)
+
+- **Layer 1 (copy):** finalize hero copy + the "What I do" statement. Text.
+- **Layer 2 (wireframe):** grayscale two-column hero + the start of the
+  statement section. Boxes for sky and the right illustration. Judge layout.
+- **Layer 3 (aesthetic):** sky gradient + dawn glow, palette, Oswald type.
+  Placeholder still fine for the desert ridge and illustration.
+- **Layer 4 (art, frozen SVGs):** build (a) the desert-horizon ridge with
+  cacti and (b) the chosen right-side illustration, each as its own frozen
+  `assets/*.svg`.
+- **Layer 5 (motion):** star twinkle, comet(s), gentle float on the
+  illustration. Respect `prefers-reduced-motion`.
+- **Layer 6 (logo):** swap the text wordmark for the real emblem.
+
+Start at Layer 1 with the copy, and wait.
