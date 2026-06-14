@@ -1,186 +1,211 @@
-# Claude Code — Skud Labs, Pass 1 (Hero only, fast iteration)
+# Skud Labs — Website Build Brief
 
-Paste this into the Claude Code panel in VS Code. Toggle PLAN MODE first
-(Shift+Tab) so it proposes before it builds. Have these in the workspace:
-- assets/skud-labs-logo.svg   (my desert logo — text already says "Skud Labs")
-- reference/oakharbor/        (scraped Oak Harbor source + assets)
-- reference/screenshots/      (my screenshots, if any)
+Single source of truth for this project. Read it fully once; I'll steer you
+through the build in short messages. Don't act on everything at once — follow
+the WORKING METHOD and stop at each checkpoint.
 
 ---
 
-We're doing a FAST first pass. I want speed and tight iteration, not a
-finished site. Follow these rules the whole way:
+## Assets in this workspace (real paths)
 
-**Workflow — stop and check with me:**
-- Work in small checkpoints. After each one, STOP and wait for my approval
-  before continuing. Do not build the whole thing in one autonomous run.
-- Checkpoint 1: show me your design plan as text only (palette usage, type
-  pairing, layout sketch, and the animation concept for each of 3
-  directions). No code yet. Wait for me to react.
-- Checkpoint 2: after I react, build ONLY the hero section for all three
-  directions, as three separate self-contained static .html files
-  (inline CSS + JS, no build step, no framework). Plain HTML I can open in
-  a browser directly. Then stop.
-- We'll pick a winner and iterate on it after that. Don't scaffold Astro,
-  don't build other sections, don't set up deploy — none of that yet.
-- Keep each hero file independent so I can compare them side by side.
+```
+assets/
+  fonts/                 oswald-v53-latin-600.woff2, oswald-v53-latin-regular.woff2
+                         (display type — load offline, no font CDN)
+  hero_inspiration/      lowfi_mobile.jpg        (my rough mobile mockup — LOOSE inspiration)
+                         midjourney_website_lowfi_example_*.jpg  (mood/theme inspiration)
+  images/                logo_midjourney.png, logo_skudworks_simple.svg
+                         (logo inspiration — used only at the final logo layer)
+reference/               (Oak Harbor Web Designs scrape — primary technique reference)
+resume/                  (my résumé — context for copy; see RÉSUMÉ section)
+```
 
-**Scope of this pass:** the hero section ONLY (top nav + the full-viewport
-hero with its animated background). Nothing below the fold.
+If a file or path you need is missing or ambiguous, **ask me — don't guess.**
 
-## Who I am and what this site is for
+---
 
-I'm Kyle, a senior backend software engineer in Austin, TX with 10
-years of experience at Fortune 500 companies. At my current job I built and
-solely own a production AI document-processing system (OCR + multi-stage
-LLM agents on AWS) that handles thousands of healthcare documents per day
-at a Fortune 15 healthcare company.
+## Working method (most important section — follow exactly)
 
-I'm launching a solo consulting practice (Skud Labs) helping small
-businesses automate repetitive work with AI, plus general custom software
-(websites, backend APIs, integrations) and ongoing fractional engineering.
+We build in **fidelity layers**, in the order a human designer works: words
+first, then structure, then look, then art, then motion, with the logo near
+the end. **Stop after each layer and wait for my approval** before the next.
+Never put a later layer's polish on top of an unapproved earlier one. If I
+can reject it as text, don't render it; if I can judge it in grayscale, don't
+add color. Use plan mode to propose before writing files. If I interrupt,
+fall back to the last approved layer. Keep a running `NOTES.md` of what each
+direction tried and what I rejected, so we don't relitigate dead ends.
 
-The site's single job: when a referred small-business owner lands here,
-they should think "this person is credible, I understand exactly what he
-does, and booking a call feels safe." It's a trust artifact for warm leads,
-not a marketing funnel. Success = they click the Calendly link.
+- **Layer 1 — Structure & copy (text only, no visual code).**
+  (a) Study `reference/` (Oak Harbor) and map its page structure — the
+  sequence of sections and what each does. Then propose an **adapted
+  full-page outline for Skud Labs**: same general approach and rhythm, but
+  fitted to my broader offering (AI automation + custom software + fractional
+  engineering — NOT just websites). Borrow their structure, not their copy.
+  Present as a section list / text wireframe.
+  (b) Write the **hero copy** (eyebrow, headline, subhead, CTA, reassurance);
+  a couple of headline options welcome. Plain, first person, résumé-altitude.
+  No layout code yet. Wait.
 
-Critical positioning constraints:
-- I am ONE person and the site must read that way. First person singular
-  ("I", never "we"). No agency theater, no fake team, no stock photos, no
-  invented testimonials or client logos. Being solo is a selling point —
-  clients work directly with the engineer doing the work. Say so.
-- Describe my corporate experience at résumé altitude only: "a Fortune 15
-  healthcare company," never specific employer names, internal product
-  names, internal metrics, or proprietary details.
+- **Layer 2 — Hero wireframe (grayscale skeleton).** Build the hero as real
+  HTML/CSS — real layout, type scale, spacing — following the approved
+  structure, on a FLAT dark background with plain placeholder boxes where the
+  sky/desert art will go. A simple **text wordmark** ("Skud Labs") stands in
+  for the logo. No scene art, no animation. Judges bones and composition
+  only. (Grayscale is *supposed* to look unfinished — hold color/art notes
+  for later layers.) Wait.
 
-## Tech stack
+- **Layer 3 — Aesthetic & background theme.** Apply the palette and
+  typography personality, and iterate the **desert-night background
+  treatment** — gradient sky, color, mood — still with simplified/placeholder
+  art and no real animation. Where we dial in the overall feel. Wait.
 
-- Astro with Tailwind CSS. Static output only — no SSR, no database, no CMS.
-- Dont fofcus on astro set up thgouh for first pass, just in case thats relevant im idnicating we will use astro so we can build from whatever html hero sections you create in case thats even relevant (i dont know)
-- Single page (index) focus on hero section first
+- **Layer 4 — Scene art, as frozen standalone SVG files.** Build the night
+  sky and desert as separate files in `assets/` (e.g. `sky.svg`,
+  `desert-horizon.svg`), referenced by the hero — NOT inlined. Iterate in
+  isolation; once I approve each, **freeze it** and don't regenerate it. Wait.
+
+- **Layer 5 — Motion, last of the visuals.** Add comets, drift, star
+  twinkle, the satellite — on top of the approved static hero. Respect
+  `prefers-reduced-motion` (freeze to a calm static starfield). Wait.
+
+- **Layer 6 — Logo (near the end).** Only now, replace the text wordmark with
+  a hand-authored combined SVG (low-poly desert emblem + "Skud Labs"
+  wordmark), drawing on `assets/images/logo_midjourney.png` and
+  `logo_skudworks_simple.svg` as inspiration — higher fidelity, both emblem
+  and wordmark as one SVG. Wordmark reads "Skud Labs" (drop
+  "Skudworks"/"Technologies"). Save to `assets/skud-labs-logo.svg`. Freeze
+  once approved. Wait.
+
+**Scope of this pass = the HERO only** (top nav + full-viewport hero). The
+Layer 1 full-page outline is produced as text only, so we have the map for
+later. Don't build below-the-fold sections, scaffold Astro, or deploy yet.
+Keep the hero's HTML/CSS clean and portable so it extends into the full page
+in a later session.
 
 
-## Visual direction — THIS IS THE POINT OF THE PASS
 
-Reference: study `reference/oakharbor/` closely (the Oak Harbor Web Designs
-site). I want that **calm, dark-mode, animated SVG/geometric atmosphere** —
-shooting comets, drifting satellites/UFOs, glowing particles — NOT
-photorealistic, NOT a static page. The earlier drafts I got were flat and
-Notion-like; this should feel alive and atmospheric while still restrained
-and professional.
 
-**My theme (differentiate from Oak Harbor, don't copy it):** an Austin-
-Texas **desert at night** — a low-poly/geometric desert horizon (mesas,
-saguaro silhouettes) under a deep starry sky with **constellations**, a
-subtle Milky Way band, the occasional **shooting comet** and a slow-drifting
-**satellite or stylized UFO**. Dark, serene, a little futuristic. Think
-"observatory in the high desert," with optional restrained Tron/retro-
-computing glow accents in the linework — secondary, not the main event.
 
-**Logo:** use `assets/images/logo_skudworks_simple.svg` and `logo_midjourney.png` as inspiration. ibasically also want to have (you craete_ an svg very similar to the skudworks one, but more high def using the logo midjourney in a vector form if possible, witht he ifnal svg having both the ciruclar logo and the text together as one, of course update skudworks to skud labs and maybe drop tech technologies part).
 
-**Palette (use these exact tokens as CSS variables):**
+
+---
+
+## Who I am & what the site is for
+
+I'm Kyle — a senior software engineer in Austin, TX, 10+ years at Fortune 500
+companies. **Skud Labs** is my solo consulting practice: I help small
+businesses automate repetitive work with AI, and I build custom software,
+backend APIs, integrations, and websites. The site is a **trust artifact for
+referred leads** — when a small-business owner lands here they should think
+"this person is credible, I get what he does, booking a call feels safe."
+Success = they book the call.
+
+
+
+## Visual direction
+
+The signature is a **calm, dark-mode, animated SVG/geometric night sky** in
+the spirit of Oak Harbor Web Designs (`reference/`) — comets, a drifting
+satellite/UFO, glowing particles. Atmospheric and alive, but restrained and
+professional. Not photorealistic, not flat/Notion-like.
+
+My theme, differentiated from Oak Harbor: an **Austin desert at night** —
+low-poly/geometric desert horizon (mesas, saguaro silhouettes) under a deep
+starry sky with original **constellations**, a faint Milky Way band, an
+occasional **shooting comet**, and one slow-drifting **satellite/UFO**. Mood:
+"observatory in the high desert," Dune/Arrakis future-tech-in-the-desert,
+with Scandinavian/Japanese-Zen restraint — clean lines, generous negative
+space, calm. Optional sparing Tron/retro-computing glow in the linework as a
+secondary note, never the main event.
+
+Within the hero, the background reads top-to-bottom as space → night sky →
+the top edge of the desert (one continuous gradient scene, not stacked
+blocks). The full descent to a "black sand" footer comes in the later
+full-page session — build the hero so it can extend into that.
+
+**Animation technique:** study how `reference/` builds its sky (stars
+animated on opacity via staggered keyframes; comet as a thin rotated element
+translated across a long loop; satellite on a slow orbit; sky as a single
+gradient). Reuse those lightweight techniques rather than a heavier approach.
+Reusing generic helpers (easing, particle utilities) is fine; swap anything
+distinctive (their exact comet sprite, signature shapes) for original work so
+the result is unmistakably mine. GPU-friendly transform/opacity only, ~60fps.
+
+**Loose cues from `hero_inspiration*`** (inspiration, not a
+spec)
+
+
+**Across 3 directions, vary execution of this one theme:** (A) wide cinematic
+horizon + big constellation field (canvas starfield + Milky Way); (B) close &
+minimal — few precise constellations, one hero comet, lots of negative sky
+(pure-CSS, closest to Oak Harbor's mechanism, cleaned up); (C) Tron desert —
+subtle perspective grid horizon + restrained olivine glow (CSS grid + glow).
+Different layout, type, and motion character; same palette and concept.
+
+## Palette (exact tokens, as CSS variables)
+
 ```
 --eerie-black:  #1B1B1B
---gunmetal:     #112431   /* primary — dark blue base */
+--gunmetal:     #112431   /* primary — dark blue sky base */
 --seasalt:      #FAFBFC   /* off-white text */
---olivine:      #A0B389   /* olive green — primary accent */
+--olivine:      #A0B389   /* olive green — primary accent (CTA, key strokes) */
 --navajo-white: #FEDDAA   /* warm sand — secondary accent / starlight */
 --jet:          #353535
 --body-text:    #8B8B8C
 ```
-Dark base (gunmetal / eerie-black gradient sky), off-white body text,
-**olivine** as the main accent (CTAs, key strokes), **navajo-white** as the
-warm starlight/sand secondary. Glow accents allowed but sparing.
-
-**Across the 3 directions, vary the *execution* of this one theme** — e.g.
-(1) wide cinematic desert horizon with a big constellation field;
-(2) close, minimal — few precise constellations + one hero comet, lots of
-negative sky; (3) more retro-computing — subtle grid horizon (Tron desert)
-with glowing geometric accents. Different layout, type, and animation
-character each; same palette and same desert-night concept.
-
-## Animation guidance
-
-- CSS/SVG/canvas only, self-contained, lightweight. 60fps, no jank.
-- Tasteful and slow — ambient, not busy. A few comets on a loop, slow star
-  twinkle, one drifting satellite. Restraint reads as premium.
-- **Respect `prefers-reduced-motion`**: freeze to a calm static starfield.
+Dark gunmetal/eerie-black gradient sky, seasalt headings, body-text for muted
+copy, olivine primary accent, navajo-white as warm starlight/sand. Sparing
+warm yellow/orange low on the horizon is fine. Glow used with restraint.
 
 ## Hero content
 
-- Nav: Skud Labs logo (left); links Services / Work / About / a "Book a
-  call" button (right). Just needs to look right — links can be anchors.
+- Nav: logo (left; text wordmark until Layer 6, `alt="Skud Labs"`); links
+  Services / Work / About (anchors) + a **"Book a call"** button (olivine).
+  Visible `:focus-visible` on links + CTA.
 - Eyebrow: AI automation & custom software · Austin, TX
-- Headline (outcome-first, vary the wording per direction): the idea is
-  "get back the hours your team loses to repetitive work." Confident, plain.
+- Headline (outcome-first, vary per direction): the idea is "get back the
+  hours your team loses to repetitive work." Confident, plain.
 - Subhead (one line): senior engineer, 10 years at Fortune 500 companies,
   built production AI for a Fortune 15 healthcare company, now helping small
   businesses — without an in-house tech team.
-- Primary CTA button: "Book a free 20-minute call"
-- One quiet reassurance line: 20 minutes · no pitch · no obligation
+- Primary CTA: "Book a free 20-minute call"
+- Reassurance: 20 minutes · no pitch · no obligation
 
-## Quality floor (even in this pass)
+## Quality floor (even now)
 
-Responsive down to 360px, visible keyboard focus on nav + CTA, semantic
-landmarks, real alt text on the logo, WCAG AA contrast for text on the dark
-sky. Keep CSS specificity clean so section spacing doesn't fight itself.
+Semantic `<header><nav><main>`; responsive to 360px; visible keyboard focus
+on nav + CTA; real alt text; WCAG-AA text contrast on the dark sky;
+`prefers-reduced-motion` → calm static starfield; clean CSS specificity so
+spacing doesn't fight itself. Oswald loaded offline from `assets/fonts/`.
 
-Start at Checkpoint 1: give me the 3 text design plans and wait.
+## RÉSUMÉ (context for copy — never reproduce verbatim)
 
-## Hero more details
+Source in `resume/`. Use it to write credible hero/about copy in plain,
+client-facing language (owners don't care what Databricks is). Pull only what
+builds trust; apply the positioning guardrails above.
 
-For the hero specifically, get close to the look and feel of Oak Harbor Web
-Designs (in `reference/oakharbor/`) — not a copy, but the same caliber and
-the same approach. Read their HTML/CSS/JS to see exactly how they build the
-animated night sky (the comets, the glowing particles, the layering) and use
-the same technologies and techniques they did, rather than inventing a
-heavier approach. You're free to reuse generic assets from that folder
-(sprites, easing, particle helpers) as a starting point.
+- 10+ years software engineer; B.S. Computer Science, University of Virginia.
+- Strongest trust signal: built and runs a production AI system processing
+  thousands of healthcare documents a day at a Fortune 15 healthcare company
+  (OCR + LLM pipelines on AWS) — great for medical/dental/legal prospects.
+- Earlier: AI assistant / RAG features at a major financial-software company;
+  productionized fraud-detection ML; modernized large data pipelines.
+- Breadth: backend, cloud (AWS — certified Solutions Architect), data
+  engineering, applied AI/ML, full-stack/web.
+- Throughline: I turn messy, manual, document-and-data-heavy work into
+  reliable automation — proven where the reliability bar is highest.
 
-Then make it mine:
-- Keep their night-sky quality, but it's MY sky — original constellations,
-  my palette tokens, my comet/satellite treatment. Improve on theirs where
-  you can (smoother motion, cleaner layering).
-- Replace whatever sits beneath their sky with an **Austin desert** scene —
-  geometric mesas and saguaro silhouettes on the horizon, low-fi and
-  serene — matching the screenshots in `assets/midjourney_inspiration/`. Follow those
-  screenshots for the desert's look and composition.
+## Competitor / inspiration sites (study for structure & polish, don't copy)
 
-Same checkpoint rule: show the plan, then build the hero, stopping for me
-between. Match their level, keep it unmistakably Skud Labs.
+Oak Harbor is primary (`reference/`). For layout, flow, and the quality bar
+of solo/boutique software & design studios: fourkitchens.com,
+fatbirdcreative.co.nz, blackbird.digital, glidedesign.com, lunawebstudio.com,
+diamond-group.co, ramotion.com, octaveagency.com, clemsonwebdesign.com,
+dockyard.com, ronasit.com. Take cues on rhythm and restraint; the
+desert-night identity stays mine.
 
 
-## Theme more details
+---
 
-The whole page is one continuous **top-to-bottom scene** that descends from
-space to desert — the background tells a story as you scroll:
-
-- **Top (hero):** minimalist outer space — low-fi stars, a single comet,
-  a drifting satellite.
-- **Mid:** transition into a minimalist night sky.
-- **Lower:** settle into a minimalist **Austin desert** — geometric mesas
-  and small low-poly green cacti on the dunes.
-- **Down to the footer:** dark "black sand" desert floor.
-
-Each section sits on its slice of this gradient so the scene flows
-continuously rather than resetting per block. Keep every element minimal and
-geometric (SVG/CSS), never photorealistic.
-
-**Aesthetic:** retro-futurism meets modern minimalism — a *Dune / Arrakis*
-"future tech in the high desert" mood, with Scandinavian/Japanese-Zen
-restraint (clean lines, generous negative space, calm). Cutting-edge but
-serene.
-
-**Color:** dark base (gunmetal/eerie-black sky → desert), off-white text,
-**olivine** green as primary accent, **navajo-white** sand/starlight as
-secondary. Sparing warm accents (sand yellows/oranges) low on the horizon
-are fine. Glow used with restraint.
-
-**Layout:** single centered column, clear sections — navbar, hero with
-headline + CTA, services grid, and footer — generous whitespace throughout.
-The desert portion occupies the largest share of the page.
-
-**Micro-details:** a few tiny deliberate touches — one comet up top, small
-simple cacti on the desert hills — nothing busy. Restraint reads as premium.
+Begin at **Layer 1** — wait for me to confirm before starting, then produce
+the structure map + hero copy as text only, and stop.
