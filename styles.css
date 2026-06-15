@@ -20,6 +20,13 @@
   font-display: swap;
   src: url("assets/fonts/oswald-v53-latin-600.woff2") format("woff2");
 }
+@font-face {
+  font-family: "Caveat";       /* neon script flourish */
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/caveat-v23-latin-700.woff2") format("woff2");
+}
 
 :root {
   /* Palette (exact brief tokens) */
@@ -158,14 +165,46 @@ a { color: inherit; }
 }
 
 .wordmark {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--fg);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
+  margin-left: -16px;   /* let the logo sit left of the content gutter */
 }
+.wordmark img {
+  display: block;
+  height: 72px;
+  width: auto;
+}
+
+/* neon script flourish, overlapping the wordmark (Oak Harbor homage, our palette) */
+.neon {
+  position: absolute;
+  bottom: -16px;
+  left: 188px;
+  display: flex;
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  font-size: 1.85rem;
+  line-height: 1;
+  color: var(--seasalt);
+  transform: rotate(-7deg);
+  pointer-events: none;
+  white-space: nowrap;
+}
+.neon span {
+  animation: neonGlow 3.2s linear infinite;
+}
+.neon span:nth-child(1) { animation-delay: 0.2s; }
+.neon span:nth-child(2) { animation-delay: 1.1s; }
+.neon span:nth-child(3) { animation-delay: 0.5s; }
+.neon span:nth-child(4) { animation-delay: 2.3s; }
+.neon span:nth-child(6) { animation-delay: 0.8s; }
+.neon span:nth-child(7) { animation-delay: 2.0s; }
+.neon span:nth-child(8) { animation-delay: 1.5s; }
+.neon span:nth-child(9) { animation-delay: 0.4s; }
+.neon span:nth-child(10) { animation-delay: 2.6s; }
+.neon span:nth-child(11) { animation-delay: 1.3s; }
 
 .nav-links {
   list-style: none;
@@ -401,6 +440,11 @@ a { color: inherit; }
   }
   .nav-cta { margin-left: auto; }
   .hero { min-height: 0; }
+
+  /* smaller logo on phones so the neon clears the CTA */
+  .wordmark { margin-left: -6px; }
+  .wordmark img { height: 54px; }
+  .neon { left: 141px; bottom: -12px; font-size: 1.4rem; }
 }
 
 @media (max-width: 380px) {
@@ -445,10 +489,33 @@ a { color: inherit; }
   100% { transform: translate(112vw, 9vh)  rotate(10deg); opacity: 0; }
 }
 
-/* Reduced motion → calm static starfield, no comets, no satellite, no float */
+/* neon sign: mostly crisp, briefly buzzes into a colored bloom (staggered per letter) */
+@keyframes neonGlow {
+  0%, 100% {
+    color: var(--navajo-white);
+    filter: blur(0.6px);
+    text-shadow:
+      0 0 5px rgba(160, 179, 137, 0.95),
+      0 0 11px rgba(160, 179, 137, 0.85),
+      0 0 22px rgba(160, 179, 137, 0.6),
+      0 0 32px rgba(254, 221, 170, 0.45);
+  }
+  7%, 93% {
+    color: var(--seasalt);
+    filter: blur(0);
+    text-shadow: 0 0 4px rgba(160, 179, 137, 0.45);
+  }
+}
+
+/* Reduced motion → calm static starfield, no comets/satellite/float, steady neon */
 @media (prefers-reduced-motion: reduce) {
   .stars-a, .stars-b { animation: none; opacity: 0.9; }
   .comet { display: none; }
   .satellite { display: none; }
   .illustration { animation: none; }
+  .neon span {
+    animation: none;
+    color: var(--navajo-white);
+    text-shadow: 0 0 5px rgba(160, 179, 137, 0.8), 0 0 12px rgba(160, 179, 137, 0.5);
+  }
 }

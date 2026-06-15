@@ -23,7 +23,7 @@ stopping for approval between each (see `prompt.md`).
 - [x] **Layer 4 — Scene art (frozen SVGs)** — APPROVED & FROZEN.
       `assets/desert-ridge.svg`, `assets/automation-flow.svg`.
 - [x] **Layer 5 — Motion** — APPROVED.
-- [ ] Layer 6 — Logo (swap text wordmark for hand-authored SVG emblem).
+- [x] **Layer 6 — Logo** — APPROVED & FROZEN. `assets/skud-labs-logo.svg`.
 
 ## Decisions (Layer 1)
 
@@ -100,6 +100,32 @@ Implemented in that style:
   stars/comets/satellite at the horizon; scene background = sky gradient + glow.
 - `prefers-reduced-motion: reduce` → twinkle/comets/satellite/float all off,
   static starfield.
+
+## Decisions (Layer 6)
+
+- **`assets/skud-labs-logo.svg`** — one combined SVG: low-poly desert roundel
+  (dark night disk, olivine ring, navajo moon + stars, mesas, olivine saguaro,
+  dawn glow) drawn from `logo_midjourney.png`, restyled to the hero's night
+  palette; + "SKUD LABS" wordmark.
+- Wordmark dropped "Skudworks"/"Technologies" per the brief → reads "Skud Labs".
+- Swapped into nav as `<img alt="…">`, sized to 40px tall.
+
+### Layer 6 revision (extra flair, per feedback)
+- Wordmark font → **Space Grotesk 600** (embedded base64 in the logo SVG) for a
+  more geometric/techy, less-generic feel. Headline stays Oswald.
+- Added **spacing** between emblem and wordmark.
+- **Tagline** under wordmark: "AI AUTOMATION · SOFTWARE · WEB" (olivine). Chosen to
+  keep AI prominent and signal web work too; avoided vague "digital consultant".
+- **Neon flourish**: "Est. Austin" in **Caveat** (script), hovering over the
+  **bottom** of the lockup (like OH's "After Dark"), per-letter `neonGlow` flicker
+  on staggered delays in olivine/navajo. Static steady glow under reduced-motion.
+- New fonts downloaded as offline woff2 into `assets/fonts/`
+  (`caveat-v23-latin-700`, `space-grotesk-v22-latin-600`) — no CDN.
+- Sizing pass (per feedback): logo enlarged in nav to **72px** (54px on phones)
+  so the emblem, wordmark, and tagline all read at OH-like relative scale; tagline
+  legible at standard desktop zoom. Logo **shifted left** off the content gutter
+  (−16px desktop / −6px mobile) for an intentional optical break. Neon scaled to
+  match and repositioned on mobile to clear the CTA.
 
 ## Open / carried-forward decisions
 
