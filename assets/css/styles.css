@@ -11,21 +11,21 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("assets/fonts/oswald-v53-latin-regular.woff2") format("woff2");
+  src: url("../fonts/oswald-v53-latin-regular.woff2") format("woff2");
 }
 @font-face {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("assets/fonts/oswald-v53-latin-600.woff2") format("woff2");
+  src: url("../fonts/oswald-v53-latin-600.woff2") format("woff2");
 }
 @font-face {
   font-family: "Caveat";       /* neon script flourish */
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("assets/fonts/caveat-v23-latin-700.woff2") format("woff2");
+  src: url("../fonts/caveat-v23-latin-700.woff2") format("woff2");
 }
 
 :root {
@@ -308,7 +308,7 @@ a { color: inherit; }
   left: 0;
   width: 34px;
   height: 34px;
-  background: url("assets/satellite.svg") center / contain no-repeat;
+  background: url("../img/satellite.svg") center / contain no-repeat;
   filter: drop-shadow(0 0 4px rgba(160, 179, 137, 0.45));
   opacity: 0;
   will-change: transform, opacity;
@@ -320,7 +320,7 @@ a { color: inherit; }
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: url("assets/desert-ridge.svg") bottom center / 100% auto no-repeat;
+  background: url("../img/desert-ridge.svg") bottom center / 100% auto no-repeat;
 }
 
 .hero-inner {
