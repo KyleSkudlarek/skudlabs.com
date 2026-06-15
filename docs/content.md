@@ -28,19 +28,19 @@ the map for a later session.
 
 ---
 
-## Hero copy (decluttered, who/what lockup)
+## Hero copy (outcome-led)
 
-- **Headline (two-line lockup):**
-  - *Small business* — the "who" (olivine, catches the eye)
-  - *AI automation & custom software* — the "what" (seasalt, main statement)
+- **Eyebrow:** Small business · Austin, TX
+- **Headline:** Custom software & AI that handle your busywork for you.
 - **Subhead:** Bespoke, enterprise-grade AI-driven automation, software, and websites for small businesses. Fortune 500 reliability, minus the agency overhead — you work directly with the engineer who builds it.
 - **Primary CTA:** Get started  (→ flexible contact page: chatbot, form, quote, or contact info)
 - **Secondary link:** About me →
 - **Reassurance:** Chat, email, or a quick call — no pitch, no obligation
 
-(Evolved from 7 blocks → 4: standalone location + proof lines folded in; eyebrow
-dropped once the headline stated the offering; headline split into a who/what
-lockup, Oak-Harbor-style. Services/web also covered in the subhead.)
+(Outcome-led so the hero converts cold traffic — ads/flyers, not just referrals:
+lead with the benefit + what you do, audience/location in the eyebrow, credibility
+in the subhead. The prior "Small business / AI automation & custom software"
+category lockup is preserved at tag `hero-v6`.)
 
 ### Nav
 - **Wordmark:** Skud Labs (text until Layer 6 logo; `alt="Skud Labs"`)

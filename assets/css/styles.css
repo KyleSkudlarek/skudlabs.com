@@ -355,18 +355,6 @@ a { color: inherit; }
   text-transform: uppercase;
   color: var(--fg);
 }
-/* who / what lockup — each on its own line */
-.headline-who {
-  display: block;
-  color: var(--olivine);
-  letter-spacing: 0.03em;
-  margin-bottom: 0.1em;
-}
-.headline-what {
-  display: block;
-  color: var(--fg);
-}
-
 .subhead {
   margin: 0 0 var(--space-6);
   font-size: var(--fs-subhead);

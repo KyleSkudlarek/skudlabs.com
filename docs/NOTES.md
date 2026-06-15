@@ -3,6 +3,14 @@
 Running log of the fidelity-layer build. Tracks what's approved, decisions made,
 and directions tried/rejected so we never relitigate dead ends.
 
+## Milestone — `hero-v7` (2026-06-14)
+
+Headline pivoted from a category label to **outcome-led**, so the hero converts
+cold traffic (ads/flyers) as well as referrals: H1 = "Custom software & AI that
+handle your busywork for you"; eyebrow brought back as "Small business · Austin,
+TX" (audience + location); credibility stays in the subhead. (Prior category
+lockup at `hero-v6`.)
+
 ## Milestone — `hero-v6` (2026-06-14)
 
 Logo tagline expanded to four services — AI · Automation · Software · Web
