@@ -19,7 +19,7 @@ stopping for approval between each (see `prompt.md`).
 
 - [x] **Layer 1 — Structure & copy** — APPROVED. See `content.md`.
 - [x] **Layer 2 — Grayscale wireframe** — APPROVED. `index.html` + `styles.css`.
-- [ ] Layer 3 — Aesthetic & background theme (palette, Oswald, sky gradient + dawn glow).
+- [x] **Layer 3 — Aesthetic & background theme** — APPROVED.
 - [ ] Layer 4 — Scene art as frozen SVGs (desert ridge + cacti; right-side illustration).
 - [ ] Layer 5 — Motion (star twinkle, comet(s), gentle float; respect prefers-reduced-motion).
 - [ ] Layer 6 — Logo (swap text wordmark for hand-authored SVG emblem).
@@ -46,6 +46,19 @@ stopping for approval between each (see `prompt.md`).
   sky/desert scene is a **full-bleed background layer behind the hero content**
   (matches Oak Harbor), with a horizon band near the bottom — not a block below
   the hero. (Revised per feedback.)
+
+## Decisions (Layer 3)
+
+- Real palette wired via semantic tokens (`--bg`, `--accent`, …) → brief colors.
+  Body copy lifted to `#aeb4b8` (from `#8B8B8C`) to clear WCAG-AA on the dark sky.
+- **Oswald** loaded offline (400/600), used for display only — wordmark, eyebrows,
+  headline, statement (uppercase, condensed). Body/subhead stay system sans.
+- Sky = layered CSS gradient (deep eerie/gunmetal top → warmer toward horizon)
+  + **dawn-glow** radial bloom at the horizon line (navajo-white over soft orange).
+- **Static starfield** via radial-gradient dots (denser up top, a few navajo-tinted).
+  No twinkle/motion yet — that's Layer 5.
+- Olivine CTA with restrained glow (box-shadow), navajo-white focus ring.
+- Desert ridge + right-side illustration still simplified placeholders (Layer 4).
 
 ## Open / carried-forward decisions
 

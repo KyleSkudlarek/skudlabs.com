@@ -1,21 +1,46 @@
 /* =========================================================================
-   Skud Labs — LAYER 2 wireframe (grayscale)
-   Purpose: judge bones only — layout, type scale, spacing, composition.
-   No palette colors, no scene art, no motion. Tokens are intentionally
-   generic so Layer 3 can remap them to the real palette / Oswald type.
+   Skud Labs — LAYER 3 aesthetic & background theme
+   Real palette + Oswald display type + sky gradient and dawn-glow.
+   Desert ridge and right-side illustration are still simplified placeholders
+   (real frozen SVG art = Layer 4). No motion yet (Layer 5).
    ========================================================================= */
 
+/* ---- Oswald (loaded offline; display type only) -------------------------- */
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/oswald-v53-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("assets/fonts/oswald-v53-latin-600.woff2") format("woff2");
+}
+
 :root {
-  /* Grayscale stand-in tokens (Layer 3 remaps these) */
-  --bg:        #1c1c1c;   /* flat dark background (stands in for the sky) */
-  --surface:   #262626;   /* placeholder fills */
-  --fg:        #f2f2f2;   /* headings */
-  --muted:     #a8a8a8;   /* body / muted copy */
-  --faint:     #6f6f6f;   /* eyebrows, captions */
-  --line:      #3a3a3a;   /* hairlines, borders */
-  --accent:    #cfcfcf;   /* CTA fill stand-in (becomes olivine in L3) */
-  --accent-fg: #1c1c1c;   /* text on accent */
-  --focus:     #ffffff;   /* focus ring */
+  /* Palette (exact brief tokens) */
+  --eerie-black:  #1B1B1B;
+  --gunmetal:     #112431;
+  --seasalt:      #FAFBFC;
+  --olivine:      #A0B389;
+  --navajo-white: #FEDDAA;
+  --jet:          #353535;
+  --body-text:    #8B8B8C;
+
+  /* Semantic tokens (markup references these) */
+  --bg:        #0e1a23;            /* page base — deep gunmetal, sets up descent to black */
+  --surface:   rgba(160,179,137,0.06); /* translucent placeholder fill (olivine-tinted) */
+  --fg:        var(--seasalt);     /* headings */
+  --muted:     #aeb4b8;            /* body copy (lifted from #8B8B8C for AA over dark sky) */
+  --faint:     var(--body-text);   /* captions */
+  --line:      rgba(160,179,137,0.22); /* hairlines (faint olivine) */
+  --accent:    var(--olivine);     /* CTA fill, key strokes */
+  --accent-fg: var(--eerie-black); /* text on accent */
+  --focus:     var(--navajo-white);/* warm focus ring */
 
   /* Spacing scale */
   --space-1: 0.25rem;
@@ -32,8 +57,9 @@
   --maxw: 1200px;
   --gutter: clamp(1.25rem, 5vw, 4rem);
 
-  /* Type scale (system font for now; Oswald arrives in Layer 3) */
+  /* Type scale */
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: "Oswald", var(--font-sans);  /* condensed display — headings, eyebrows, wordmark */
   --fs-eyebrow: 0.8125rem;
   --fs-body:    1.0625rem;
   --fs-subhead: clamp(1.0625rem, 0.9rem + 0.7vw, 1.375rem);
@@ -59,10 +85,12 @@ body {
 
 .eyebrow {
   margin: 0 0 var(--space-4);
+  font-family: var(--font-display);
+  font-weight: 600;
   font-size: var(--fs-eyebrow);
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--faint);
+  color: var(--olivine);
 }
 
 a { color: inherit; }
@@ -86,8 +114,12 @@ a { color: inherit; }
   padding: 0.95rem 1.6rem;
   background: var(--accent);
   color: var(--accent-fg);
+  box-shadow: 0 0 0 1px rgba(160,179,137,.5), 0 6px 28px -10px rgba(160,179,137,.55);
 }
-.btn-cta:hover { opacity: 0.88; }
+.btn-cta:hover {
+  background: #aebd99;
+  box-shadow: 0 0 0 1px rgba(160,179,137,.7), 0 8px 34px -8px rgba(160,179,137,.7);
+}
 
 .btn-text {
   text-decoration: none;
@@ -135,9 +167,11 @@ a { color: inherit; }
 }
 
 .wordmark {
-  font-size: 1.375rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--fg);
   text-decoration: none;
 }
@@ -172,33 +206,60 @@ a { color: inherit; }
   overflow: hidden;
 }
 
-/* Full-bleed background scene (stands in for sky + desert horizon) */
+/* Full-bleed background scene: sky gradient + dawn glow (real, Layer 3).
+   Desert ridge below is still a simplified placeholder (frozen SVG = Layer 4). */
 .hero-scene {
   position: absolute;
   inset: 0;
   z-index: 0;
-  border: 1px dashed var(--line);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  background:
+    /* static starfield — faint scatter, denser up top (twinkle = Layer 5) */
+    radial-gradient(1.4px 1.4px at 8% 12%,  rgba(250,251,252,.85), transparent),
+    radial-gradient(1.2px 1.2px at 19% 24%, rgba(250,251,252,.55), transparent),
+    radial-gradient(1.6px 1.6px at 27% 9%,  rgba(254,221,170,.80), transparent),
+    radial-gradient(1.1px 1.1px at 38% 30%, rgba(250,251,252,.50), transparent),
+    radial-gradient(1.5px 1.5px at 47% 16%, rgba(250,251,252,.80), transparent),
+    radial-gradient(1.1px 1.1px at 58% 26%, rgba(250,251,252,.45), transparent),
+    radial-gradient(1.6px 1.6px at 66% 11%, rgba(254,221,170,.70), transparent),
+    radial-gradient(1.2px 1.2px at 74% 22%, rgba(250,251,252,.55), transparent),
+    radial-gradient(1.4px 1.4px at 83% 14%, rgba(250,251,252,.75), transparent),
+    radial-gradient(1.1px 1.1px at 91% 27%, rgba(250,251,252,.45), transparent),
+    radial-gradient(1.2px 1.2px at 14% 40%, rgba(250,251,252,.35), transparent),
+    radial-gradient(1.3px 1.3px at 53% 42%, rgba(250,251,252,.30), transparent),
+    radial-gradient(1.2px 1.2px at 88% 44%, rgba(250,251,252,.30), transparent),
+    /* dawn glow blooming at the horizon line (the Oak Harbor signature move) */
+    radial-gradient(150% 46% at 50% 80%, rgba(255,168,92,.16) 0%, transparent 52%),
+    radial-gradient(120% 52% at 50% 74%, rgba(254,221,170,.30) 0%, rgba(254,221,170,.05) 36%, transparent 62%),
+    /* sky: deep eerie/gunmetal up top → slightly warmer toward the horizon */
+    linear-gradient(180deg, #161a1d 0%, #102230 48%, #112e3a 76%, #143a48 100%);
 }
+
+/* Simplified desert foreground placeholder (real low-poly ridge = Layer 4) */
 .hero-horizon {
   margin-top: auto;
-  min-height: 34%;
-  border-top: 1px dashed var(--line);
-  background: var(--surface);
+  min-height: 30%;
+  background: linear-gradient(180deg,
+    rgba(15,20,18,0) 0%,
+    rgba(18,22,20,.72) 28%,
+    var(--eerie-black) 72%,
+    var(--bg) 100%);
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: center;
 }
 .scene-label {
   display: inline-block;
   margin: var(--space-4);
-  font-size: var(--fs-eyebrow);
-  letter-spacing: 0.16em;
+  font-family: var(--font-display);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--faint);
+  color: rgba(160,179,137,.45);
 }
+.scene-label--sky { align-self: flex-start; }
 
 .hero-inner {
   position: relative;
@@ -224,10 +285,12 @@ a { color: inherit; }
 
 .headline {
   margin: 0 0 var(--space-5);
+  font-family: var(--font-display);
   font-size: var(--fs-h1);
-  line-height: 1.04;
-  letter-spacing: -0.01em;
-  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: 0.005em;
+  font-weight: 600;
+  text-transform: uppercase;
   color: var(--fg);
 }
 
@@ -279,10 +342,12 @@ a { color: inherit; }
 .statement {
   margin: 0 0 var(--space-5);
   max-width: 18ch;
+  font-family: var(--font-display);
   font-size: var(--fs-h2);
-  line-height: 1.05;
-  letter-spacing: -0.01em;
-  font-weight: 700;
+  line-height: 1.03;
+  letter-spacing: 0.005em;
+  font-weight: 600;
+  text-transform: uppercase;
   color: var(--fg);
 }
 
