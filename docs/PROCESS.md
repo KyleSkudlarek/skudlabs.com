@@ -38,12 +38,12 @@ For a clean comparison, branch first:
 
 Then open a fresh session in this repo and paste:
 
-> Read `prompt.md` (the full brief plus the Oak Harbor desert-remix add-on),
-> `content.md` (approved structure + hero copy), and `NOTES.md` (decisions +
-> rejected directions). Rebuild the Skud Labs hero using the fidelity-layer
-> method: copy → wireframe → aesthetic → frozen SVG art → motion → logo. Stop
-> for my approval after each layer, and commit + tag each approved layer. Use the
-> palette and the offline fonts already in `assets/`. Build original SVG art — do
-> not lift Oak Harbor's. The current build is tagged `hero-v1`; treat it as the
-> baseline to match or beat, but make your own take. Start at Layer 1 and wait
-> for my confirmation.
+> Read `docs/prompt.md` (the full brief plus the Oak Harbor desert-remix add-on),
+> `docs/content.md` (approved structure + hero copy), and `docs/NOTES.md`
+> (decisions + rejected directions). Rebuild the Skud Labs hero using the
+> fidelity-layer method: copy → wireframe → aesthetic → frozen SVG art → motion →
+> logo. Stop for my approval after each layer, and commit + tag each approved
+> layer. Use the palette and the offline fonts already in `assets/`. Build
+> original SVG art — do not lift Oak Harbor's. The current build is tagged
+> `hero-v2`; treat it as the baseline to match or beat, but make your own take.
+> Start at Layer 1 and wait for my confirmation.

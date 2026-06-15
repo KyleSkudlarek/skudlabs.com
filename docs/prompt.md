@@ -12,9 +12,9 @@ the WORKING METHOD and stop at each checkpoint.
 > grouped by type; inspiration/source material is under `assets/inspiration/`.
 
 ```
+README.md                project map (start here)
 index.html               the hero page
-content.md               approved structure + hero copy (source of truth for words)
-NOTES.md                 running build log (layers, decisions, rejected directions)
+docs/                    this brief + content.md, NOTES.md, PROCESS.md
 assets/
   css/                   styles.css
   fonts/                 oswald-v53-latin-{regular,600}.woff2  (display type — offline, no CDN)
