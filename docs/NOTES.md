@@ -3,6 +3,11 @@
 Running log of the fidelity-layer build. Tracks what's approved, decisions made,
 and directions tried/rejected so we never relitigate dead ends.
 
+## Milestone — `hero-v6` (2026-06-14)
+
+Logo tagline expanded to four services — AI · Automation · Software · Web
+(split the compound "AI automation" into AI + Automation).
+
 ## Milestone — `hero-v5` (2026-06-14)
 
 Copy/CTA refinements: fixed the who/what headline line break (restored
