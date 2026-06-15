@@ -137,6 +137,8 @@ a { color: inherit; }
   max-width: 520px;
   height: auto;
   margin-inline: auto;
+  animation: float 7s ease-in-out infinite;
+  will-change: transform;
 }
 
 /* ---- Header / nav -------------------------------------------------------- */
@@ -195,35 +197,91 @@ a { color: inherit; }
   overflow: hidden;
 }
 
-/* Full-bleed background scene: sky gradient + dawn glow + frozen desert ridge.
-   Layer order (front → back): ridge SVG, stars, dawn glow, sky gradient — so
-   the glow blooms behind the ridge crest and the ridge melts into the page. */
+/* Full-bleed background scene. Layers are separate children so motion (Layer 5)
+   can animate them independently:
+     .stars-a / .stars-b  twinkling star groups (out of phase)
+     .comet-1 / .comet-2  shooting comets on long loops
+     .hero-ridge          frozen desert SVG, painted last so it occludes stars
+   The scene's own background is just the sky gradient + dawn glow. */
 .hero-scene {
   position: absolute;
   inset: 0;
   z-index: 0;
+  overflow: hidden;
   background:
-    /* desert ridge — frozen SVG, full-bleed at the bottom (Layer 4) */
-    url("assets/desert-ridge.svg") bottom center / 100% auto no-repeat,
-    /* static starfield — faint scatter, denser up top (twinkle = Layer 5) */
-    radial-gradient(1.4px 1.4px at 8% 12%,  rgba(250,251,252,.85), transparent),
-    radial-gradient(1.2px 1.2px at 19% 24%, rgba(250,251,252,.55), transparent),
-    radial-gradient(1.6px 1.6px at 27% 9%,  rgba(254,221,170,.80), transparent),
-    radial-gradient(1.1px 1.1px at 38% 30%, rgba(250,251,252,.50), transparent),
-    radial-gradient(1.5px 1.5px at 47% 16%, rgba(250,251,252,.80), transparent),
-    radial-gradient(1.1px 1.1px at 58% 26%, rgba(250,251,252,.45), transparent),
-    radial-gradient(1.6px 1.6px at 66% 11%, rgba(254,221,170,.70), transparent),
-    radial-gradient(1.2px 1.2px at 74% 22%, rgba(250,251,252,.55), transparent),
-    radial-gradient(1.4px 1.4px at 83% 14%, rgba(250,251,252,.75), transparent),
-    radial-gradient(1.1px 1.1px at 91% 27%, rgba(250,251,252,.45), transparent),
-    radial-gradient(1.2px 1.2px at 14% 40%, rgba(250,251,252,.35), transparent),
-    radial-gradient(1.3px 1.3px at 53% 42%, rgba(250,251,252,.30), transparent),
-    radial-gradient(1.2px 1.2px at 88% 44%, rgba(250,251,252,.30), transparent),
     /* dawn glow blooming at the horizon line (the Oak Harbor signature move) */
     radial-gradient(150% 46% at 50% 80%, rgba(255,168,92,.16) 0%, transparent 52%),
     radial-gradient(120% 52% at 50% 74%, rgba(254,221,170,.30) 0%, rgba(254,221,170,.05) 36%, transparent 62%),
     /* sky: deep eerie/gunmetal up top → slightly warmer toward the horizon */
     linear-gradient(180deg, #161a1d 0%, #102230 48%, #112e3a 76%, #143a48 100%);
+}
+
+/* --- star layers (twinkle on opacity, out of phase) --- */
+.stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.stars-a {
+  background-image:
+    radial-gradient(1.4px 1.4px at 8% 12%,  rgba(250,251,252,.95), transparent),
+    radial-gradient(1.6px 1.6px at 27% 9%,  rgba(254,221,170,.90), transparent),
+    radial-gradient(1.5px 1.5px at 47% 16%, rgba(250,251,252,.90), transparent),
+    radial-gradient(1.6px 1.6px at 66% 11%, rgba(254,221,170,.85), transparent),
+    radial-gradient(1.4px 1.4px at 83% 14%, rgba(250,251,252,.90), transparent),
+    radial-gradient(1.2px 1.2px at 14% 40%, rgba(250,251,252,.60), transparent),
+    radial-gradient(1.3px 1.3px at 53% 42%, rgba(250,251,252,.55), transparent);
+  animation: twinkle 4.5s ease-in-out infinite;
+}
+.stars-b {
+  background-image:
+    radial-gradient(1.2px 1.2px at 19% 24%, rgba(250,251,252,.85), transparent),
+    radial-gradient(1.1px 1.1px at 33% 18%, rgba(250,251,252,.65), transparent),
+    radial-gradient(1.1px 1.1px at 38% 31%, rgba(250,251,252,.70), transparent),
+    radial-gradient(1.1px 1.1px at 58% 26%, rgba(250,251,252,.65), transparent),
+    radial-gradient(1.2px 1.2px at 74% 22%, rgba(250,251,252,.75), transparent),
+    radial-gradient(1.1px 1.1px at 91% 27%, rgba(250,251,252,.60), transparent),
+    radial-gradient(1.2px 1.2px at 88% 44%, rgba(250,251,252,.45), transparent);
+  animation: twinkle 6s ease-in-out -2.4s infinite;
+}
+
+/* --- comets: thin streak translated across a long loop, mostly dormant --- */
+.comet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, rgba(250,251,252,0), rgba(254,221,170,.85));
+  filter: drop-shadow(0 0 5px rgba(254,221,170,.7));
+  opacity: 0;
+  will-change: transform, opacity;
+}
+/* start soon after load and recur ~10–14s, echoing Oak Harbor's 1s / 1.5s delays */
+.comet-1 { animation: comet1 10s ease-in 1s infinite; }
+.comet-2 { width: 110px; animation: comet2 14s ease-in 3s infinite; }
+
+/* --- satellite: slow drift across the back, a few seconds after the comets --- */
+.satellite {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  background: url("assets/satellite.svg") center / contain no-repeat;
+  filter: drop-shadow(0 0 4px rgba(160, 179, 137, 0.45));
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: orbit 34s linear 6s infinite;
+}
+
+/* --- frozen desert ridge, painted last (occludes stars/comets at horizon) --- */
+.hero-ridge {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: url("assets/desert-ridge.svg") bottom center / 100% auto no-repeat;
 }
 
 .hero-inner {
@@ -348,4 +406,49 @@ a { color: inherit; }
 @media (max-width: 380px) {
   .nav-links { gap: var(--space-4); }
   .cta-row { gap: var(--space-4); }
+}
+
+/* ---- Motion (Layer 5) — GPU-friendly transform/opacity only --------------- */
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.35; }
+  50%      { opacity: 1; }
+}
+
+/* comets travel diagonally down-and-across, then stay dormant most of the loop */
+@keyframes comet1 {
+  0%   { transform: translate(-12vw, 8vh) rotate(20deg);  opacity: 0; }
+  2%   { opacity: 1; }
+  11%  { opacity: 1; }
+  16%  { transform: translate(58vw, 34vh) rotate(20deg);  opacity: 0; }
+  100% { transform: translate(58vw, 34vh) rotate(20deg);  opacity: 0; }
+}
+@keyframes comet2 {
+  0%   { transform: translate(40vw, -6vh) rotate(28deg);  opacity: 0; }
+  3%   { opacity: 0.9; }
+  10%  { opacity: 0.9; }
+  15%  { transform: translate(96vw, 26vh) rotate(28deg);  opacity: 0; }
+  100% { transform: translate(96vw, 26vh) rotate(28deg);  opacity: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+/* satellite drifts in a slow shallow arc across the sky, gently banking */
+@keyframes orbit {
+  0%   { transform: translate(-8vw, 7vh)   rotate(-6deg); opacity: 0; }
+  6%   { opacity: 0.9; }
+  50%  { transform: translate(52vw, -3vh)  rotate(4deg);  opacity: 0.9; }
+  94%  { opacity: 0.9; }
+  100% { transform: translate(112vw, 9vh)  rotate(10deg); opacity: 0; }
+}
+
+/* Reduced motion → calm static starfield, no comets, no satellite, no float */
+@media (prefers-reduced-motion: reduce) {
+  .stars-a, .stars-b { animation: none; opacity: 0.9; }
+  .comet { display: none; }
+  .satellite { display: none; }
+  .illustration { animation: none; }
 }

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" role="img" aria-label="Small satellite">
+  <!-- Original low-poly satellite: central body, two solar-panel wings, a dish
+       antenna. Palette-tied (olivine panels, gunmetal body, navajo light). -->
+  <!-- struts -->
+  <path d="M16,24 H20 M28,24 H32" stroke="#7f8f6e" stroke-width="2"/>
+  <!-- left solar panel -->
+  <rect x="3" y="17" width="13" height="14" rx="1" fill="#A0B389"/>
+  <path d="M9.5,17 V31 M3,24 H16" stroke="#13242e" stroke-width="1"/>
+  <!-- right solar panel -->
+  <rect x="32" y="17" width="13" height="14" rx="1" fill="#A0B389"/>
+  <path d="M38.5,17 V31 M32,24 H45" stroke="#13242e" stroke-width="1"/>
+  <!-- body -->
+  <rect x="19" y="18" width="10" height="12" rx="2" fill="#33454f" stroke="#c2d1ad" stroke-width="1.2"/>
+  <!-- dish antenna -->
+  <path d="M24,18 V11" stroke="#FEDDAA" stroke-width="1.4"/>
+  <circle cx="24" cy="9.4" r="2.1" fill="#FEDDAA"/>
+</svg>

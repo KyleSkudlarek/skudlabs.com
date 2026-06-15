@@ -22,7 +22,7 @@ stopping for approval between each (see `prompt.md`).
 - [x] **Layer 3 — Aesthetic & background theme** — APPROVED.
 - [x] **Layer 4 — Scene art (frozen SVGs)** — APPROVED & FROZEN.
       `assets/desert-ridge.svg`, `assets/automation-flow.svg`.
-- [ ] Layer 5 — Motion (star twinkle, comet(s), gentle float; respect prefers-reduced-motion).
+- [x] **Layer 5 — Motion** — APPROVED.
 - [ ] Layer 6 — Logo (swap text wordmark for hand-authored SVG emblem).
 
 ## Decisions (Layer 1)
@@ -78,6 +78,28 @@ stopping for approval between each (see `prompt.md`).
   `.hero-copy`/`.hero-art`. Verified clean at 360px (in-iframe render).
 - **Gotcha:** XML comments can't contain `--`; `--bg` in an SVG comment broke the
   file in strict parsers (libxml2/browsers) though Python's minidom allowed it.
+
+## Decisions (Layer 5)
+
+Oak Harbor hero animation categories (studied from `reference/css/style.css`):
+  1. **Stars** — 13 divs, opacity flicker (starFlicker), 2–5s, staggered, always on.
+  2. **Comets** — thin rotated div, zips diagonally then dormant (shootingStar/2),
+     delays 1s & 1.5s, recur ~9–10s, ease-in.
+  3. **Satellite/UFO** — one small craft, slow diagonal orbit (orbit), 11–20s,
+     gentle rotation, a 2nd pass delayed 10s. (Single craft, not two.)
+
+Implemented in that style:
+- Stars: two layers (`.stars-a` / `.stars-b`) twinkle out of phase (4.5s / 6s).
+- Comets (`.comet-1` / `.comet-2`): navajo streaks + glow. **Start sooner per
+  feedback** — delays 1s / 3s, recur 10s / 14s (echoing OH's 1s / 1.5s).
+- **Satellite** (`assets/satellite.svg`, original): drifts in a slow shallow arc
+  across the back, gently banking; starts at 6s (after the comets), 34s loop,
+  fades in/out at the edges.
+- Illustration floats gently (`translateY`, 7s).
+- Ridge restructured into its own `.hero-ridge` child painted last, so it occludes
+  stars/comets/satellite at the horizon; scene background = sky gradient + glow.
+- `prefers-reduced-motion: reduce` → twinkle/comets/satellite/float all off,
+  static starfield.
 
 ## Open / carried-forward decisions
 
