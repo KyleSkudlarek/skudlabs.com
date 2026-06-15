@@ -71,7 +71,7 @@
   --fs-body:    1.0625rem;
   --fs-subhead: clamp(1.0625rem, 0.9rem + 0.7vw, 1.375rem);
   --fs-h2:      clamp(2rem, 1.3rem + 3.2vw, 3.5rem);
-  --fs-h1:      clamp(2.5rem, 1.4rem + 5vw, 5rem);
+  --fs-h1:      clamp(2.25rem, 1.4rem + 3.2vw, 4rem);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -230,7 +230,7 @@ a { color: inherit; }
 
 .hero {
   position: relative;
-  min-height: 82vh;
+  min-height: 96vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -332,7 +332,7 @@ a { color: inherit; }
   padding: clamp(2.5rem, 6vw, 6rem) var(--gutter) clamp(3rem, 8vw, 6rem);
   flex: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-start;   /* lift the hero content up into the sky */
 }
 
 .hero-grid {
@@ -382,6 +382,23 @@ a { color: inherit; }
   font-size: 0.8125rem;
   letter-spacing: 0.08em;
   color: var(--faint);
+}
+
+.location {
+  margin: var(--space-4) 0 0;
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  color: var(--faint);
+}
+.location::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 0.5em;
+  border-radius: 50%;
+  background: var(--olivine);
+  vertical-align: middle;
 }
 
 .hero-art { align-self: center; min-width: 0; }

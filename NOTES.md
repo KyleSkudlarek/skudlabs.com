@@ -3,6 +3,12 @@
 Running log of the fidelity-layer build. Tracks what's approved, decisions made,
 and directions tried/rejected so we never relitigate dead ends.
 
+## Milestone — `hero-v2` (2026-06-14)
+
+Hero composition refined: copy lifted into the sky (full-viewport hero → more
+contrast and clear separation from the desert), headline downsized, eyebrow now
+includes web design, and a "Location: Austin, TX" line added.
+
 ## Milestone — `hero-v1` (2026-06-14)
 
 Full hero complete (Layers 1–6) + assets reorganized. Tagged **`hero-v1`** as the
