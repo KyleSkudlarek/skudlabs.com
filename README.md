@@ -30,9 +30,9 @@ reference/  resume/      research material (Oak Harbor scrape, résumé)
 
 ## Status
 
-- Hero **complete**. Latest: **`hero-v4`** (right-side illustration expanded into an AI "bloom": papers → hub → website+app, support chat, dashboard, organized data). Earlier: `hero-v1`–`hero-v3`.
+- Hero **complete**. Latest: **`hero-v5`** (headline line-break fix; condensed subhead; CTAs → "Get started" with a flexible "chat, email, or a quick call" cue). Earlier: `hero-v1`–`hero-v4`.
 - Below-the-fold sections: **not built yet** — the full-page outline is in `docs/content.md`.
-- Rollback points: one git tag per approved layer (`layer-1-approved` … `layer-6-approved`) plus `hero-v1` … `hero-v4`. Restore any with `git checkout <tag>`.
+- Rollback points: one git tag per approved layer (`layer-1-approved` … `layer-6-approved`) plus `hero-v1` … `hero-v5`. Restore any with `git checkout <tag>`.
 
 ## Replaying the build (e.g., with Fable 5)
 

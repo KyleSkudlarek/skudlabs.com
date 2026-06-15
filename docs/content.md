@@ -33,10 +33,10 @@ the map for a later session.
 - **Headline (two-line lockup):**
   - *Small business* — the "who" (olivine, catches the eye)
   - *AI automation & custom software* — the "what" (seasalt, main statement)
-- **Subhead:** Bespoke, enterprise-grade AI-driven automation, software, and websites for small businesses — Fortune 500 reliability without the agency overhead. Work directly with the engineer who builds it; every project starts with a free call.
-- **Primary CTA:** Book a free 20-minute call
+- **Subhead:** Bespoke, enterprise-grade AI-driven automation, software, and websites for small businesses. Fortune 500 reliability, minus the agency overhead — you work directly with the engineer who builds it.
+- **Primary CTA:** Get started  (→ flexible contact page: chatbot, form, quote, or contact info)
 - **Secondary link:** About me →
-- **Reassurance:** 20 minutes · no pitch · no obligation
+- **Reassurance:** Chat, email, or a quick call — no pitch, no obligation
 
 (Evolved from 7 blocks → 4: standalone location + proof lines folded in; eyebrow
 dropped once the headline stated the offering; headline split into a who/what
@@ -45,7 +45,7 @@ lockup, Oak-Harbor-style. Services/web also covered in the subhead.)
 ### Nav
 - **Wordmark:** Skud Labs (text until Layer 6 logo; `alt="Skud Labs"`)
 - **Links:** Home · Services · Work · About
-- **Button:** Book a call (olivine)
+- **Button:** Get started (olivine)
 
 ---
 

@@ -3,6 +3,14 @@
 Running log of the fidelity-layer build. Tracks what's approved, decisions made,
 and directions tried/rejected so we never relitigate dead ends.
 
+## Milestone — `hero-v5` (2026-06-14)
+
+Copy/CTA refinements: fixed the who/what headline line break (restored
+`styles.css`, which had been omitted from the hero-v3/v4 commits — the cause of
+the regression); condensed the subhead to two sentences; changed both the nav and
+hero CTAs to "Get started", with the reassurance now "Chat, email, or a quick
+call — no pitch, no obligation" (CTA leads to a future flexible contact page).
+
 ## Milestone — `hero-v4` (2026-06-14)
 
 Right-side illustration reworked from a single left→right flow into an AI "bloom":

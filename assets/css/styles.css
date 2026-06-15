@@ -71,7 +71,7 @@
   --fs-body:    1.0625rem;
   --fs-subhead: clamp(1.0625rem, 0.9rem + 0.7vw, 1.375rem);
   --fs-h2:      clamp(2rem, 1.3rem + 3.2vw, 3.5rem);
-  --fs-h1:      clamp(2.25rem, 1.4rem + 3.2vw, 4rem);
+  --fs-h1:      clamp(2rem, 1.3rem + 2.6vw, 3.25rem);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -355,18 +355,24 @@ a { color: inherit; }
   text-transform: uppercase;
   color: var(--fg);
 }
+/* who / what lockup — each on its own line */
+.headline-who {
+  display: block;
+  color: var(--olivine);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.1em;
+}
+.headline-what {
+  display: block;
+  color: var(--fg);
+}
 
 .subhead {
-  margin: 0 0 var(--space-4);
+  margin: 0 0 var(--space-6);
   font-size: var(--fs-subhead);
   line-height: 1.45;
   color: var(--muted);
-}
-
-.proof {
-  margin: 0 0 var(--space-6);
-  font-size: 0.95rem;
-  color: var(--faint);
+  max-width: 44ch;
 }
 
 .cta-row {
@@ -382,23 +388,6 @@ a { color: inherit; }
   font-size: 0.8125rem;
   letter-spacing: 0.08em;
   color: var(--faint);
-}
-
-.location {
-  margin: var(--space-4) 0 0;
-  font-size: 0.8125rem;
-  letter-spacing: 0.06em;
-  color: var(--faint);
-}
-.location::before {
-  content: "";
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  margin-right: 0.5em;
-  border-radius: 50%;
-  background: var(--olivine);
-  vertical-align: middle;
 }
 
 .hero-art { align-self: center; min-width: 0; }
