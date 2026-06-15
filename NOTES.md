@@ -18,7 +18,7 @@ stopping for approval between each (see `prompt.md`).
 ## Layer status
 
 - [x] **Layer 1 — Structure & copy** — APPROVED. See `content.md`.
-- [~] **Layer 2 — Grayscale wireframe** — BUILT, awaiting review. `index.html` + `styles.css`.
+- [x] **Layer 2 — Grayscale wireframe** — APPROVED. `index.html` + `styles.css`.
 - [ ] Layer 3 — Aesthetic & background theme (palette, Oswald, sky gradient + dawn glow).
 - [ ] Layer 4 — Scene art as frozen SVGs (desert ridge + cacti; right-side illustration).
 - [ ] Layer 5 — Motion (star twinkle, comet(s), gentle float; respect prefers-reduced-motion).
