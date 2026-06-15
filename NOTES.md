@@ -3,6 +3,12 @@
 Running log of the fidelity-layer build. Tracks what's approved, decisions made,
 and directions tried/rejected so we never relitigate dead ends.
 
+## Milestone — `hero-v1` (2026-06-14)
+
+Full hero complete (Layers 1–6) + assets reorganized. Tagged **`hero-v1`** as the
+baseline. To re-run this whole build from scratch (e.g., with Fable 5), see
+`PROCESS.md` → "Replay" for the exact prompt to send.
+
 ## Process / state convention
 
 We build in fidelity layers (words → structure → look → art → motion → logo),

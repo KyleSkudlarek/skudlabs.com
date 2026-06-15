@@ -8,14 +8,26 @@ the WORKING METHOD and stop at each checkpoint.
 
 ## Assets in this workspace (real paths)
 
+> Layout updated after the hero build. Production assets live under `assets/`
+> grouped by type; inspiration/source material is under `assets/inspiration/`.
+
 ```
+index.html               the hero page
+content.md               approved structure + hero copy (source of truth for words)
+NOTES.md                 running build log (layers, decisions, rejected directions)
 assets/
-  fonts/                 oswald-v53-latin-600.woff2, oswald-v53-latin-regular.woff2
-                         (display type — load offline, no font CDN)
-  hero_inspiration/      lowfi_mobile.jpg        (my rough mobile mockup — LOOSE inspiration)
-                         midjourney_website_lowfi_example_*.jpg  (mood/theme inspiration)
-  images/                logo_midjourney.png, logo_skudworks_simple.svg
-                         (logo inspiration — used only at the final logo layer)
+  css/                   styles.css
+  fonts/                 oswald-v53-latin-{regular,600}.woff2  (display type — offline, no CDN)
+                         caveat-v23-latin-700.woff2            (neon script flourish)
+                         space-grotesk-v22-latin-600.woff2     (logo wordmark)
+  img/                   skud-labs-logo.svg   (combined emblem + wordmark, font embedded)
+                         desert-ridge.svg     (frozen low-poly horizon)
+                         automation-flow.svg  (right-side illustration)
+                         satellite.svg        (drifting satellite)
+  inspiration/
+    logo/                logo_midjourney.png, logo_skudworks_simple.svg  (logo inspiration)
+    hero/                lowfi_mobile.jpg, midjourney_website_lowfi_example_*.png,
+                         oak_harbor_web_designs_hero_*.jpg     (mood/theme inspiration)
 reference/               (Oak Harbor Web Designs scrape — primary technique reference)
 resume/                  (my résumé — context for copy; see RÉSUMÉ section)
 ```
