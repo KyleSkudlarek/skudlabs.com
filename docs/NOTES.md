@@ -3,6 +3,13 @@
 Running log of the fidelity-layer build. Tracks what's approved, decisions made,
 and directions tried/rejected so we never relitigate dead ends.
 
+## Milestone — `hero-v4` (2026-06-14)
+
+Right-side illustration reworked from a single left→right flow into an AI "bloom":
+messy papers → glowing AI/software hub → four outcomes (website + app via
+laptop & phone, AI support chat, a dashboard, and clean organized data).
+Connectors radiate from the hub with consistent gaps at both ends.
+
 ## Milestone — `hero-v3` (2026-06-14)
 
 Hero copy reworked: decluttered, and the headline pivoted to an Oak-Harbor-style
