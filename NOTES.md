@@ -18,7 +18,7 @@ stopping for approval between each (see `prompt.md`).
 ## Layer status
 
 - [x] **Layer 1 — Structure & copy** — APPROVED. See `content.md`.
-- [ ] Layer 2 — Grayscale wireframe (two-column hero + start of "What I do").
+- [~] **Layer 2 — Grayscale wireframe** — BUILT, awaiting review. `index.html` + `styles.css`.
 - [ ] Layer 3 — Aesthetic & background theme (palette, Oswald, sky gradient + dawn glow).
 - [ ] Layer 4 — Scene art as frozen SVGs (desert ridge + cacti; right-side illustration).
 - [ ] Layer 5 — Motion (star twinkle, comet(s), gentle float; respect prefers-reduced-motion).
@@ -32,6 +32,20 @@ stopping for approval between each (see `prompt.md`).
   (chosen over "Never do that by hand again.")
 - Nav: **Home · Services · Work · About** (kept Home).
 - Employer names anonymized by design.
+
+## Decisions (Layer 2)
+
+- Grayscale only; flat `#1c1c1c` background stands in for the sky.
+- Neutral system font for now — Oswald + real palette deferred to Layer 3
+  (typography personality is a Layer 3 concern per the brief).
+- CSS tokens (`--bg`, `--fg`, `--accent`, …) are generic so Layer 3 remaps them
+  without touching markup.
+- Two-column hero collapses to single column (text → illustration) at ≤860px;
+  nav wraps at ≤620px.
+- Placeholder boxes: right-side illustration (Layer 4) sits in the grid; the
+  sky/desert scene is a **full-bleed background layer behind the hero content**
+  (matches Oak Harbor), with a horizon band near the bottom — not a block below
+  the hero. (Revised per feedback.)
 
 ## Open / carried-forward decisions
 

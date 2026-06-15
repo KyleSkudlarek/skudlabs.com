@@ -1,0 +1,326 @@
+/* =========================================================================
+   Skud Labs — LAYER 2 wireframe (grayscale)
+   Purpose: judge bones only — layout, type scale, spacing, composition.
+   No palette colors, no scene art, no motion. Tokens are intentionally
+   generic so Layer 3 can remap them to the real palette / Oswald type.
+   ========================================================================= */
+
+:root {
+  /* Grayscale stand-in tokens (Layer 3 remaps these) */
+  --bg:        #1c1c1c;   /* flat dark background (stands in for the sky) */
+  --surface:   #262626;   /* placeholder fills */
+  --fg:        #f2f2f2;   /* headings */
+  --muted:     #a8a8a8;   /* body / muted copy */
+  --faint:     #6f6f6f;   /* eyebrows, captions */
+  --line:      #3a3a3a;   /* hairlines, borders */
+  --accent:    #cfcfcf;   /* CTA fill stand-in (becomes olivine in L3) */
+  --accent-fg: #1c1c1c;   /* text on accent */
+  --focus:     #ffffff;   /* focus ring */
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  /* Layout */
+  --maxw: 1200px;
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+
+  /* Type scale (system font for now; Oswald arrives in Layer 3) */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --fs-eyebrow: 0.8125rem;
+  --fs-body:    1.0625rem;
+  --fs-subhead: clamp(1.0625rem, 0.9rem + 0.7vw, 1.375rem);
+  --fs-h2:      clamp(2rem, 1.3rem + 3.2vw, 3.5rem);
+  --fs-h1:      clamp(2.5rem, 1.4rem + 5vw, 5rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Shared bits --------------------------------------------------------- */
+
+.eyebrow {
+  margin: 0 0 var(--space-4);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+a { color: inherit; }
+
+:where(a, button, .btn, .btn-text):focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 999px;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-cta {
+  padding: 0.95rem 1.6rem;
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+.btn-cta:hover { opacity: 0.88; }
+
+.btn-text {
+  text-decoration: none;
+  color: var(--fg);
+  font-weight: 600;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 2px;
+}
+.btn-text:hover { border-color: var(--fg); }
+
+/* Placeholder boxes (wireframe only — removed as real art lands) */
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  text-align: center;
+  background: var(--surface);
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  color: var(--faint);
+}
+.placeholder span {
+  font-size: var(--fs-eyebrow);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.placeholder small { font-size: 0.75rem; opacity: 0.8; }
+
+/* ---- Header / nav -------------------------------------------------------- */
+
+.site-header {
+  position: relative;
+  z-index: 2;
+}
+
+.nav {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: var(--space-5) var(--gutter);
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.wordmark {
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: var(--space-6);
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.nav-links a:hover { color: var(--fg); }
+
+.nav-cta {
+  padding: 0.6rem 1.15rem;
+  font-size: 0.95rem;
+}
+
+/* ---- Hero ---------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  min-height: 82vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Full-bleed background scene (stands in for sky + desert horizon) */
+.hero-scene {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border: 1px dashed var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.hero-horizon {
+  margin-top: auto;
+  min-height: 34%;
+  border-top: 1px dashed var(--line);
+  background: var(--surface);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.scene-label {
+  display: inline-block;
+  margin: var(--space-4);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 6rem) var(--gutter) clamp(3rem, 8vw, 6rem);
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+  width: 100%;
+}
+
+.hero-copy { max-width: 36rem; }
+
+.headline {
+  margin: 0 0 var(--space-5);
+  font-size: var(--fs-h1);
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  color: var(--fg);
+}
+
+.subhead {
+  margin: 0 0 var(--space-4);
+  font-size: var(--fs-subhead);
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.proof {
+  margin: 0 0 var(--space-6);
+  font-size: 0.95rem;
+  color: var(--faint);
+}
+
+.cta-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-4);
+}
+
+.reassurance {
+  margin: 0;
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+}
+
+.hero-art { align-self: center; }
+
+.placeholder-illustration {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+}
+
+/* ---- What I do (start of next section) ----------------------------------- */
+
+.whatido {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: clamp(4rem, 10vw, 9rem) var(--gutter);
+}
+
+.whatido .eyebrow { color: var(--faint); }
+
+.statement {
+  margin: 0 0 var(--space-5);
+  max-width: 18ch;
+  font-size: var(--fs-h2);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  color: var(--fg);
+}
+
+.statement-support {
+  margin: 0;
+  max-width: 52ch;
+  font-size: var(--fs-subhead);
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* ---- Responsive ---------------------------------------------------------- */
+
+@media (max-width: 860px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: clamp(2rem, 8vw, 3rem);
+    align-items: stretch;
+  }
+  .hero-copy { max-width: none; order: 1; }
+  .hero-art { order: 2; }
+  .placeholder-illustration { aspect-ratio: 16 / 9; }
+}
+
+@media (max-width: 620px) {
+  .nav { flex-wrap: wrap; gap: var(--space-4); }
+  .nav-links {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+    gap: var(--space-5);
+    flex-wrap: wrap;
+  }
+  .nav-cta { margin-left: auto; }
+  .hero { min-height: 0; }
+}
+
+@media (max-width: 380px) {
+  .nav-links { gap: var(--space-4); }
+  .cta-row { gap: var(--space-4); }
+}
