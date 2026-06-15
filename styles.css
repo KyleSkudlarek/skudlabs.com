@@ -130,25 +130,14 @@ a { color: inherit; }
 }
 .btn-text:hover { border-color: var(--fg); }
 
-/* Placeholder boxes (wireframe only — removed as real art lands) */
-.placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
-  text-align: center;
-  background: var(--surface);
-  border: 1px dashed var(--line);
-  border-radius: 8px;
-  color: var(--faint);
+/* Right-side illustration (frozen SVG) */
+.illustration {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  margin-inline: auto;
 }
-.placeholder span {
-  font-size: var(--fs-eyebrow);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-.placeholder small { font-size: 0.75rem; opacity: 0.8; }
 
 /* ---- Header / nav -------------------------------------------------------- */
 
@@ -206,16 +195,16 @@ a { color: inherit; }
   overflow: hidden;
 }
 
-/* Full-bleed background scene: sky gradient + dawn glow (real, Layer 3).
-   Desert ridge below is still a simplified placeholder (frozen SVG = Layer 4). */
+/* Full-bleed background scene: sky gradient + dawn glow + frozen desert ridge.
+   Layer order (front → back): ridge SVG, stars, dawn glow, sky gradient — so
+   the glow blooms behind the ridge crest and the ridge melts into the page. */
 .hero-scene {
   position: absolute;
   inset: 0;
   z-index: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   background:
+    /* desert ridge — frozen SVG, full-bleed at the bottom (Layer 4) */
+    url("assets/desert-ridge.svg") bottom center / 100% auto no-repeat,
     /* static starfield — faint scatter, denser up top (twinkle = Layer 5) */
     radial-gradient(1.4px 1.4px at 8% 12%,  rgba(250,251,252,.85), transparent),
     radial-gradient(1.2px 1.2px at 19% 24%, rgba(250,251,252,.55), transparent),
@@ -237,30 +226,6 @@ a { color: inherit; }
     linear-gradient(180deg, #161a1d 0%, #102230 48%, #112e3a 76%, #143a48 100%);
 }
 
-/* Simplified desert foreground placeholder (real low-poly ridge = Layer 4) */
-.hero-horizon {
-  margin-top: auto;
-  min-height: 30%;
-  background: linear-gradient(180deg,
-    rgba(15,20,18,0) 0%,
-    rgba(18,22,20,.72) 28%,
-    var(--eerie-black) 72%,
-    var(--bg) 100%);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-.scene-label {
-  display: inline-block;
-  margin: var(--space-4);
-  font-family: var(--font-display);
-  font-size: 0.6875rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(160,179,137,.45);
-}
-.scene-label--sky { align-self: flex-start; }
-
 .hero-inner {
   position: relative;
   z-index: 1;
@@ -275,13 +240,13 @@ a { color: inherit; }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   align-items: center;
   gap: clamp(2rem, 5vw, 5rem);
   width: 100%;
 }
 
-.hero-copy { max-width: 36rem; }
+.hero-copy { min-width: 0; max-width: 36rem; }
 
 .headline {
   margin: 0 0 var(--space-5);
@@ -322,12 +287,7 @@ a { color: inherit; }
   color: var(--faint);
 }
 
-.hero-art { align-self: center; }
-
-.placeholder-illustration {
-  aspect-ratio: 4 / 3;
-  width: 100%;
-}
+.hero-art { align-self: center; min-width: 0; }
 
 /* ---- What I do (start of next section) ----------------------------------- */
 
@@ -363,13 +323,13 @@ a { color: inherit; }
 
 @media (max-width: 860px) {
   .hero-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: clamp(2rem, 8vw, 3rem);
     align-items: stretch;
   }
   .hero-copy { max-width: none; order: 1; }
   .hero-art { order: 2; }
-  .placeholder-illustration { aspect-ratio: 16 / 9; }
+  .illustration { max-width: 420px; }
 }
 
 @media (max-width: 620px) {

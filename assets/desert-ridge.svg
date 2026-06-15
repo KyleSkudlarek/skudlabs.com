@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 360" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Low-poly desert horizon with flat-topped mesas and saguaro cacti">
+  <!-- Layered low-poly desert horizon. Far mesas are lighter (atmospheric
+       perspective, nearer the dawn glow); the near foreground melts into the
+       page base for the descent into the next section. Saguaros stand in the
+       gaps so they rise into the glowing sky. Frozen — Layer 4. -->
+
+  <!-- far ridge: flat-topped mesas rising from a desert floor -->
+  <path fill="#15323f" d="M0,205
+    L140,205 L152,168 L300,168 L312,205
+    L470,205 L482,150 L690,150 L702,205
+    L900,205 L912,174 L1030,174 L1042,205
+    L1250,205 L1262,160 L1410,160 L1422,205
+    L1440,205 L1440,360 L0,360 Z"/>
+
+  <!-- mid ridge: gentle rise for depth -->
+  <path fill="#0f2734" d="M0,236 L300,228 L600,240 L900,226 L1200,238 L1440,230 L1440,360 L0,360 Z"/>
+
+  <!-- near foreground: closest dune, melts into the page base below -->
+  <path fill="#0e1a23" d="M0,262 L260,252 L540,264 L840,250 L1140,262 L1440,252 L1440,360 L0,360 Z"/>
+
+  <!-- saguaro cacti standing in the gaps between mesas (rise into the glow) -->
+  <g fill="none" stroke="#0a131b" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="13">
+      <!-- cactus A (gap between mesa 1 and 2) -->
+      <path d="M398,260 V162"/>
+      <path d="M398,224 H380 V200"/>
+      <path d="M398,212 H416 V184"/>
+      <!-- cactus B (gap between mesa 2 and 3) -->
+      <path d="M800,256 V168"/>
+      <path d="M800,222 H783 V198"/>
+      <path d="M800,210 H817 V184"/>
+    </g>
+    <g stroke-width="12">
+      <!-- cactus C (gap between mesa 3 and 4) -->
+      <path d="M1132,260 V180"/>
+      <path d="M1132,228 H1116 V208"/>
+      <path d="M1132,218 H1148 V198"/>
+    </g>
+    <g stroke-width="9">
+      <!-- small cactus, foreground left -->
+      <path d="M150,262 V214"/>
+      <path d="M150,238 H162 V224"/>
+    </g>
+  </g>
+</svg>

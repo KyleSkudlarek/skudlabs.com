@@ -20,7 +20,8 @@ stopping for approval between each (see `prompt.md`).
 - [x] **Layer 1 — Structure & copy** — APPROVED. See `content.md`.
 - [x] **Layer 2 — Grayscale wireframe** — APPROVED. `index.html` + `styles.css`.
 - [x] **Layer 3 — Aesthetic & background theme** — APPROVED.
-- [ ] Layer 4 — Scene art as frozen SVGs (desert ridge + cacti; right-side illustration).
+- [x] **Layer 4 — Scene art (frozen SVGs)** — APPROVED & FROZEN.
+      `assets/desert-ridge.svg`, `assets/automation-flow.svg`.
 - [ ] Layer 5 — Motion (star twinkle, comet(s), gentle float; respect prefers-reduced-motion).
 - [ ] Layer 6 — Logo (swap text wordmark for hand-authored SVG emblem).
 
@@ -60,6 +61,24 @@ stopping for approval between each (see `prompt.md`).
 - Olivine CTA with restrained glow (box-shadow), navajo-white focus ring.
 - Desert ridge + right-side illustration still simplified placeholders (Layer 4).
 
+## Decisions (Layer 4)
+
+- **`desert-ridge.svg`** — three depth layers (far mesas lightest → near foreground
+  = page base) + saguaro cacti standing in the gaps between mesas so they rise
+  into the glowing sky. Referenced via `background-image` on `.hero-scene` (front
+  layer, `100% auto`, bottom) so the dawn glow blooms behind the crest. NOT inlined.
+- **`automation-flow.svg`** — messy invoice stack → glowing olivine hexagon node
+  (spark + soft glow) → clean table with a check badge. `<img>` with real alt.
+- First ridge attempt read as a central "V" valley and only 1 cactus showed
+  (others lost against the dark foreground) — redesigned with flat-topped mesas
+  and gap-standing cacti. (Rejected direction logged below.)
+- **Fixed mobile overflow**: the illustration's intrinsic 480px width was acting
+  as the grid column's automatic minimum → hero couldn't shrink below ~480px on
+  phones. Fix = `grid-template-columns: minmax(0, …)` + `min-width: 0` on
+  `.hero-copy`/`.hero-art`. Verified clean at 360px (in-iframe render).
+- **Gotcha:** XML comments can't contain `--`; `--bg` in an SVG comment broke the
+  file in strict parsers (libxml2/browsers) though Python's minidom allowed it.
+
 ## Open / carried-forward decisions
 
 - Right-side illustration: leaning **Automation flow** (messy inputs → glowing
@@ -67,4 +86,7 @@ stopping for approval between each (see `prompt.md`).
 
 ## Rejected directions
 
-- _(none yet)_
+- Desert ridge v1: back ridge with a deep central dip → read as a "V" valley /
+  interior corner, not a horizon. Cacti tone too close to the foreground fill, so
+  only the one tall center cactus showed. Replaced by flat-topped mesas + cacti in
+  the inter-mesa gaps.
