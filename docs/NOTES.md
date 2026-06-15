@@ -3,6 +3,12 @@
 Running log of the fidelity-layer build. Tracks what's approved, decisions made,
 and directions tried/rejected so we never relitigate dead ends.
 
+## Milestone — `hero-v3` (2026-06-14)
+
+Hero copy reworked: decluttered, and the headline pivoted to an Oak-Harbor-style
+who/what lockup — "Small business" (olivine) over "AI automation & custom
+software" (seasalt) — above a bespoke, enterprise-grade AI-driven subhead.
+
 ## Milestone — `hero-v2` (2026-06-14)
 
 Hero composition refined: copy lifted into the sky (full-viewport hero → more

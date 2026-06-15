@@ -28,15 +28,19 @@ the map for a later session.
 
 ---
 
-## Hero copy (LOCKED)
+## Hero copy (decluttered, who/what lockup)
 
-- **Eyebrow:** AI automation & custom software · Austin, TX
-- **Headline:** Stop paying people to do work a computer can do.
-- **Subhead:** One senior engineer who automates the repetitive, document-heavy work — without an in-house tech team.
-- **Proof line:** 10 years building software at Fortune 500 companies, including production AI for a Fortune 15 healthcare company.
+- **Headline (two-line lockup):**
+  - *Small business* — the "who" (olivine, catches the eye)
+  - *AI automation & custom software* — the "what" (seasalt, main statement)
+- **Subhead:** Bespoke, enterprise-grade AI-driven automation, software, and websites for small businesses — Fortune 500 reliability without the agency overhead. Work directly with the engineer who builds it; every project starts with a free call.
 - **Primary CTA:** Book a free 20-minute call
 - **Secondary link:** About me →
 - **Reassurance:** 20 minutes · no pitch · no obligation
+
+(Evolved from 7 blocks → 4: standalone location + proof lines folded in; eyebrow
+dropped once the headline stated the offering; headline split into a who/what
+lockup, Oak-Harbor-style. Services/web also covered in the subhead.)
 
 ### Nav
 - **Wordmark:** Skud Labs (text until Layer 6 logo; `alt="Skud Labs"`)
