@@ -3,6 +3,29 @@
 Running log of the fidelity-layer build. Tracks what's approved, decisions made,
 and directions tried/rejected so we never relitigate dead ends.
 
+## Milestone — `motion-v1` (2026-06-16)
+
+Aesthetic/motion pass (Phases 3–4). Added vanilla JS (`assets/js/main.js`, no
+deps) for progressive enhancement:
+- **Sticky nav** — transparent over the hero, gains a blurred backdrop after
+  ~48px scroll (so "Get started" follows you down without covering the sky).
+- **Scroll-reveal** — section headers, cards, steps, tells, FAQ, About blocks
+  fade/translate in on enter (IntersectionObserver), staggered across rows.
+- **Twilight icon swap** — service-card line-icons crossfade to desert-night
+  glyphs on hover (constellation / satellite-spark / crescent moon).
+- **Cursor "moonlight" spotlight** — radial glow tracks the pointer across
+  service + work cards (hover-capable pointers only; off on touch).
+- **Ambient drift** — `.ambient` layer of soft glowing orbs + star-dust behind
+  the dark sections (sits above the page gradient, below content via
+  `main{z-index:1}`). Tuned brighter + faster after review (orbs ~.15–.20
+  opacity, 130–150px wandering paths, 16–23s).
+- **Count-up stats** — credibility numbers (10, 1,000) tick up on scroll.
+- **Line-draw** — the How-it-works connector scaleX-draws as steps reveal.
+
+All transform/opacity; everything honors `prefers-reduced-motion` and degrades
+without JS (reveal targets only hide once `.js` is set; counters keep their HTML
+value). Orbs drop on ≤620px.
+
 ## Milestone — `layout-v1` (2026-06-16)
 
 Full one-page site built out below the hero (Phase 2 of the full-page plan).

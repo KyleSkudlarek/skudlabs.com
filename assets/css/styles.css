@@ -152,8 +152,17 @@ a { color: inherit; }
 /* ---- Header / nav -------------------------------------------------------- */
 
 .site-header {
-  position: relative;
-  z-index: 2;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  transition: background-color .3s ease, backdrop-filter .3s ease, box-shadow .3s ease;
+}
+/* transparent over the hero's open sky; gains a blurred backdrop once scrolled */
+.site-header.scrolled {
+  background: rgba(10, 18, 24, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 var(--line);
 }
 
 .nav {
@@ -434,8 +443,67 @@ a { color: inherit; }
 .section .statement { max-width: 24ch; }
 .section .statement-support { margin-bottom: var(--space-7); max-width: 56ch; }
 
-/* nav-jump landing offset */
-:where(#services, #work, #about, #book) { scroll-margin-top: 1.5rem; }
+/* nav-jump landing offset (clears the sticky header) */
+:where(#services, #work, #about, #book) { scroll-margin-top: 6rem; }
+
+/* ---- Scroll-reveal (Phase 4 motion) -------------------------------------- */
+/* Only hide targets when JS is present AND motion is welcome — so no-JS and
+   reduced-motion users always see fully rendered content. */
+@media (prefers-reduced-motion: no-preference) {
+  .js :is(
+    .section > .eyebrow,
+    .section > .statement,
+    .section > .statement-support,
+    .section > .problem-close,
+    .cred-item,
+    .tell,
+    .card,
+    .step,
+    .work-card,
+    .chips,
+    .callout,
+    .about-photo,
+    .about-copy,
+    .faq-item,
+    .cta-band-inner > *
+  ) {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .6s ease, transform .6s cubic-bezier(.2,.6,.2,1);
+  }
+  .js :is(
+    .section > .eyebrow,
+    .section > .statement,
+    .section > .statement-support,
+    .section > .problem-close,
+    .cred-item,
+    .tell,
+    .card,
+    .step,
+    .work-card,
+    .chips,
+    .callout,
+    .about-photo,
+    .about-copy,
+    .faq-item,
+    .cta-band-inner > *
+  ).in {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* gentle stagger for items revealed together in a row/list */
+  .js .card-grid > *:nth-child(2),
+  .js .tells > *:nth-child(2),
+  .js .steps > *:nth-child(2),
+  .js .cred-inner > *:nth-child(2) { transition-delay: .08s; }
+  .js .card-grid > *:nth-child(3),
+  .js .tells > *:nth-child(3),
+  .js .steps > *:nth-child(3),
+  .js .cred-inner > *:nth-child(3) { transition-delay: .16s; }
+  .js .tells > *:nth-child(4),
+  .js .steps > *:nth-child(4) { transition-delay: .24s; }
+}
 
 /* ---- Credibility strip --------------------------------------------------- */
 .cred-band {
@@ -732,6 +800,119 @@ a { color: inherit; }
 .footer-links a { text-decoration: none; color: var(--muted); font-size: 0.95rem; }
 .footer-links a:hover { color: var(--fg); }
 .footer-fine { margin: 0; width: 100%; color: var(--faint); font-size: 0.85rem; }
+
+/* =========================================================================
+   AESTHETIC FLOURISHES (Phase 4) — desert-night microinteractions + ambient
+   ========================================================================= */
+
+/* content sits above the ambient layer; header already at z-20 */
+main, .site-footer { position: relative; z-index: 1; }
+
+/* ---- Ambient drift (glowing orbs + star-dust) ---------------------------- */
+.ambient {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(46px);
+  will-change: transform;
+}
+.orb-1 {
+  width: 380px; height: 380px; left: 4%; top: 24%;
+  background: radial-gradient(circle, var(--olivine), transparent 70%);
+  opacity: .20; animation: drift1 19s ease-in-out infinite;
+}
+.orb-2 {
+  width: 300px; height: 300px; right: 6%; top: 54%;
+  background: radial-gradient(circle, var(--navajo-white), transparent 70%);
+  opacity: .15; animation: drift2 23s ease-in-out infinite;
+}
+.orb-3 {
+  width: 260px; height: 260px; left: 40%; bottom: 4%;
+  background: radial-gradient(circle, var(--olivine), transparent 70%);
+  opacity: .16; animation: drift3 16s ease-in-out infinite;
+}
+.dust {
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(2px 2px at 12% 30%, rgba(250,251,252,.95), transparent),
+    radial-gradient(2px 2px at 76% 20%, rgba(254,221,170,.9), transparent),
+    radial-gradient(1.7px 1.7px at 50% 62%, rgba(250,251,252,.8), transparent),
+    radial-gradient(1.8px 1.8px at 88% 72%, rgba(250,251,252,.75), transparent),
+    radial-gradient(1.7px 1.7px at 28% 82%, rgba(254,221,170,.75), transparent),
+    radial-gradient(1.9px 1.9px at 64% 46%, rgba(250,251,252,.85), transparent),
+    radial-gradient(1.6px 1.6px at 18% 55%, rgba(250,251,252,.6), transparent),
+    radial-gradient(1.6px 1.6px at 92% 38%, rgba(254,221,170,.6), transparent);
+  opacity: .9;
+  animation: dustDrift 40s ease-in-out infinite;
+}
+/* wandering paths — larger travel so the drift actually reads */
+@keyframes drift1 {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(130px, -60px); }
+  50%  { transform: translate(70px, -150px); }
+  75%  { transform: translate(-80px, -70px); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes drift2 {
+  0%   { transform: translate(0, 0); }
+  30%  { transform: translate(-150px, 60px); }
+  60%  { transform: translate(-60px, 150px); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes drift3 {
+  0%   { transform: translate(0, 0); }
+  33%  { transform: translate(120px, -50px); }
+  66%  { transform: translate(-90px, -110px); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes dustDrift { 0%,100% { transform: translate(0, 0); } 50% { transform: translate(18px, -90px); } }
+
+/* ---- Twilight icon swap (service cards) ---------------------------------- */
+.card-ic { position: relative; }
+.card-ic svg {
+  position: absolute; inset: 0; margin: auto;
+  transition: opacity .35s ease, transform .5s cubic-bezier(.2,.7,.2,1);
+}
+.card-ic .ic-night { opacity: 0; transform: scale(.55) rotate(-25deg); }
+.card:hover .ic-day { opacity: 0; transform: scale(.55) rotate(25deg); }
+.card:hover .ic-night { opacity: 1; transform: none; }
+
+/* ---- Cursor "moonlight" spotlight on cards (hover-capable only) ----------- */
+.card, .work-card { position: relative; overflow: hidden; }
+.card > *, .work-card > * { position: relative; z-index: 1; }
+@media (hover: hover) and (pointer: fine) {
+  .card::after, .work-card::after {
+    content: "";
+    position: absolute; inset: 0; z-index: 0;
+    border-radius: inherit;
+    background: radial-gradient(240px circle at var(--mx, 50%) var(--my, 50%),
+                rgba(160,179,137,.16), transparent 60%);
+    opacity: 0; transition: opacity .3s ease;
+    pointer-events: none;
+  }
+  .card:hover::after, .work-card:hover::after { opacity: 1; }
+}
+
+/* ---- "How it works" connector line-draw ---------------------------------- */
+@media (prefers-reduced-motion: no-preference) {
+  .step:not(:last-child)::before { transform: scaleX(0); transform-origin: left; transition: transform .7s ease .15s; }
+  .step.in:not(:last-child)::before { transform: scaleX(1); }
+}
+
+/* calm the ambient layer on small screens */
+@media (max-width: 620px) {
+  .orb { display: none; }
+  .dust { opacity: .3; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .orb, .dust { animation: none; }
+}
 
 /* ---- Responsive ---------------------------------------------------------- */
 

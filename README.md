@@ -30,9 +30,9 @@ reference/  resume/      research material (Oak Harbor scrape, résumé)
 
 ## Status
 
-- **Full one-page site built.** Latest: **`layout-v1`** — all sections live (hero, credibility strip, problem, services, how it works, recent work, who it's for, about, FAQ, final CTA, footer) on the desert-night theme, one-page scroll with nav jumps. Copy locked at `copy-fullpage`; hero at `hero-v7`.
-- **Still to come:** Phase 3 (per-section style/art polish), Phase 4 (scroll-reveal motion), Phase 5 (wire the `#book` contact/booking destination). Recent-work cards use **mock testimonials** — replace with real ones.
-- Rollback points: one git tag per approved layer (`layer-1-approved` … `layer-6-approved`), `hero-v1` … `hero-v7`, `copy-fullpage`, `layout-v1`. Restore any with `git checkout <tag>`.
+- **Full one-page site built + motion pass done.** Latest: **`motion-v1`** — all sections live on the desert-night theme with scroll-reveal, sticky nav, hover icon-swap + cursor spotlight, ambient drifting orbs/dust, count-up stats, and a line-draw connector. Earlier: `layout-v1` (structure), `copy-fullpage` (copy), `hero-v7` (hero).
+- **Still to come:** Phase 5 — wire the `#book` contact/booking destination (the real conversion dependency). Recent-work cards use **mock testimonials** — replace with real ones. Optional: hidden comet easter egg (logo click).
+- Rollback points: one git tag per approved layer (`layer-1-approved` … `layer-6-approved`), `hero-v1` … `hero-v7`, `copy-fullpage`, `layout-v1`, `motion-v1`. Restore any with `git checkout <tag>`.
 
 ## Replaying the build (e.g., with Fable 5)
 
