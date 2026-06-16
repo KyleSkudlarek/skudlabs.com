@@ -3,6 +3,23 @@
 Running log of the fidelity-layer build. Tracks what's approved, decisions made,
 and directions tried/rejected so we never relitigate dead ends.
 
+## Milestone — `layout-v1` (2026-06-16)
+
+Full one-page site built out below the hero (Phase 2 of the full-page plan).
+Added nine sections on the locked desert-night theme: credibility strip, the
+problem (four tells), services (3 cards), how it works (4 numbered steps with a
+connector line), recent work (3 mock testimonial cards — replace with real),
+who it's for (industry chips + HIPAA callout), about (headshot + bio + stats),
+FAQ (native `<details>` accordion), final CTA band (glow), and footer. One-page
+scroll: nav links jump to `#services`/`#work`/`#about`; smooth scroll on.
+Background descends from the hero sky to near-black "black sand" at the footer.
+Clean inline line-icons + card hover-lift; bespoke art and scroll-reveal motion
+deferred to later phases. Copy locked separately at `copy-fullpage`.
+
+Phase plan (see also full-page map in `content.md`):
+Phase 1 Words (`copy-fullpage`) → **Phase 2 Structure (`layout-v1`)** →
+Phase 3 Style + art per section → Phase 4 Motion + polish → Phase 5 Contact/booking.
+
 ## Milestone — `hero-v7` (2026-06-14)
 
 Headline pivoted from a category label to **outcome-led**, so the hero converts
