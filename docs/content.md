@@ -21,16 +21,17 @@ what → how → proof → who → who-builds-it → objections → act).
 | 2 | **Hero** | `#top` | hook + book — *done (`hero-v7`)* |
 | 3 | **Credibility strip** | — | instant legitimacy (Fortune-500 yrs · healthcare AI · Austin) |
 | 4 | **The problem** | — | self-diagnosis via the four "tells" |
-| 5 | **Services** | `#services` | what I build — 3 cards |
+| 5 | **Services** | `#services` | what I build — 4 cards (incl. AI chatbots) |
 | 6 | **How it works** | — | de-risk the process for a non-technical owner |
-| 7 | **Recent work** | `#work` | social proof — 3 client cards + testimonials |
-| 8 | **Who it's for** | — | self-identify by industry + HIPAA line |
-| 9 | **About Kyle** | `#about` | trust — direct-with-the-engineer + photo |
-| 10 | **FAQ** | — | kill objections (cost, time, no tech staff, data) |
-| 11 | **Final CTA band** | `#book` | repeat the call + risk reversal |
-| 12 | **Footer** | — | wordmark, contact, sky continuity |
+| 7 | **Plans & pricing** | `#pricing` | websites priced (Oak Harbor style) · automation quote-based |
+| 8 | **Recent work** | `#work` | social proof — 3 client cards + testimonials |
+| 9 | **Who it's for** | — | self-identify by industry + HIPAA line |
+| 10 | **About Kyle** | `#about` | trust — direct-with-the-engineer + photo |
+| 11 | **FAQ** | — | kill objections (cost, time, no tech staff, data, hosting) |
+| 12 | **Final CTA band** | `#book` | repeat the call + risk reversal |
+| 13 | **Footer** | — | wordmark, contact, sky continuity |
 
-Nav links: **Services · Work · About** (+ Home → `#top`). "Get started" → `#book`.
+Nav links: **Services · Pricing · Work · About** (+ Home → `#top`). "Get started" → `#book`.
 
 ---
 
@@ -83,14 +84,17 @@ Three short stat-style items:
 
 - **Eyebrow:** WHAT I BUILD
 - **Headline:** Put the busywork on autopilot.
-- **Support:** Three ways I take repetitive work off your plate — pick one, or combine them.
-- **Cards (3):**
+- **Support:** Six ways I take repetitive work off your plate — pick one, or combine them.
+- **Cards (6 — renders as a 3×2 grid, à la Oak Harbor's post-hero feature grid):**
 
 | Card | Title | Copy | Icon idea |
 |------|-------|------|-----------|
 | 1 | **AI Automation** | Documents, data entry, routing, follow-ups — handled by software that runs on its own. Turn faxes, PDFs, and emails into clean, organized data without anyone retyping it. | hexagon / spark (reuse hero motif) |
-| 2 | **Custom Software & Integrations** | Tools built around how you actually work — and the connections that make your existing apps finally talk to each other. | interlocking blocks / plug |
-| 3 | **Websites That Work** | Fast, modern sites that bring in customers and plug into the rest of your operation — not just an online brochure. | browser window / cursor |
+| 2 | **AI Chatbots & Assistants** | A smart assistant on your website or phone line that answers customers 24/7, books appointments, and handles the common questions — trained on your business, so it deflects the repetitive asks before they ever reach you. | speech bubble + dots / sparkle |
+| 3 | **Document Processing** | Faxes, PDFs, forms, and scans turned into clean, structured data — read, sorted, and filed by AI. The same kind of pipeline I run in production on thousands of healthcare documents a day. | document + sparkle |
+| 4 | **Custom Software** | Tools built around how you actually work — internal apps and dashboards that replace the spreadsheet juggling and do exactly what your business needs. | code brackets / gear |
+| 5 | **Integrations & Data Sync** | Make the apps you already pay for finally talk to each other — so a booking, an invoice, or a record only gets entered once and shows up everywhere it should. | link / connected nodes |
+| 6 | **Websites That Work** | Fast, modern sites that bring in customers and plug into the rest of your operation — not just an online brochure. | browser window / cursor |
 
 Each card: icon, title, 1–2 lines, subtle hover lift. (No per-card CTA — the page
 has one CTA: Get started.)
@@ -114,7 +118,65 @@ has one CTA: Get started.)
 
 ---
 
-## 7. Recent work (DRAFT — MOCK DATA, replace with real)
+## 7. Plans & pricing (DRAFT)
+
+Blend of two competitor models: **Oak Harbor** (websites shown with real,
+packaged numbers) + **quote-based agencies** (automation shown as structure,
+no figures). Websites are a known quantity → price up front; automation/AI is
+bespoke → quoted after a call.
+
+- **Eyebrow:** PLANS & PRICING
+- **Headline:** Packaged where it can be, quoted where it should be.
+- **Support:** A website is a known quantity, so it's priced up front. Automation
+  and custom software are built around your business, so those are quoted after a
+  quick call — fixed price, never an hourly meter.
+
+**Track 1 — Websites & web apps** (3 priced tiles, Oak Harbor style)
+*Sub:* A fast, modern site built and launched for a flat fee — then kept current for a
+low monthly. Bigger, custom builds scale up from there.
+
+| Tile | Price | Includes |
+|------|-------|----------|
+| **Starter site** | **$2,500** one-time | Up to ~5 pages · custom mobile-fast design · SEO & Google Business basics · contact/booking form · launched live |
+| **Business site** *(most popular)* | **$5,000** one-time | Everything in Starter · more pages & custom sections · copywriting help · lead capture, reviews & analytics · priority edits |
+| **Web app & automation** | **$8,000+** / project | Everything in Business · online store/payments/booking · customer logins & dashboards · AI chatbot, doc processing or automation built in · custom integrations |
+
+*Care plan (footnote under tiles):* every site includes an optional **$100/mo** care
+plan — hosting, SSL, monitoring, unlimited small edits.
+
+*The $8k+ tile is deliberate:* it bridges into the custom/automation work and anchors
+the ballpark so tire-kickers expecting a $100 plug-in self-filter. (See
+`skudlabs-STRATEGY.md` → site positioning: websites = front door, software = expansion.)
+
+*Portfolio (Oak Harbor style):* "A few recent sites" — 3 examples, each a laptop-framed
+preview of the site's hero + business name + category. Currently **CSS mockups**
+(Cactus Coffee Co. · Ravel & Stone Law · Mesa Family Dental) — swap the `.site-preview`
+blocks for real screenshots/`<img>` once live sites exist. **Note:** `.portfolio-item`
+must be listed in BOTH the reveal `:is()` set (styles.css) AND the observer `sel`
+(main.js) or it stays `opacity:0` and never appears.
+
+**Track 2 — How the bigger builds work** (structure + ballpark, no separate price list)
+*Sub:* automation/AI/software (the $8k+ tier) quoted to fit — real engineering, several
+thousand dollars, not a $100 plug-in. Audit → fixed-price build → optional monthly
+keep-it-running plan. Hosting/ownership: I host & run it (one bill) or build inside the
+client's own cloud account (larger/regulated). See STRATEGY → delivery models.
+
+**Track 2 — Automation, AI & custom software** (quote-based, structure only)
+*Sub:* Every workflow is different, so these are quoted — not sold off a price
+list. How an engagement is structured:
+1. **Start with a low-cost audit** — map where time leaks, see the payback first.
+2. **Fixed-price build, agreed up front** — one number, no hourly meter.
+3. **Optional monthly plan to keep it running** — hosting, monitoring, changes
+   as needs shift, so the system keeps working without you thinking about it.
+
+*Note (hosting/ownership):* Most clients let me host & run everything → one
+predictable monthly bill, nothing to manage. Larger/regulated clients can own
+their own cloud account; I build & operate inside theirs instead. (See
+`skudlabs-STRATEGY.md` → delivery models for the business rationale.)
+
+---
+
+## 8. Recent work (DRAFT — MOCK DATA, replace with real)
 
 - **Eyebrow:** RECENT WORK
 - **Headline:** A few businesses I've helped.
@@ -141,6 +203,8 @@ has one CTA: Get started.)
 > — [First name L.], [Title, Business]
 > *Link:* [View project →] (optional)
 
+> *(Keep Recent Work to **3 cards** so it renders as one clean row.)*
+
 ### What makes a testimonial that converts (for when you collect the real ones)
 The strongest reviews aren't "great to work with" — they're **specific + before/after
 + attributed**. Aim for this shape:
@@ -159,7 +223,7 @@ The strongest reviews aren't "great to work with" — they're **specific + befor
 
 ---
 
-## 8. Who it's for (DRAFT)
+## 9. Who it's for (DRAFT)
 
 - **Eyebrow:** WHO IT'S FOR
 - **Headline:** Built for established, paper-heavy businesses.
@@ -174,15 +238,17 @@ The strongest reviews aren't "great to work with" — they're **specific + befor
 
 ---
 
-## 9. About Kyle (DRAFT)
+## 10. About Kyle (DRAFT)
 
 - **Eyebrow:** ABOUT
 - **Headline:** You work directly with the engineer who builds it.
 - **Body:**
   I'm Kyle — a senior software engineer with 10+ years building production systems
   for Fortune 500 companies, and a CS degree from UVA. I built and run an AI system
-  that processes thousands of healthcare documents a day, so I know how to make
-  automation that's reliable enough to trust with the work that matters.
+  that processes thousands of healthcare documents a day, and before that I helped
+  build a Fortune 500 fintech's customer-facing AI assistant — the kind of chatbot
+  millions of people use for support. So I know how to make automation that's
+  reliable enough to trust with the work that matters.
 
   Skud Labs is how I bring that same engineering to small businesses — without the
   agency overhead, account managers, or handoffs. You talk to the person who writes
@@ -193,7 +259,7 @@ The strongest reviews aren't "great to work with" — they're **specific + befor
 
 ---
 
-## 10. FAQ (DRAFT)
+## 11. FAQ (DRAFT)
 
 - **Eyebrow:** QUESTIONS
 - **Headline:** What owners usually ask.
@@ -205,8 +271,11 @@ The strongest reviews aren't "great to work with" — they're **specific + befor
    everything in plain language.
 
 2. **How much does this cost?**
-   Every project is fixed-price, agreed before any work starts — no hourly meter, no
-   surprise bills. Most engagements begin with a low-cost audit so you see the
+   Websites are packaged and priced up front — a flat build fee from $2,500, plus an
+   optional $100/mo care plan for hosting and edits. Automation, chatbots, and custom
+   software are quoted after a quick call, since every workflow is different. Either
+   way it's a fixed price agreed before any work starts — no hourly meter, no surprise
+   bills. Bigger automation projects usually begin with a low-cost audit so you see the
    expected payback before you commit to a build.
 
 3. **How long does it take?**
@@ -217,21 +286,33 @@ The strongest reviews aren't "great to work with" — they're **specific + befor
    Yes. I build to the same security standards I use for Fortune 500 work, and I'm
    happy to sign an NDA — or a HIPAA BAA if you handle protected health information.
 
-5. **What if something breaks later?**
-   I hand projects off working, and you can add an optional maintenance plan if you
-   want ongoing support. No lock-in either way.
+5. **What if something breaks later? Do you offer ongoing support?**
+   Yes — two ways, both optional and month-to-month with no lock-in. *Websites* come
+   with a $100/mo care plan (hosting, security, updates, unlimited small edits — you
+   email, I handle it). *Automations and software* can include a monthly plan that
+   keeps the system running, monitored, and adjusted as your needs change. I hand
+   everything off working either way; the plan just means you never have to think
+   about keeping it that way.
 
-6. **Do you only do AI?**
-   No — I also build custom software, integrations between the tools you already use,
-   and websites. AI automation is just where the biggest time savings usually hide.
+6. **Where does everything run — and who owns it?**
+   For most small businesses I host and run everything for you, so it's one
+   predictable monthly bill with nothing to manage. If you'd rather own your own cloud
+   account — common for larger or regulated businesses that want their data in-house —
+   I'll build and operate it inside your account instead, and your infrastructure bill
+   stays separate from my fee. Your call.
 
-7. **Do we have to meet in person?**
+7. **Do you only do AI?**
+   No — I also build custom software, AI chatbots, integrations between the tools you
+   already use, and websites. AI automation is just where the biggest time savings
+   usually hide.
+
+8. **Do we have to meet in person?**
    No. I'm Austin-based but work remotely and on your schedule — chat, email, or a
    quick call, whatever you prefer.
 
 ---
 
-## 11. Final CTA band (DRAFT)
+## 12. Final CTA band (DRAFT)
 
 - **Headline:** Let's find the busywork worth automating.
 - **Support:** A free 20-minute call — I'll point out what's automatable whether or
@@ -241,7 +322,7 @@ The strongest reviews aren't "great to work with" — they're **specific + befor
 
 ---
 
-## 12. Footer (DRAFT)
+## 13. Footer (DRAFT)
 
 - **Wordmark** (logo) + tagline: *AI · Automation · Software · Web*
 - **Nav repeat:** Home · Services · Work · About

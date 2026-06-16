@@ -86,6 +86,7 @@
     ".card",
     ".step",
     ".work-card",
+    ".portfolio-item",
     ".chips",
     ".callout",
     ".about-photo",

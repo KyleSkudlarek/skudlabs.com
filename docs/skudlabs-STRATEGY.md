@@ -47,11 +47,93 @@ day job. Goal: convert that time into consistent supplemental income.
 | Maintenance retainer | $200–500/mo per automation |
 | Fractional engineer | from $1,500/mo |
 | C2C contract | $120–150/hr agency, $140–175 direct |
-| Custom software / websites | fixed proposal |
+| **Website build** | flat $2,500–5,000 one-time |
+| **Website care plan** | $100/mo (hosting + unlimited small edits + updates) |
+| Custom software / chatbots | fixed proposal (quoted, not list-priced) |
 
 Rules: charge from day one (never free; founding rate ≠ free). Fixed-price >
 hourly — fixed price IS the async freedom. Watch the guilt-underpricing
 reflex.
+
+## Products / use cases (where the money actually is)
+
+Don't over-fixate on document processing — it's the *legible* example, not
+the most profitable. Willingness to pay is highest when the work is tied to
+**revenue** or directly **replaces a salary** (budget approves fast); pure
+cost-savers get haggled. Priority offers, roughly by ease-of-sale:
+
+- **Revenue-tied automation for local service businesses** (the honey pot —
+  cash-rich, unsophisticated buyers, obvious ROI): missed-call text-back,
+  AI voice/receptionist, review-generation, quoting/booking. A missed lead is
+  a $500–10k job — easy to justify thousands.
+- **AI chatbots & assistants** (Intuit Assist / RAG credibility is the wedge):
+  customer-facing site/phone assistants, support deflection, Q&A grounded in
+  the client's own docs. Replaces headcount / captures after-hours demand.
+- **"Glue" / integrations** — connecting CRM ↔ QuickBooks ↔ spreadsheets.
+  Unglamorous, bespoke, endless, can't-DIY. Pure full-stack, AI optional.
+- **Custom internal tools** replacing manual spreadsheet workflows (HolderForge
+  energy). Deepest, stickiest relationships.
+- **Static websites** — the OkoDaBoss / Oak Harbor model: flat build + $100/mo
+  care plan. Low per-client value but **stacks** into near-passive MRR. Keep as
+  a real, dedicated offer + entry point. Proven (~$300k/yr solo operator).
+- **Document processing** — real but a *capability*, not the headline. Best
+  bundled into integrations ("ingest the PDFs AND push to accounting").
+
+## Site positioning & offer hierarchy (decided 2026-06-16)
+
+Stop leading the *site* with AI automation — it's a hard, abstract, consultative
+sale with no built-in recurring line. Lead with **websites** and treat everything
+else as expansion. The model is a **hands-on, scaled-down Oak Harbor**: a website
+studio whose senior-engineer owner can also build the software a small business
+eventually needs.
+
+**The ladder (land-and-expand):**
+1. **Front door — Websites.** The easy yes: a known purchase, fixed scope, fast to
+   produce, carries recurring (care plan) by default. Gets you *into the
+   relationship*. ~$2.5–5k + $100/mo.
+2. **Expansion — Software / automation / AI chatbots / integrations.** Once you're
+   the trusted "software person," discover and quote the expensive problems. The
+   real moat (most web freelancers can't build production systems; agencies cost
+   5×). $3–8k+.
+3. **Engine — Recurring.** Care plans + automation/maintenance retainers. The part
+   that compounds, replaces the W2 over time, and survives getting fired.
+
+**Positioning rule:** *generalist in capability, specific in offer.* Sell named
+products (a website, a chatbot, an automation), never "I can build anything" —
+concrete offers convert; "smart generalist builder" does not. The product ladder
+gives breadth without the mushy pitch. Mental tagline: **your small business's
+outsourced software person.**
+
+**Site implication (drives the copy work):** websites get **lead/equal billing**
+with automation. The hero currently reads automation-first ("Custom software & AI
+that handle your busywork") → rework to lead with websites + the ladder so cold
+traffic searching "small business website" sees itself. Keep the 3×2 services grid
+(AI automation · chatbots & assistants · document processing · custom software /
+integrations & data sync · websites that work · …) and the Plans & Pricing split
+(websites priced up front, software/automation quoted).
+
+## Delivery / hosting & billing models (don't co-mingle)
+
+Pick one **per client** by size; never put a client's workload under your
+entity with their card on it (liability + tax + exit mess).
+
+- **Model 1 — your infra, flat fee.** Everything in *your* account
+  (Cloudflare/Vercel for sites, your AWS for heavier). Client sees only your
+  invoice; you pay the pennies and keep the margin (a static site costs ~$1/mo
+  to run vs a $100/mo fee — the margin *is* the business). Use for: static
+  sites + light automation. Fat margins, full control.
+- **Model 2 — their account, you operate.** Client creates the cloud account,
+  their card on it; you get a delegated IAM role to build/run. Infra bill goes
+  straight to them; you charge a separate management fee. Use for: corporate
+  clients, heavy/variable compute, or compliance (their data stays in-house —
+  pairs with the HIPAA BAA story). Zero infra liability for you.
+
+Architecture default = **serverless + managed services** (static front end +
+Lambda/Workers + managed DB + Twilio/Resend glue + Claude API). Near-zero ops
+= the async-freedom property. **AI API cost is variable**: for small biz,
+bundle it into the monthly fee *with usage caps*; for corporate, pass through
+on their key. The recurring fee must attach to *a system that runs on its own*,
+not to *your availability* — that's the line between passive MRR and 12 bosses.
 
 ## Target clients
 
