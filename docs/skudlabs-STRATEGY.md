@@ -203,3 +203,52 @@ Yr 1: $20–40k, lumpy (most quit here). Yr 2: $60–100k+ → total crosses $25
 Fractional CTO / productized SaaS are year-2+ emergent moves, not starting
 points. Day-90 checkpoint: decide between job offer / promotion leverage /
 doubling down, using real data.
+
+## Revenue projection — how the recurring stacks (added 2026-06-16)
+
+Illustrative, built from the current site pricing. Assumes you do the sales reps
+consistently + ~12% annual churn on recurring. **The point:** each year's clients
+stack *on top of* prior years' recurring (minus churn), so MRR compounds even at a
+flat sales pace. Recurring is what turns lumpy project income into a safe floor.
+
+**Moderate scenario — new clients signed each year:**
+
+| | Yr 1 (warm network) | Yr 2 (referrals) | Yr 3 (established) |
+|---|---|---|---|
+| Subscription sites ($175/mo) | 4 | 6 | 6 |
+| Lump-sum sites ($4k + $25–100/mo) | 5 | 7 | 8 |
+| AI chatbots ($3.5k + ~$99/mo) | 1 | 3 | 4 |
+| Web app / automation ($8k+ + retainer) | 1 | 2 | 3 |
+| **New one-time revenue** | ~$31k | ~$59k | ~$88k |
+| **New MRR added** | ~$1,450/mo | ~$2,500/mo | ~$3,500/mo |
+
+**Recurring run-rate (stacks year over year):**
+
+| End of | MRR | Annualized |
+|---|---|---|
+| Year 1 | ~$1,450/mo | **~$17k/yr** |
+| Year 2 | ~$3,800/mo | **~$46k/yr** |
+| Year 3 | ~$6,900/mo | **~$82k/yr** |
+
+**Total income (one-time + recurring collected):** Yr 1 ~$40k · Yr 2 ~$90k ·
+Yr 3 ~$150k (with ~$82k/yr of that now recurring).
+
+**Lower bound (half the sales pace):** recurring run-rate ~$9k → ~$22k → ~$42k/yr;
+total ~$22k → ~$48k → ~$80k. Even this lands near goal by Yr 3 — recurring + the
+W2 cushion is that forgiving.
+
+**Read it as:** by ~Yr 3, ~$80k/yr shows up *before you sell anything new* — the
+plumber-floor. Not even shown here: price increases ($4k→$5k→$6k as the portfolio
+grows) and expansion revenue (a website client later buys a chatbot/automation at
+~zero acquisition cost). The only real failure mode is **zero sales reps for
+months**, not "fewer clients."
+
+**Freedom caveat (if scaling to a team / agency):** the freedom comes from *how*
+it's built, not the title "CEO." Design async-native — deliverable-based
+contractors, written status over meetings, SOPs so production doesn't route
+through your calendar. Do that and "agency owner" + freedom aren't in tension;
+skip it and the freedom leaks the moment you hire. Two valid games:
+**(1) lifestyle business** (solo + heavy AI leverage + recurring, ceiling
+~$150–250k, max freedom) vs **(2) growth agency** (team, higher ceiling
+$500k–$1M+, but you become a manager). Default to (1) and push AI leverage +
+recurring as far as it goes before hiring humans.
