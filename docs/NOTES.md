@@ -11,6 +11,13 @@ sizing: website (laptop + phone) big again top-left (86%), assistant smaller
 tucked to the right beneath it (50%), document/automation tile beneath on the
 left (72%). Uses more vertical space; laptop is legible again.
 
+Follow-up tweak: roomier gaps (clamp 1.5–2.5rem) + a gentler low-amplitude
+`heroFloat` (±6px, varied durations) so the pieces don't crowd as they drift;
+assistant tile trimmed to 44%. Also spelled out credentials everywhere: "a B.S.
+in Computer Science from the University of Virginia" (was "CS degree from UVA"),
+and the About stat chips now read "B.S. Computer Science · University of
+Virginia" (clearer + more impressive than "UVA CS").
+
 ## Milestone — `todo-batch-v3` (2026-06-16)
 
 Hero + pricing refinements:

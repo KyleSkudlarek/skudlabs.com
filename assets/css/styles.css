@@ -797,14 +797,16 @@ a { color: inherit; }
   margin-inline: auto;
   display: flex;
   flex-direction: column;
-  gap: clamp(0.8rem, 2.2vw, 1.4rem);
+  gap: clamp(1.5rem, 4vw, 2.5rem);
 }
 .hero-piece { will-change: transform; }
 /* staggered cascade: big website top-left, smaller assistant tucked to the right
-   beneath it, then the document/automation tile beneath on the left */
-.piece-web  { width: 86%; align-self: flex-start; z-index: 3; animation: float 7s ease-in-out infinite; }
-.piece-chat { width: 50%; align-self: flex-end;   z-index: 2; animation: float 7s ease-in-out -2.3s infinite; }
-.piece-auto { width: 72%; align-self: flex-start; z-index: 1; animation: float 7s ease-in-out -4.6s infinite; }
+   beneath it, then the document/automation tile beneath on the left. Gentle,
+   low-amplitude float + roomy gaps so the pieces never crowd as they drift. */
+.piece-web  { width: 86%; align-self: flex-start; z-index: 3; animation: heroFloat 7s ease-in-out infinite; }
+.piece-chat { width: 44%; align-self: flex-end;   z-index: 2; animation: heroFloat 8s ease-in-out -2.6s infinite; }
+.piece-auto { width: 72%; align-self: flex-start; z-index: 1; animation: heroFloat 7.5s ease-in-out -4.6s infinite; }
+@keyframes heroFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
 
 /* websites: laptop + a small phone side by side (responsive preview) */
 .web-devices { display: flex; align-items: flex-end; gap: 0.6rem; }
