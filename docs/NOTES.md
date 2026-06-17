@@ -3,6 +3,22 @@
 Running log of the fidelity-layer build. Tracks what's approved, decisions made,
 and directions tried/rejected so we never relitigate dead ends.
 
+## Milestone — `websites-led-v1` (2026-06-16)
+
+Strategic repositioning: **websites lead, software/AI/automation = expansion,
+recurring = engine** (captured in `skudlabs-STRATEGY.md` → "Site positioning &
+offer hierarchy"). Built on top of a parallel session's work (6-card services
+grid, priced website tiers, CSS laptop portfolio, expanded FAQ/About). Changes:
+- **Hero** rewritten websites-first ("Websites that bring in customers — and the
+  software that runs your business"); secondary CTA → "See plans & pricing".
+- **Hero visual** swapped from the automation illustration to a three-tile
+  cluster — website (laptop + phone), AI chatbot window, and the automation flow
+  (the old `automation-flow.svg` reused as the third tile, not deleted).
+- **Services** grid now leads with Websites; header → "From your website to the
+  software behind it."
+- **Final CTA** + title/meta broadened beyond automation.
+Prior automation-first hero preserved at `hero-v7`.
+
 ## Milestone — `motion-v1` (2026-06-16)
 
 Aesthetic/motion pass (Phases 3–4). Added vanilla JS (`assets/js/main.js`, no

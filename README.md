@@ -30,7 +30,7 @@ reference/  resume/      research material (Oak Harbor scrape, résumé)
 
 ## Status
 
-- **Full one-page site built + motion pass done.** Latest: **`motion-v1`** — all sections live on the desert-night theme with scroll-reveal, sticky nav, hover icon-swap + cursor spotlight, ambient drifting orbs/dust, count-up stats, and a line-draw connector. Earlier: `layout-v1` (structure), `copy-fullpage` (copy), `hero-v7` (hero).
+- **Repositioned websites-first.** Latest: **`websites-led-v1`** — hero leads with websites (+ a 3-tile website/chatbot/automation visual), services grid leads with Websites, added priced website tiers + CSS portfolio, expanded FAQ/About. Strategy in `docs/skudlabs-STRATEGY.md` → "Site positioning & offer hierarchy". Earlier: `motion-v1` (motion), `layout-v1` (structure), `copy-fullpage` (copy), `hero-v7` (automation-first hero).
 - **Still to come:** Phase 5 — wire the `#book` contact/booking destination (the real conversion dependency). Recent-work cards use **mock testimonials** — replace with real ones. Optional: hidden comet easter egg (logo click).
 - Rollback points: one git tag per approved layer (`layer-1-approved` … `layer-6-approved`), `hero-v1` … `hero-v7`, `copy-fullpage`, `layout-v1`, `motion-v1`. Restore any with `git checkout <tag>`.
 

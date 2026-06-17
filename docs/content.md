@@ -3,8 +3,9 @@
 > Approved copy and page structure. Later layers (HTML/CSS) pull their words
 > from here. Edit copy here first, then propagate to markup.
 >
-> **Status:** Hero — **APPROVED** (`hero-v7`). Full-page copy — **DRAFT** (Phase 1,
-> awaiting review). Sections below the hero are not yet built.
+> **Status:** Full one-page site built (`motion-v1`). **Repositioned websites-first**
+> (2026-06-16) per `skudlabs-STRATEGY.md` → "Site positioning & offer hierarchy":
+> websites = front door, software/AI/automation = expansion, recurring = engine.
 
 ---
 
@@ -35,13 +36,17 @@ Nav links: **Services · Pricing · Work · About** (+ Home → `#top`). "Get st
 
 ---
 
-## 2. Hero copy (outcome-led) — LOCKED (`hero-v7`)
+## 2. Hero copy (websites-led)
+
+Repositioned to lead with websites (the front door / easy yes) while signaling the
+software-and-automation expansion ladder. Prior automation-first hero preserved at
+tag `hero-v7`.
 
 - **Eyebrow:** Small business · Austin, TX
-- **Headline:** Custom software & AI that handle your busywork for you.
-- **Subhead:** Bespoke, enterprise-grade AI-driven automation, software, and websites for small businesses. Fortune 500 reliability, minus the agency overhead — you work directly with the engineer who builds it.
+- **Headline:** Websites that bring in customers — and the software that runs your business.
+- **Subhead:** Skud Labs builds fast, modern websites for small businesses in Austin — then the automation, AI, and custom software to take the busywork off your plate when you're ready. Fortune 500 engineering, minus the agency overhead — you work directly with the engineer who builds it.
 - **Primary CTA:** Get started  (→ flexible contact: chatbot, form, quote, or contact info)
-- **Secondary link:** About me →
+- **Secondary link:** See plans & pricing → (`#pricing`)
 - **Reassurance:** Chat, email, or a quick call — no pitch, no obligation
 
 ### Nav
@@ -83,9 +88,9 @@ Three short stat-style items:
 ## 5. Services (DRAFT)
 
 - **Eyebrow:** WHAT I BUILD
-- **Headline:** Put the busywork on autopilot.
-- **Support:** Six ways I take repetitive work off your plate — pick one, or combine them.
-- **Cards (6 — renders as a 3×2 grid, à la Oak Harbor's post-hero feature grid):**
+- **Headline:** From your website to the software behind it.
+- **Support:** Start with a website, then add automation, AI, and custom software when you're ready — pick one, or combine them.
+- **Cards (6 — renders as a 3×2 grid; Websites first to lead with the front door):**
 
 | Card | Title | Copy | Icon idea |
 |------|-------|------|-----------|
@@ -314,9 +319,8 @@ The strongest reviews aren't "great to work with" — they're **specific + befor
 
 ## 12. Final CTA band (DRAFT)
 
-- **Headline:** Let's find the busywork worth automating.
-- **Support:** A free 20-minute call — I'll point out what's automatable whether or
-  not we work together.
+- **Headline:** Let's build something that works for your business.
+- **Support:** A free 20-minute call — whether you need a website, automation, or both. No pitch, no obligation.
 - **Button:** Get started
 - **Reassurance:** Chat, email, or a quick call · no pitch, no obligation
 
