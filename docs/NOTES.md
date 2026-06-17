@@ -18,6 +18,12 @@ in Computer Science from the University of Virginia" (was "CS degree from UVA"),
 and the About stat chips now read "B.S. Computer Science · University of
 Virginia" (clearer + more impressive than "UVA CS").
 
+Hero arrangement (final-ish): the 3-tall cascade ate too much vertical space and
+loomed over the copy, so → **laptop + assistant side by side on top, the
+document/automation tile (70%) centered beneath**. Dropped the mobile phone from
+the website tile (just the laptop now) so it isn't squished at half-width. Two
+rows instead of three = more compact.
+
 ## Milestone — `todo-batch-v3` (2026-06-16)
 
 Hero + pricing refinements:
