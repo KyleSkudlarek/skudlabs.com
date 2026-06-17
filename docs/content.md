@@ -29,10 +29,15 @@ what → how → proof → who → who-builds-it → objections → act).
 | 9 | **Who it's for** | — | self-identify by industry + HIPAA line |
 | 10 | **About Kyle** | `#about` | trust — direct-with-the-engineer + photo |
 | 11 | **FAQ** | — | kill objections (cost, time, no tech staff, data, hosting) |
-| 12 | **Final CTA band** | `#book` | repeat the call + risk reversal |
-| 13 | **Footer** | — | wordmark, contact, sky continuity |
+| 12 | **Final CTA band** | — | repeat the call + risk reversal |
+| 13 | **Contact** | `#contact` | email · call/text · form · live-chatbot placeholder |
+| 14 | **Footer** | — | wordmark, contact, sky continuity |
 
-Nav links: **Services · Pricing · Work · About** (+ Home → `#top`). "Get started" → `#book`.
+Plus a floating **chat launcher** (fixed bottom-right) — placeholder for the live
+AI assistant, "coming soon."
+
+Nav links: **Services · Pricing · Work · About · Contact** (+ Home → `#top`).
+"Get started" → `#contact`.
 
 ---
 
@@ -42,12 +47,16 @@ Repositioned to lead with websites (the front door / easy yes) while signaling t
 software-and-automation expansion ladder. Prior automation-first hero preserved at
 tag `hero-v7`.
 
-- **Eyebrow:** Small business · Austin, TX
-- **Headline:** Websites that bring in customers — and the software that runs your business.
-- **Subhead:** Skud Labs builds fast, modern websites for small businesses in Austin — then the automation, AI, and custom software to take the busywork off your plate when you're ready. Fortune 500 engineering, minus the agency overhead — you work directly with the engineer who builds it.
-- **Primary CTA:** Get started  (→ flexible contact: chatbot, form, quote, or contact info)
+Simplified to an Oak-Harbor-style category lockup reflecting the full scope; no
+"upsell" framing in the pitch, no em-dashes (per feedback).
+
+- **Eyebrow:** Austin, TX
+- **Headline:** *(category line)* Small business — *(main)* custom web design, AI & software
+- **Subhead:** I build custom, hand-coded websites, AI automations, and software for small businesses. With 10+ years of Fortune 500 experience building websites, chatbots, and AI automation platforms, I work with you directly, start to finish.
+- **Primary CTA:** Get started  (→ `#contact`)
 - **Secondary link:** See plans & pricing → (`#pricing`)
 - **Reassurance:** Chat, email, or a quick call — no pitch, no obligation
+- **Hero visual:** three comparable tiles — website (laptop + phone), AI chatbot window, automation flow (`automation-flow.svg`).
 
 ### Nav
 - **Wordmark:** Skud Labs (logo SVG; `alt="Skud Labs"`)
@@ -63,8 +72,12 @@ every competitor uses (I can't show client logos, so I show pedigree instead).
 Three short stat-style items:
 
 - **10+ years** building software for Fortune 500 companies
-- **Thousands of documents a day** processed by AI I built and run in production
+- **Hand-coded** — fast, custom sites with no page builders or templates
 - **Austin, TX** — you work with me directly, not a sales team
+
+(The "thousands of docs/day" stat was dropped here — felt off next to the website
+focus; it still lives in the Document Processing service card. Replaced with a
+website-quality signal.)
 
 > Alt one-liner version (if the 3-stat row feels heavy):
 > *"A decade of Fortune 500 engineering — now building for small businesses in Austin."*
@@ -136,9 +149,18 @@ bespoke → quoted after a call.
   and custom software are built around your business, so those are quoted after a
   quick call — fixed price, never an hourly meter.
 
-**Track 1 — Websites & web apps** (3 priced tiles, Oak Harbor style)
+**Track 1 — Websites & web apps**
 *Sub:* A fast, modern site built and launched for a flat fee — then kept current for a
 low monthly. Bigger, custom builds scale up from there.
+
+**Featured: Website subscription — $175/mo, $0 down** (the Oak Harbor model — they
+say most small-business owners choose it, and it's where a lot of their revenue
+comes from). A complete custom site with nothing upfront: design, build, hosting,
+and unlimited edits rolled into one monthly fee. Shown as a highlighted banner
+*above* the buy-outright tiles ("…or own it outright with a one-time build:").
+Recurring revenue = the engine (see `skudlabs-STRATEGY.md`).
+
+*Buy-outright tiles (3, Oak Harbor style):*
 
 | Tile | Price | Includes |
 |------|-------|----------|
@@ -323,6 +345,20 @@ The strongest reviews aren't "great to work with" — they're **specific + befor
 - **Support:** A free 20-minute call — whether you need a website, automation, or both. No pitch, no obligation.
 - **Button:** Get started
 - **Reassurance:** Chat, email, or a quick call · no pitch, no obligation
+
+---
+
+## 12b. Contact (DRAFT) — the `#contact` destination for "Get started"
+
+- **Eyebrow:** GET IN TOUCH
+- **Headline:** Tell me what you need, and I'll tell you how I'd build it.
+- **Support:** Email, call or text, send the form, or chat with my assistant. Whatever's easiest. I reply fast, with no pitch or obligation.
+- **Methods (3 cards):** Email (`hello@skudlabs.com`) · Call or text (`(512) 555-1234`) · **Chat with my assistant** ("Coming soon" — advertised as: ask the AI assistant for a quick quote or answer, day or night, while you wait for a reply).
+- **Form:** name · email · message + "Send message". **Not wired to a backend yet** — note tells users to email directly; wire to Formspree/Resend later.
+- **Live chatbot:** a fixed floating launcher (bottom-right) opens a small "coming soon" panel. Doubles as a portfolio piece (proof I build chatbots) — replace with the real assistant once built.
+
+> **Placeholders to replace:** real business email + phone, and the form backend.
+> The chatbot is intentionally a styled placeholder until Kyle builds it.
 
 ---
 

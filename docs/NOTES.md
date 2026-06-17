@@ -3,6 +3,28 @@
 Running log of the fidelity-layer build. Tracks what's approved, decisions made,
 and directions tried/rejected so we never relitigate dead ends.
 
+## Milestone — `todo-batch-v1` (2026-06-16)
+
+Worked the `TODO.md` queue in one pass:
+- **Hero rewrite** — Oak-Harbor-style category lockup: "Small business" /
+  "custom web design, AI & software" (`.headline-cat`). No upsell framing, no
+  em-dashes. Eyebrow trimmed to "Austin, TX".
+- **Contact section** (`#contact`) — email, call/text, a chat-with-assistant
+  card, and a form (not backend-wired; note tells users to email). All "Get
+  started"/nav CTAs repointed `#book` → `#contact`; added Contact nav link.
+- **Floating chat launcher** (`.chat-fab` + `.chat-widget`) — placeholder for the
+  live AI assistant ("coming soon"); doubles as proof I build chatbots.
+- **$175/mo no-downpayment plan** — featured banner above the buy-outright website
+  tiers (Oak Harbor model). Demoted the $5k card badge to "Best value".
+- **Credibility strip** — dropped "1,000s of docs/day" → "Hand-coded" website
+  quality signal (kept 10+ yrs + Austin).
+- **Navbar type** — Oswald, uppercase, tracked (was plain system font).
+- **Portfolio** — higher-fidelity previews (faux nav + hero + content cards,
+  themed per business) + more spacing.
+- **Favicon** — `assets/img/favicon.svg`, a cactus-night roundel in the logo style.
+
+Placeholders still to fill: real email/phone, form backend, the real chatbot.
+
 ## Milestone — `websites-led-v1` (2026-06-16)
 
 Strategic repositioning: **websites lead, software/AI/automation = expansion,

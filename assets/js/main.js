@@ -75,6 +75,23 @@
     });
   }
 
+  /* floating chat widget (placeholder for the live AI assistant) */
+  var fab = document.querySelector(".chat-fab");
+  var widget = document.querySelector(".chat-widget");
+  if (fab && widget) {
+    var setChat = function (open) {
+      widget.hidden = !open;
+      fab.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+    fab.addEventListener("click", function () { setChat(widget.hidden); });
+    document.querySelectorAll("[data-chat-open]").forEach(function (b) {
+      b.addEventListener("click", function () { setChat(true); });
+    });
+    document.querySelectorAll("[data-chat-close]").forEach(function (b) {
+      b.addEventListener("click", function () { setChat(false); });
+    });
+  }
+
   /* scroll-reveal — fade/translate elements in as they enter the viewport */
   var sel = [
     ".section > .eyebrow",

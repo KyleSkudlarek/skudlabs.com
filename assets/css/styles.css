@@ -227,7 +227,11 @@ a { color: inherit; }
 .nav-links a {
   text-decoration: none;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 600;
 }
 .nav-links a:hover { color: var(--fg); }
 
@@ -364,6 +368,14 @@ a { color: inherit; }
   font-weight: 600;
   text-transform: uppercase;
   color: var(--fg);
+}
+.headline-cat {
+  display: block;
+  font-size: 0.44em;
+  line-height: 1;
+  letter-spacing: 0.07em;
+  color: var(--olivine);
+  margin-bottom: 0.4rem;
 }
 .subhead {
   margin: 0 0 var(--space-6);
@@ -711,7 +723,8 @@ a { color: inherit; }
 .portfolio {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
-  gap: clamp(1.5rem, 3vw, 2.5rem);
+  gap: clamp(2rem, 4.5vw, 3.5rem);
+  margin-top: var(--space-5);
 }
 .portfolio-name {
   margin: var(--space-4) 0 0.1rem;
@@ -1158,9 +1171,164 @@ main, .site-footer { position: relative; z-index: 1; }
   .orb, .dust { animation: none; }
 }
 
+/* =========================================================================
+   TODO-batch additions: $175 plan banner · hi-fi portfolio · contact · chat
+   ========================================================================= */
+
+/* ---- $175 subscription feature banner (pricing) -------------------------- */
+.plan-feature {
+  position: relative;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: var(--space-5);
+  margin-bottom: clamp(1.25rem, 3vw, 1.75rem);
+  padding: clamp(1.4rem, 3vw, 1.9rem) clamp(1.5rem, 3vw, 2rem);
+  border: 1px solid rgba(160,179,137,0.5);
+  border-radius: 16px;
+  background:
+    radial-gradient(130% 180% at 0% 0%, rgba(160,179,137,0.14), transparent 55%),
+    rgba(160,179,137,0.05);
+  box-shadow: 0 22px 55px -32px rgba(160,179,137,0.6);
+}
+.plan-feature-main { flex: 1 1 340px; min-width: 0; }
+.plan-feature-desc { margin: var(--space-3) 0 0; color: var(--muted); line-height: 1.55; max-width: 56ch; }
+.plan-feature-price { flex: none; text-align: right; }
+.plan-feature-price .price { margin-bottom: 0.2rem; }
+.plan-feature-price .plan-meta { margin: 0; }
+.plan-or {
+  margin: 0 0 var(--space-5);
+  font-family: var(--font-display);
+  text-transform: uppercase; letter-spacing: 0.1em;
+  font-size: 0.8rem; color: var(--faint);
+}
+
+/* ---- Higher-fidelity portfolio site previews ----------------------------- */
+.site-preview.sp-rich { justify-content: flex-start; padding: 0; gap: 0; }
+.spx-nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.45rem 0.7rem; background: rgba(0,0,0,0.22);
+}
+.spx-logo { font-family: var(--font-display); font-weight: 600; font-size: 0.62rem; letter-spacing: 0.02em; }
+.spx-links { display: flex; gap: 0.35rem; }
+.spx-links i { width: 0.85rem; height: 0.26rem; border-radius: 2px; background: rgba(255,255,255,0.55); }
+.spx-hero {
+  flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 0.28rem;
+  padding: 0.6rem 0.8rem;
+}
+.spx-eyebrow { font-size: 0.42rem; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.85; }
+.spx-h { font-family: var(--font-display); font-weight: 600; font-size: 0.98rem; line-height: 1.04; }
+.spx-sub { font-size: 0.46rem; line-height: 1.3; opacity: 0.82; max-width: 86%; }
+.spx-btn {
+  align-self: flex-start; margin-top: 0.2rem;
+  font-size: 0.46rem; font-weight: 700; letter-spacing: 0.02em;
+  padding: 0.3rem 0.6rem; border-radius: 6px; background: #fff; color: #1b2632;
+}
+.spx-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.35rem; padding: 0 0.8rem 0.7rem; }
+.spx-card { height: 0.95rem; border-radius: 4px; background: rgba(255,255,255,0.18); }
+.sp-cafe   .spx-btn { background: #f1d6ac; color: #3a2a1a; }
+.sp-law    .spx-btn { background: #cfe0f5; color: #15263b; }
+.sp-clinic .spx-btn { background: #cdeee4; color: #143a31; }
+
+/* ---- Contact section ----------------------------------------------------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+.contact-methods { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-4); }
+.contact-method {
+  display: flex; align-items: flex-start; gap: var(--space-4);
+  width: 100%; text-align: left;
+  padding: var(--space-5);
+  border: 1px solid var(--line); border-radius: 14px;
+  background: var(--surface);
+  color: inherit; text-decoration: none; font: inherit; cursor: pointer;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.contact-method:hover {
+  transform: translateY(-3px);
+  border-color: rgba(160,179,137,0.45);
+  box-shadow: 0 16px 36px -24px rgba(160,179,137,0.55);
+}
+.contact-ic {
+  flex: none; display: inline-flex; align-items: center; justify-content: center;
+  width: 42px; height: 42px; border-radius: 10px;
+  background: rgba(160,179,137,0.1); border: 1px solid var(--line);
+}
+.contact-ic svg { width: 22px; height: 22px; fill: none; stroke: var(--accent); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.contact-method-text { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; }
+.contact-method-label {
+  font-family: var(--font-display); font-weight: 600;
+  letter-spacing: 0.04em; color: var(--fg); font-size: 1.05rem;
+  display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+}
+.contact-method-val { color: var(--muted); line-height: 1.4; font-size: 0.95rem; }
+.tag-soon {
+  font-family: var(--font-sans);
+  font-size: 0.6rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.15rem 0.45rem; border-radius: 999px;
+  background: rgba(254,221,170,0.16); color: var(--navajo-white);
+  border: 1px solid rgba(254,221,170,0.35);
+}
+.contact-form { display: flex; flex-direction: column; gap: var(--space-4); }
+.field { display: flex; flex-direction: column; gap: 0.4rem; }
+.field label { font-family: var(--font-display); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.field input, .field textarea {
+  font: inherit; color: var(--fg);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--line); border-radius: 10px;
+  padding: 0.7rem 0.85rem; width: 100%;
+}
+.field textarea { resize: vertical; min-height: 5.5rem; }
+.field input::placeholder, .field textarea::placeholder { color: rgba(174,180,184,0.5); }
+.field input:focus-visible, .field textarea:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-color: transparent; }
+.contact-form .btn-cta { align-self: flex-start; }
+.form-note { margin: 0; font-size: 0.85rem; color: var(--faint); }
+.form-note a { color: var(--olivine); }
+
+/* ---- Floating chat launcher (placeholder for the live AI assistant) ------ */
+.chat-fab {
+  position: fixed; right: clamp(1rem, 3vw, 2rem); bottom: clamp(1rem, 3vw, 2rem);
+  z-index: 40;
+  width: 56px; height: 56px; border-radius: 999px;
+  border: none; cursor: pointer;
+  background: var(--accent); color: #14201a;
+  box-shadow: 0 0 0 1px rgba(160,179,137,0.5), 0 14px 34px -10px rgba(160,179,137,0.7);
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: transform .2s ease;
+}
+.chat-fab:hover { transform: translateY(-2px); }
+.chat-fab svg { width: 26px; height: 26px; fill: none; stroke: #14201a; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.chat-widget {
+  position: fixed; right: clamp(1rem, 3vw, 2rem);
+  bottom: calc(clamp(1rem, 3vw, 2rem) + 70px);
+  z-index: 41;
+  width: min(330px, calc(100vw - 2rem));
+  border-radius: 16px; overflow: hidden;
+  background: linear-gradient(180deg, #122230, #0e1a23);
+  border: 1px solid var(--line);
+  box-shadow: 0 30px 60px -24px rgba(0,0,0,0.8);
+}
+.chat-widget[hidden] { display: none; }
+.chat-widget-top {
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.8rem 0.9rem;
+  border-bottom: 1px solid var(--line);
+  background: rgba(160,179,137,0.06);
+  font-family: var(--font-display); font-weight: 600; letter-spacing: 0.03em; color: var(--fg);
+}
+.chat-widget-title { flex: 1; }
+.chat-widget-close { background: none; border: none; color: var(--muted); font-size: 1.3rem; line-height: 1; cursor: pointer; padding: 0 0.2rem; }
+.chat-widget-body { display: flex; flex-direction: column; gap: 0.5rem; padding: 0.9rem; }
+.chat-widget-body .chat { font-size: 0.85rem; max-width: 92%; padding: 0.55rem 0.7rem; }
+.chat-widget-body .chat a { color: var(--olivine); }
+.chat-widget-foot { padding: 0 0.9rem 0.9rem; }
+.chat-widget-cta { width: 100%; text-align: center; font-size: 0.9rem; padding: 0.7rem; }
+
 /* ---- Responsive ---------------------------------------------------------- */
 
 @media (max-width: 860px) {
+  .contact-grid { grid-template-columns: minmax(0, 1fr); }
   .hero-grid {
     grid-template-columns: minmax(0, 1fr);
     gap: clamp(2rem, 8vw, 3rem);

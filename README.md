@@ -30,7 +30,8 @@ reference/  resume/      research material (Oak Harbor scrape, résumé)
 
 ## Status
 
-- **Repositioned websites-first.** Latest: **`websites-led-v1`** — hero leads with websites (+ a 3-tile website/chatbot/automation visual), services grid leads with Websites, added priced website tiers + CSS portfolio, expanded FAQ/About. Strategy in `docs/skudlabs-STRATEGY.md` → "Site positioning & offer hierarchy". Earlier: `motion-v1` (motion), `layout-v1` (structure), `copy-fullpage` (copy), `hero-v7` (automation-first hero).
+- **Websites-first + contact/polish pass.** Latest: **`todo-batch-v1`** — added a Contact section (email/phone/form + live-chatbot placeholder) and floating chat launcher, a $175/mo no-downpayment plan, higher-fidelity portfolio previews, stylized nav, a simplified Oak-Harbor-style hero, and a favicon. Earlier: `websites-led-v1` (reposition), `motion-v1`, `layout-v1`, `copy-fullpage`, `hero-v7`.
+- **Placeholders to fill** (see `TODO.md`): real contact email/phone, form backend, the real chatbot, real client work.
 - **Still to come:** Phase 5 — wire the `#book` contact/booking destination (the real conversion dependency). Recent-work cards use **mock testimonials** — replace with real ones. Optional: hidden comet easter egg (logo click).
 - Rollback points: one git tag per approved layer (`layer-1-approved` … `layer-6-approved`), `hero-v1` … `hero-v7`, `copy-fullpage`, `layout-v1`, `motion-v1`. Restore any with `git checkout <tag>`.
 

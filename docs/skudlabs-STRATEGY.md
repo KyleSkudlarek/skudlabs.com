@@ -49,6 +49,7 @@ day job. Goal: convert that time into consistent supplemental income.
 | C2C contract | $120–150/hr agency, $140–175 direct |
 | **Website build** | flat $2,500–5,000 one-time |
 | **Website care plan** | $100/mo (hosting + unlimited small edits + updates) |
+| **Website subscription (no money down)** | $175/mo, $0 down — build + hosting + edits bundled; the Oak Harbor model, where a lot of their revenue comes from and most small-biz owners reportedly opt in. Featured above the buy-outright tiers on the site. |
 | Custom software / chatbots | fixed proposal (quoted, not list-priced) |
 
 Rules: charge from day one (never free; founding rate ≠ free). Fixed-price >
