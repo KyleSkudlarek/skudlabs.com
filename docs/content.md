@@ -153,20 +153,25 @@ bespoke → quoted after a call.
 *Sub:* A fast, modern site built and launched for a flat fee — then kept current for a
 low monthly. Bigger, custom builds scale up from there.
 
-**Featured: Website subscription — $175/mo, $0 down** (the Oak Harbor model — they
-say most small-business owners choose it, and it's where a lot of their revenue
-comes from). A complete custom site with nothing upfront: design, build, hosting,
-and unlimited edits rolled into one monthly fee. Shown as a highlighted banner
-*above* the buy-outright tiles ("…or own it outright with a one-time build:").
-Recurring revenue = the engine (see `skudlabs-STRATEGY.md`).
+**Featured: Website subscription — $175/mo, $0 down, 12-month minimum** (the Oak
+Harbor model — they say most small-business owners choose it, and it's where a lot
+of their revenue comes from). A complete custom site with nothing upfront, with
+benefit bullets like Oak Harbor's: custom hand-coded design (no templates) ·
+hosting, domain & SSL · unlimited edits & updates · 24/7 monitoring & support ·
+SEO & Google Business. Labeled **Most popular**; shown as a highlighted banner
+*above* the buy-outright tiles. No "cancel anytime" language (it's a 12-month
+plan). Recurring revenue = the engine (see `skudlabs-STRATEGY.md`).
 
 *Buy-outright tiles (3, Oak Harbor style):*
 
 | Tile | Price | Includes |
 |------|-------|----------|
-| **Starter site** | **$2,500** one-time | Up to ~5 pages · custom mobile-fast design · SEO & Google Business basics · contact/booking form · launched live |
-| **Business site** *(most popular)* | **$5,000** one-time | Everything in Starter · more pages & custom sections · copywriting help · lead capture, reviews & analytics · priority edits |
-| **Web app & automation** | **$8,000+** / project | Everything in Business · online store/payments/booking · customer logins & dashboards · AI chatbot, doc processing or automation built in · custom integrations |
+| **Starter site** | **$4,000** one-time | Up to ~5 pages · custom mobile-fast design · SEO & Google Business basics · contact/booking form · launched live |
+| **Business site** *(best value)* | **$6,500** one-time | Everything in Starter · more pages & custom sections · copywriting help · lead capture, reviews & analytics · priority edits |
+| **Web app & automation** | **$9,000+** / project | Everything in Business · online store/payments/booking · customer logins & dashboards · AI chatbot, doc processing or automation built in · custom integrations |
+
+(Lump-sum builds now start at **$4,000** per feedback; "most popular" moved to the
+$175/mo subscription below, so the $6.5k card carries "best value.")
 
 *Care plan (footnote under tiles):* every site includes an optional **$100/mo** care
 plan — hosting, SSL, monitoring, unlimited small edits.

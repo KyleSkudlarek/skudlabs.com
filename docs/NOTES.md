@@ -3,6 +3,24 @@
 Running log of the fidelity-layer build. Tracks what's approved, decisions made,
 and directions tried/rejected so we never relitigate dead ends.
 
+## Milestone — `todo-batch-v2` (2026-06-16)
+
+Second TODO round (refinements of v1):
+- **Hero → triangle.** The 3 tiles were a vertical zig-zag (read awkward); now
+  chatbot + automation sit side by side on top with the wider website tile
+  centered below (`.cluster-top`).
+- **Pricing.** Lump-sum builds now start at **$4,000** ($4k/$6.5k/$9k+ tiers);
+  the **$175/mo** subscription is the "Most popular" option, now **12-month
+  minimum** (dropped "cancel anytime") with Oak-Harbor-style benefit bullets
+  (hand-coded design, hosting/domain/SSL, unlimited edits, 24/7 support, SEO).
+- **Favicon.** Replaced the hand-drawn one (mirrored moon) with the **actual
+  emblem lifted from `skud-labs-logo.svg`** (viewBox cropped to 90×90) so it
+  matches the navbar exactly.
+
+(Also confirmed: the earlier "mobile overflow" was a false alarm — Chrome
+headless clamps to a 500px min window, so 390px screenshots were just cropped.
+Verified true 390px via an iframe wrapper; layout is clean.)
+
 ## Milestone — `todo-batch-v1` (2026-06-16)
 
 Worked the `TODO.md` queue in one pass:

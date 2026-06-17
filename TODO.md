@@ -1,5 +1,17 @@
 # TODO
 
-- I like the hero section images but they look weird stacked the way they are currently can you make it more like a triangle shap so two of them are like on same line and then on ebelow that or just change up how they render so its more aesthetically pleasing like their positiong.
-- folow oak harbro web design pricing model and sections. i want to do the $175 monthly and inciate its most popular, but have the custom lump sum website start at $4k, and have same recurring as oak harbrors. and idnicate the monthly top popular 175 one is 12 month miinumu contract, remove the language about cancel anytime. but add the bullet points to that indiicating its a good dea similar to oak harbors where they talk about hosting being covered, 24/7 support, custom designs, etc. in addition tot he details you hhave already. makea judgement call of what to keep or haow to do d it
-- the favicon icon looks like the mirror iamge of navbars ciruclar image with the moon on the wrong side, can y ou just make am favicon from the navbar image and just use that? or did it get flipped for another reaosn? is it the same image or differnt its too tiny for me to tell
+## Done — 2026-06-16
+**Batch 1 (`todo-batch-v1`):** contact section (email/phone/form + chatbot placeholder) + floating chat launcher · stylized nav · credibility stat swap · $175 plan · hi-fi portfolio · Oak-Harbor-style hero · favicon.
+
+**Batch 2 (`todo-batch-v2`):**
+- [x] Hero visual → triangle layout (chatbot + automation on top, wider website below)
+- [x] Pricing → lump-sum starts at **$4,000**; **$175/mo** marked most popular with **12-month minimum** (no "cancel anytime") + benefit bullets (hosting, 24/7 support, custom design, edits, SEO)
+- [x] Favicon → now the **actual navbar emblem** (moon on the correct/left side), lifted from `skud-labs-logo.svg`
+
+## Still needs your real values (placeholders are live on the site)
+- [ ] Contact **email** — placeholder `hello@skudlabs.com`
+- [ ] Contact **phone** — placeholder `(512) 555-1234`
+- [ ] Contact **form backend** — not wired (Formspree/Resend/Netlify Forms)
+- [ ] **Live chatbot** — styled "coming soon" placeholder until you build it
+- [ ] **Real client testimonials/work** — Recent Work cards still use mock data
+- [ ] Confirm final **prices** ($4k / $6.5k / $9k+ tiers, $175/mo, $100/mo care)
