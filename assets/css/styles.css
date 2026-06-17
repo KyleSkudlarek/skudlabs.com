@@ -1066,15 +1066,51 @@ a { color: inherit; }
 .footer-inner {
   max-width: var(--maxw);
   margin-inline: auto;
-  padding: clamp(2.5rem, 5vw, 4rem) var(--gutter);
-  display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: var(--space-5);
+  padding: clamp(2.5rem, 5vw, 4rem) var(--gutter) clamp(1.5rem, 3vw, 2rem);
+  display: flex; align-items: flex-start; justify-content: space-between;
+  flex-wrap: wrap; gap: var(--space-6);
 }
+.footer-brand { display: flex; flex-direction: column; gap: var(--space-4); max-width: 30rem; }
 .footer-mark img { display: block; height: 56px; width: auto; }
-.footer-links { list-style: none; display: flex; gap: var(--space-6); margin: 0; padding: 0; }
-.footer-links a { text-decoration: none; color: var(--muted); font-size: 0.95rem; }
+.footer-tag {
+  margin: 0; color: var(--muted);
+  font-family: var(--font-display);
+  font-size: 1.05rem; letter-spacing: 0.01em; line-height: 1.4;
+}
+.footer-contact { display: flex; flex-direction: column; align-items: flex-end; text-align: right; gap: 0.3rem; }
+.footer-contact-h {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--olivine);
+}
+.footer-contact a, .footer-loc {
+  font-family: var(--font-display);
+  font-size: 1.15rem; letter-spacing: 0.01em;
+  color: var(--fg); text-decoration: none;
+}
+.footer-contact a:hover { color: var(--olivine); }
+.footer-loc { color: var(--muted); }
+.footer-bottom {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  /* extra bottom room so the floating chat button doesn't cover the copyright */
+  padding: clamp(1.1rem, 2.5vw, 1.6rem) var(--gutter) clamp(3rem, 6vw, 4.5rem);
+  border-top: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: var(--space-4);
+}
+.footer-links { list-style: none; display: flex; flex-wrap: wrap; gap: var(--space-5); margin: 0; padding: 0; }
+.footer-links a {
+  text-decoration: none; color: var(--muted);
+  font-family: var(--font-display); text-transform: uppercase;
+  letter-spacing: 0.12em; font-size: 0.8rem; font-weight: 600;
+}
 .footer-links a:hover { color: var(--fg); }
-.footer-fine { margin: 0; width: 100%; color: var(--faint); font-size: 0.85rem; }
+.footer-fine {
+  margin: 0; color: var(--faint);
+  font-family: var(--font-display); letter-spacing: 0.08em; font-size: 0.8rem;
+}
 
 /* =========================================================================
    AESTHETIC FLOURISHES (Phase 4) — desert-night microinteractions + ambient
@@ -1382,6 +1418,7 @@ main, .site-footer { position: relative; z-index: 1; }
   .tells { grid-template-columns: minmax(0,1fr); }
   .steps { grid-template-columns: minmax(0,1fr); }
   .footer-inner { justify-content: flex-start; }
+  .footer-contact { align-items: flex-start; text-align: left; }
 
   /* smaller logo on phones so the neon clears the CTA */
   .wordmark { margin-left: -6px; }

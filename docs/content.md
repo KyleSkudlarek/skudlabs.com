@@ -369,12 +369,22 @@ The strongest reviews aren't "great to work with" — they're **specific + befor
 
 ---
 
-## 13. Footer (DRAFT)
+## 13. Footer
 
-- **Wordmark** (logo) + tagline: *AI · Automation · Software · Web*
-- **Nav repeat:** Home · Services · Work · About
-- **Contact:** email · (optional phone) · "Austin, TX"
-- **Fine print:** © Skud Labs [year]. Built in Austin.
+Two rows, all in the display font (Oswald), sized up from the old generic look:
+- **Top row:** left = logo + tagline ("Custom web design, AI & software for small
+  business."); **right = contact block** (Oak-Harbor style) — "Get in touch" +
+  `hello@skudlabs.com` + `(512) 555-1234` + Austin, TX. (Email/phone are
+  placeholders — swap for real.)
+- **Bottom bar:** nav links (Home · Services · Pricing · Work · About · Contact)
+  + © line. Extra bottom padding so the floating chat button never covers it.
+
+### Contact-form prefill (UX flair)
+Each pricing "Get started" carries a `data-prefill`; clicking it seeds the
+contact form's "What can I help with?" with e.g. *"Hi! I'm interested in the
+$4,000 lump-sum website."* and focuses the **Name** field (so the visitor just
+adds name + email and sends). No click → the textarea keeps its normal
+placeholder. Removes the "why three buttons?" friction without leaving #contact.
 
 ---
 

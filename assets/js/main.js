@@ -92,6 +92,19 @@
     });
   }
 
+  /* pricing "Get started" → prefill the contact message + focus the Name field
+     (the #contact anchor handles the scroll; we just seed the form). */
+  var cfMsg = document.getElementById("cf-msg");
+  var cfName = document.getElementById("cf-name");
+  document.querySelectorAll("[data-prefill]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      if (cfMsg) cfMsg.value = btn.getAttribute("data-prefill");
+      if (cfName) {
+        setTimeout(function () { cfName.focus({ preventScroll: true }); }, 350);
+      }
+    });
+  });
+
   /* scroll-reveal — fade/translate elements in as they enter the viewport */
   var sel = [
     ".section > .eyebrow",
