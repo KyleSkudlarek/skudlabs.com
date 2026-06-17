@@ -3,6 +3,14 @@
 Running log of the fidelity-layer build. Tracks what's approved, decisions made,
 and directions tried/rejected so we never relitigate dead ends.
 
+## Milestone — `hero-cascade-v1` (2026-06-16)
+
+Reverted the hero from the 2-up triangle (which squished the laptop into a
+half-width cell) back to a **staggered vertical cascade**, but with intentional
+sizing: website (laptop + phone) big again top-left (86%), assistant smaller
+tucked to the right beneath it (50%), document/automation tile beneath on the
+left (72%). Uses more vertical space; laptop is legible again.
+
 ## Milestone — `todo-batch-v3` (2026-06-16)
 
 Hero + pricing refinements:
