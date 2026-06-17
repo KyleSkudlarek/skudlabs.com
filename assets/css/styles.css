@@ -809,7 +809,9 @@ a { color: inherit; }
   gap: clamp(0.75rem, 2.5vw, 1.4rem);
   width: 100%;
 }
-.cluster-top .hero-piece { flex: 1 1 0; min-width: 0; }
+.cluster-top .hero-piece { min-width: 0; }
+.cluster-top .piece-web  { flex: 1.8 1 0; }  /* lead with the website — big laptop */
+.cluster-top .piece-chat { flex: 1 1 0; }    /* assistant a bit smaller */
 .piece-web  { z-index: 3; animation: heroFloat 7s ease-in-out infinite; }
 .piece-chat { z-index: 2; animation: heroFloat 8s ease-in-out -2.6s infinite; }
 .piece-auto { width: 70%; z-index: 1; animation: heroFloat 7.5s ease-in-out -4.6s infinite; }
