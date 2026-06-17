@@ -7,7 +7,7 @@
 
 ## Professional Summary
 
-Software engineer with 10+ years of experience spanning full-stack development, data engineering, cloud infrastructure, and applied AI/ML. Proven track record building and productionizing large-scale distributed systems on AWS, with deep expertise in Python, microservices, and agentic AI architectures. Most recently lead engineer of a high-throughput healthcare AI platform at Cigna processing 10,000+ cases daily. Previously a core developer of Intuit's agentic AI platform and customer-facing chatbot (Intuit Assist). Comfortable working at the intersection of data science and software engineering — productionizing models, designing APIs, and driving cross-team technical alignment from prototype to production.
+Software engineer with 10+ years of experience spanning full-stack development, data engineering, cloud infrastructure, and applied AI/ML. Proven track record building and productionizing large-scale distributed systems on AWS, with deep expertise in Python and microservices, and hands-on experience building agentic AI and RAG applications. Most recently lead engineer of a high-throughput healthcare AI platform at Cigna processing 10,000+ cases daily. Previously a core developer of Intuit's agentic AI platform and customer-facing chatbot (Intuit Assist). Comfortable working at the intersection of data science and software engineering — taking data-science prototypes to production, designing APIs, and driving cross-team technical alignment from prototype to production.
 
 ---
 
@@ -15,7 +15,7 @@ Software engineer with 10+ years of experience spanning full-stack development, 
 
 **Languages:** Python, Java, JavaScript, HTML, CSS
 **Cloud (AWS):** Lambda, SQS, S3, ECS, API Gateway, Step Functions, CloudFormation, Elastic Beanstalk, ElasticMapReduce (EMR/Hadoop), Redshift, Glue, DynamoDB
-**AI/ML:** LLMs, Retrieval Augmented Generation (RAG), Prompt Engineering, Agentic AI, OCR pipelines, Machine Learning model deployment, Databricks
+**AI/ML:** LLM Application Development, LLMs, Retrieval Augmented Generation (RAG), Prompt Engineering, Agentic AI, OCR pipeline integration, Machine Learning model deployment, Databricks
 **Data Engineering:** Apache Kafka, Hadoop, AWS Redshift, DynamoDB (NoSQL), Data Lake architecture, ETL/ELT pipeline design
 **Containers & Orchestration:** Docker, Kubernetes
 **CI/CD & Monitoring:** Jenkins, ArgoCD, Splunk, Wavefront, PagerDuty
@@ -125,6 +125,7 @@ Software engineer with 10+ years of experience spanning full-stack development, 
 ## Certifications
 
 - **AWS Certified Solutions Architect – Associate** | Amazon Web Services | Issued Sep 2019 *(Credential ID: PLK3SBT2GJEQ1R9J)*
+- **AWS Certified Machine Learning Engineer – Associate** *(in progress)* | Amazon Web Services
 
 ---
 
