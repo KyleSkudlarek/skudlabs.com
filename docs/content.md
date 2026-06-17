@@ -56,7 +56,7 @@ Simplified to an Oak-Harbor-style category lockup reflecting the full scope; no
 - **Primary CTA:** Get started  (→ `#contact`)
 - **Secondary link:** See plans & pricing → (`#pricing`)
 - **Reassurance:** Chat, email, or a quick call — no pitch, no obligation
-- **Hero visual:** three comparable tiles — website (laptop + phone), AI chatbot window, automation flow (`automation-flow.svg`).
+- **Hero visual:** three tiles in a triangle — website (laptop + phone) top-left, AI chatbot window top-right, and the larger document-processing/automation flow (`automation-flow.svg`) spanning the bottom. Each floats out of phase.
 
 ### Nav
 - **Wordmark:** Skud Labs (logo SVG; `alt="Skud Labs"`)
@@ -166,12 +166,14 @@ plan). Recurring revenue = the engine (see `skudlabs-STRATEGY.md`).
 
 | Tile | Price | Includes |
 |------|-------|----------|
-| **Starter site** | **$4,000** one-time | Up to ~5 pages · custom mobile-fast design · SEO & Google Business basics · contact/booking form · launched live |
-| **Business site** *(best value)* | **$6,500** one-time | Everything in Starter · more pages & custom sections · copywriting help · lead capture, reviews & analytics · priority edits |
-| **Web app & automation** | **$9,000+** / project | Everything in Business · online store/payments/booking · customer logins & dashboards · AI chatbot, doc processing or automation built in · custom integrations |
+| **Lump-sum website** | **$4,000** one-time + **$25/mo** hosting | up to ~5 pages · custom hand-coded mobile-fast design · SEO & Google Business · contact/booking form · hosting, domain & SSL · launched + handoff |
+| **Custom AI chatbot** *(new)* | **$3,500+** setup + from **$99/mo** | trained on your site/docs/FAQs · 24/7 answers · captures leads & quick quotes · books appointments · drops into a new or existing site |
+| **Web app & automation** | **$8,000+** / project | online store/payments/booking · logins & dashboards · document processing & AI automation · custom integrations · built around your workflow |
 
-(Lump-sum builds now start at **$4,000** per feedback; "most popular" moved to the
-$175/mo subscription below, so the $6.5k card carries "best value.")
+(Restructured per feedback to mirror Oak Harbor: dropped the Starter/Business split
+for a single **Lump-sum website** ($4k + $25/mo hosting); added a **Custom AI
+chatbot** card — the new flagship service — to fill the 3-card row; web app back to
+$8k+. The $100/mo care plan stays as an optional edits upgrade on lump-sum sites.)
 
 *Care plan (footnote under tiles):* every site includes an optional **$100/mo** care
 plan — hosting, SSL, monitoring, unlimited small edits.

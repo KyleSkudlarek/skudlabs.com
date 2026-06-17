@@ -30,7 +30,7 @@ reference/  resume/      research material (Oak Harbor scrape, résumé)
 
 ## Status
 
-- **Websites-first + contact/polish pass.** Latest: **`todo-batch-v2`** — hero as a triangle (chatbot + automation over a wider website tile), pricing with $4k+ lump-sum tiers and a "most popular" $175/mo 12-month plan, and a favicon matching the navbar emblem. Earlier: `todo-batch-v1` (contact section, chat launcher, hi-fi portfolio, nav/hero), `websites-led-v1`, `motion-v1`, `layout-v1`, `copy-fullpage`, `hero-v7`.
+- **Websites-first + contact/polish pass.** Latest: **`todo-batch-v3`** — hero retriangled (website + chatbot on top, big document/automation tile bottom), pricing restructured (one $4k lump-sum site + $25/mo hosting, $175/mo most-popular plan, new Custom AI chatbot card, web app $8k+). Earlier: `todo-batch-v2` (triangle hero, emblem favicon), `todo-batch-v1` (contact section, chat launcher, hi-fi portfolio, nav/hero), `websites-led-v1`, `motion-v1`, `layout-v1`, `copy-fullpage`, `hero-v7`.
 - **Placeholders to fill** (see `TODO.md`): real contact email/phone, form backend, the real chatbot, real client work.
 - **Still to come:** Phase 5 — wire the `#book` contact/booking destination (the real conversion dependency). Recent-work cards use **mock testimonials** — replace with real ones. Optional: hidden comet easter egg (logo click).
 - Rollback points: one git tag per approved layer (`layer-1-approved` … `layer-6-approved`), `hero-v1` … `hero-v7`, `copy-fullpage`, `layout-v1`, `motion-v1`. Restore any with `git checkout <tag>`.

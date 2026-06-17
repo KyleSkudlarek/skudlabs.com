@@ -47,8 +47,8 @@ day job. Goal: convert that time into consistent supplemental income.
 | Maintenance retainer | $200–500/mo per automation |
 | Fractional engineer | from $1,500/mo |
 | C2C contract | $120–150/hr agency, $140–175 direct |
-| **Website build** | flat $4,000–6,500+ one-time (entry $4k) |
-| **Website care plan** | $100/mo (hosting + unlimited small edits + updates) |
+| **Website build (lump-sum)** | $4,000 one-time + **$25/mo hosting** (optional $100/mo care plan for hands-off edits) |
+| **Custom AI chatbot** | $3,500+ setup + from $99/mo (hosting + AI usage) — RAG assistant trained on the client's site/docs for 24/7 Q&A, quotes, and lead capture. Flagship AI offering; its own pricing card on the site. |
 | **Website subscription (no money down)** | $175/mo, $0 down, **12-month minimum** — build + hosting + edits + 24/7 support bundled; the Oak Harbor model, where a lot of their revenue comes from and most small-biz owners reportedly opt in. Featured/"most popular" above the buy-outright tiers on the site. |
 | Custom software / chatbots | fixed proposal (quoted, not list-priced) |
 

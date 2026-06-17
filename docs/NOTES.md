@@ -3,6 +3,19 @@
 Running log of the fidelity-layer build. Tracks what's approved, decisions made,
 and directions tried/rejected so we never relitigate dead ends.
 
+## Milestone — `todo-batch-v3` (2026-06-16)
+
+Hero + pricing refinements:
+- **Hero rearranged** — website (laptop+phone) top-left, chatbot top-right, the
+  bigger document-processing/automation tile spanning the bottom; larger gap
+  between the top row and the bottom tile so the floating pieces don't crowd.
+- **Pricing restructured toward Oak Harbor** — dropped the Starter/Business split
+  for one **Lump-sum website** ($4,000 one-time + $25/mo hosting; Oak-Harbor-style
+  inclusions). Web app back to **$8,000+**. Added a third card — **Custom AI
+  chatbot** ($3,500+ setup, from $99/mo) — both to fill the 3-card row and as a
+  flagship small-business service (RAG assistant for quotes / frontline Q&A). The
+  $100/mo care plan is now an optional edits upgrade on lump-sum sites.
+
 ## Milestone — `todo-batch-v2` (2026-06-16)
 
 Second TODO round (refinements of v1):
