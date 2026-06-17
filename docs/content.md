@@ -295,8 +295,8 @@ The strongest reviews aren't "great to work with" — they're **specific + befor
 
 ## 11. FAQ (DRAFT)
 
-- **Eyebrow:** QUESTIONS
-- **Headline:** What owners usually ask.
+- **Eyebrow:** FAQ
+- **Headline:** Questions, answered.
 - **Accordion items:**
 
 1. **I don't have a tech team — can I still work with you?**
