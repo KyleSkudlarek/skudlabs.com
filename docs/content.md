@@ -386,4 +386,7 @@ The strongest reviews aren't "great to work with" — they're **specific + befor
   replaced with real, attributed quotes. Real numbers only.
 - Trust signal in reserve: production AI processing thousands of healthcare
   documents a day (OCR + LLM on AWS) — strongest for medical/dental/legal leads.
-- One page, one CTA: **Get started** (→ `#book`). Don't scatter competing CTAs.
+- Primary CTA is always **Get started** (→ `#contact`). Keep CTA wording consistent.
+  Pricing cards + the $175 banner each carry their own "Get started" button
+  (Oak-Harbor style — reduces friction at the decision point); that's intentional,
+  not "scattering."
