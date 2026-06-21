@@ -1,0 +1,16 @@
+version: 1
+frontend:
+  phases:
+    build:
+      commands:
+        - rm -rf dist
+        - mkdir -p dist
+        - cp index.html dist/
+        - cp -r assets dist/
+        - rm -rf dist/assets/inspiration
+  artifacts:
+    baseDirectory: dist
+    files:
+      - '**/*'
+  cache:
+    paths: []
