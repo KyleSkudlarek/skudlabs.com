@@ -1059,6 +1059,15 @@ a { color: inherit; }
 }
 .cta-band .statement { max-width: none; margin: 0 auto var(--space-5); }
 .cta-band .statement-support { max-width: 46ch; margin: 0 auto; }
+
+/* frame the Calendly inline embed as an intentional panel (not a floating iframe) */
+.calendly-inline-widget {
+  margin-top: var(--space-5);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--surface);
+}
 .cta-row-center { justify-content: center; margin-top: var(--space-6); margin-bottom: var(--space-4); }
 
 /* ---- Footer -------------------------------------------------------------- */

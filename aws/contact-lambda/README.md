@@ -40,6 +40,13 @@ Console → **Lambda** → *Create function* → *Author from scratch*.
 | `MAIL_FROM` | an SES-verified sender, e.g. `hello@skudlabs.com` |
 | `ALLOW_ORIGIN` | `https://skudlabs.com` |
 
+> **Quickest test path (no domain DNS, no sandbox ticket):** in step 1 verify the
+> single address `kjs2wp@gmail.com`, then set **both** `MAIL_TO` and `MAIL_FROM` to
+> `kjs2wp@gmail.com`. SES sandbox lets you email a verified address immediately, so
+> the integration works end-to-end today. (Sending *from* a gmail.com address via
+> SES can land in spam due to Gmail's DMARC — fine for testing. For production,
+> verify the `skudlabs.com` domain and switch `MAIL_FROM` to `hello@skudlabs.com`.)
+
 **Configuration → Permissions →** click the execution role → *Add permissions →
 Create inline policy* → JSON:
 ```json
