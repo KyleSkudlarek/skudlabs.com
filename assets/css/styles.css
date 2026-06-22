@@ -1343,6 +1343,20 @@ main, .site-footer { position: relative; z-index: 1; }
 .form-note { margin: 0; font-size: 0.85rem; color: var(--faint); }
 .form-note a { color: var(--olivine); }
 
+/* honeypot — kept in the DOM for bots, removed from view + a11y tree */
+.hp-field {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* form submit feedback (JS toggles [hidden] + .is-ok / .is-err) */
+.form-status { margin: 0; font-size: 0.9rem; line-height: 1.4; }
+.form-status.is-ok { color: var(--olivine); }
+.form-status.is-err { color: var(--navajo-white); }
+
 /* ---- Floating chat launcher (placeholder for the live AI assistant) ------ */
 .chat-fab {
   position: fixed; right: clamp(1rem, 3vw, 2rem); bottom: clamp(1rem, 3vw, 2rem);

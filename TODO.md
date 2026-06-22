@@ -4,10 +4,15 @@
 The site is now **live on skudlabs.com**. Biggest gap is no working conversion path:
 the form posts nowhere and contact details are fake. In rough priority:
 
-1. **Wire the conversion path (the #1 dependency).** Pick a no-backend form handler
-   (Formspree / Resend / Netlify Forms) and wire the contact form so submissions
-   actually reach an inbox. Add the real **booking link** (Calendly `kjs2wp`) to the
-   `#book`/CTA buttons — booking the call *is* the success metric per the strategy doc.
+1. **Wire the conversion path (the #1 dependency).** ◑ In progress (2026-06-22):
+   - [x] **Calendly inline embed** themed to the dark palette now lives in `#book`;
+     primary CTAs (nav, hero, "Book a call") point there. Booking is LIVE.
+   - [x] Contact form front-end rebuilt: honeypot, validation, AJAX submit,
+     success/error states. Wired to POST JSON to an **AWS Lambda Function URL + SES**
+     (Kyle's chosen handler). Form degrades to an "email me" message until the URL is set.
+   - [ ] **Kyle's action:** deploy the Lambda + SES per `aws/contact-lambda/README.md`,
+     then paste the Function URL into `CONTACT_ENDPOINT` in `assets/js/main.js` and push.
+     Until then the live form stays gracefully inert (no dead POST).
 2. **Real contact details.** Stand up a professional email (replace `hello@skudlabs.com`)
    and swap the placeholder phone `(512) 555-1234`.
 3. **Mock testimonials are now public.** Live site is showing **fake** Recent-Work
@@ -35,7 +40,8 @@ the form posts nowhere and contact details are fake. In rough priority:
 ## Still needs your real values (placeholders are live on the site)
 - [ ] Contact **email** — placeholder `hello@skudlabs.com`
 - [ ] Contact **phone** — placeholder `(512) 555-1234`
-- [ ] Contact **form backend** — not wired (Formspree/Resend/Netlify Forms)
+- [ ] Contact **form backend** — front-end wired; needs Kyle to deploy the Lambda+SES
+  (`aws/contact-lambda/README.md`) and paste the Function URL into `main.js`
 - [ ] **Live chatbot** — styled "coming soon" placeholder until you build it
 - [ ] **Real client testimonials/work** — Recent Work cards still use mock data
 - [ ] Confirm final **prices** ($4k / $6.5k / $9k+ tiers, $175/mo, $100/mo care)

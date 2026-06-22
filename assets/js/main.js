@@ -105,6 +105,59 @@
     });
   });
 
+  /* contact form → AWS Lambda Function URL (which emails via SES).
+     SAFETY: until CONTACT_ENDPOINT is set to your real Function URL (see
+     aws/contact-lambda/README.md), we DON'T hijack submit — the form keeps its
+     honest "email me" note instead of POSTing to a dead URL on the live site. */
+  var CONTACT_ENDPOINT = "https://REPLACE_WITH_YOUR_LAMBDA_FUNCTION_URL/";
+  var endpointReady = CONTACT_ENDPOINT.indexOf("REPLACE_WITH") === -1;
+  var cform = document.querySelector(".contact-form");
+  var cstatus = cform && cform.querySelector(".form-status");
+  if (cform && cstatus) {
+    var nameEl = cform.querySelector("[name=name]");
+    var emailEl = cform.querySelector("[name=email]");
+    var msgEl = cform.querySelector("[name=message]");
+    var hpEl = cform.querySelector("[name='_company']");
+    var sendBtn = cform.querySelector("button[type=submit]");
+    var setStatus = function (msg, kind) {
+      cstatus.textContent = msg || "";
+      cstatus.classList.remove("is-ok", "is-err");
+      if (kind) cstatus.classList.add(kind);
+      cstatus.hidden = !msg;
+    };
+    if (endpointReady) cform.setAttribute("action", CONTACT_ENDPOINT);
+    cform.addEventListener("submit", function (e) {
+      e.preventDefault(); // never let the form do a native (dead) POST
+      if (hpEl && hpEl.value) return; // honeypot tripped — silently drop the bot
+      if (!cform.checkValidity()) { cform.reportValidity(); return; }
+      // Endpoint not wired yet → point them at email instead of failing silently.
+      if (!endpointReady) {
+        setStatus("The form isn't live just yet — please email me at hello@skudlabs.com and I'll reply fast.", "is-err");
+        return;
+      }
+      sendBtn.disabled = true;
+      setStatus("Sending…", null);
+      fetch(CONTACT_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: nameEl.value.trim(),
+          email: emailEl.value.trim(),
+          message: msgEl.value.trim()
+        })
+      })
+        .then(function (r) {
+          if (!r.ok) throw new Error("status " + r.status);
+          cform.reset();
+          setStatus("Thanks — I got it, and I'll reply fast (usually same day).", "is-ok");
+        })
+        .catch(function () {
+          setStatus("Sorry — that didn't go through. Please email me at hello@skudlabs.com and I'll jump on it.", "is-err");
+        })
+        .finally(function () { sendBtn.disabled = false; });
+    });
+  }
+
   /* scroll-reveal — fade/translate elements in as they enter the viewport */
   var sel = [
     ".section > .eyebrow",
