@@ -473,12 +473,10 @@
       <div class="cta-band-inner">
         <h2 id="cta-heading" class="statement">Let's build something that works for your business.</h2>
         <p class="statement-support">Grab a free intro call — whether you need a website, automation, or both. No pitch, no obligation.</p>
-        <!-- Calendly inline widget (themed to the site palette). Loads widget.js
-             at the end of <body>. Degrades to an email link without JS. -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/kjs2wp?hide_gdpr_banner=1&background_color=0e1a23&text_color=e6e9eb&primary_color=a0b389" style="min-width:320px;height:680px;"></div>
-        <noscript>
-          <p class="reassurance">Booking needs JavaScript turned on — or just <a href="mailto:hello@skudlabs.com">email me</a> and we'll find a time.</p>
-        </noscript>
+        <div class="cta-row cta-row-center">
+          <a class="btn btn-cta" href="https://calendly.com/kjs2wp" target="_blank" rel="noopener">Book a call</a>
+        </div>
+        <p class="reassurance">Picks a time that works for you · no pitch, no obligation</p>
       </div>
     </section>
 
@@ -486,9 +484,18 @@
     <section id="contact" class="section contact" aria-labelledby="contact-heading">
       <p class="eyebrow">Get in touch</p>
       <h2 id="contact-heading" class="statement">Tell me what you need, and I'll tell you how I'd build it.</h2>
-      <p class="statement-support">Email, call or text, send the form, or chat with my assistant. Whatever's easiest. I reply fast, with no pitch or obligation.</p>
+      <p class="statement-support">Book a call, email, call or text, send the form, or chat with my assistant. Whatever's easiest. I reply fast, with no pitch or obligation.</p>
       <div class="contact-grid">
         <ul class="contact-methods">
+          <li>
+            <a class="contact-method" href="https://calendly.com/kjs2wp" target="_blank" rel="noopener">
+              <span class="contact-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v3M16 3v3M8.5 14l2 2 4-4"/></svg></span>
+              <span class="contact-method-text">
+                <span class="contact-method-label">Book a call</span>
+                <span class="contact-method-val">Pick a time on my calendar — a free intro call, no obligation.</span>
+              </span>
+            </a>
+          </li>
           <li>
             <a class="contact-method" href="mailto:hello@skudlabs.com">
               <span class="contact-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
@@ -591,8 +598,6 @@
     </div>
   </div>
 
-  <!-- Calendly inline-embed loader (booking widget in #book) -->
-  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>

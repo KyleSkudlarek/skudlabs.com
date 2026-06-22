@@ -5,8 +5,10 @@ The site is now **live on skudlabs.com**. Biggest gap is no working conversion p
 the form posts nowhere and contact details are fake. In rough priority:
 
 1. **Wire the conversion path (the #1 dependency).** ◑ In progress (2026-06-22):
-   - [x] **Calendly inline embed** themed to the dark palette now lives in `#book`;
-     primary CTAs (nav, hero, "Book a call") point there. Booking is LIVE.
+   - [x] **Calendly booking** is LIVE: primary CTAs (nav, hero) point to the `#book`
+     band's "Book a call" button, which opens `calendly.com/kjs2wp` in a new tab; also
+     added as a "Book a call" item in the contact-methods column. (Dropped the inline
+     embed — the panel-in-panel looked off; a clean link-out is tidier.)
    - [x] Contact form front-end rebuilt: honeypot, validation, AJAX submit,
      success/error states. Wired to POST JSON to an **AWS Lambda Function URL + SES**
      (Kyle's chosen handler). Form degrades to an "email me" message until the URL is set.
