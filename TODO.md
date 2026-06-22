@@ -1,5 +1,25 @@
 # TODO
 
+## ▶ Next tranche — "make the live site convert" (proposed 2026-06-22)
+The site is now **live on skudlabs.com**. Biggest gap is no working conversion path:
+the form posts nowhere and contact details are fake. In rough priority:
+
+1. **Wire the conversion path (the #1 dependency).** Pick a no-backend form handler
+   (Formspree / Resend / Netlify Forms) and wire the contact form so submissions
+   actually reach an inbox. Add the real **booking link** (Calendly `kjs2wp`) to the
+   `#book`/CTA buttons — booking the call *is* the success metric per the strategy doc.
+2. **Real contact details.** Stand up a professional email (replace `hello@skudlabs.com`)
+   and swap the placeholder phone `(512) 555-1234`.
+3. **Mock testimonials are now public.** Live site is showing **fake** Recent-Work
+   testimonials — decide: replace with real ones, soften to "sample work," or remove
+   until real ones exist. Fake testimonials on a trust-artifact site are a credibility risk.
+4. **(Parallel design track)** Fable 5 hero replay — see `docs/PROCESS.md → Replay`.
+
+## Done — 2026-06-22
+- [x] **Deployed to production** — AWS Amplify, git-connected CI/CD, custom domain
+  `skudlabs.com` + `www` with auto-managed HTTPS; `amplify.yml` ships only the public
+  assets. See README → Deployment.
+
 ## Done — 2026-06-16
 **Batch 1 (`todo-batch-v1`):** contact section (email/phone/form + chatbot placeholder) + floating chat launcher · stylized nav · credibility stat swap · $175 plan · hi-fi portfolio · Oak-Harbor-style hero · favicon.
 
