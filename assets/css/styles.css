@@ -246,7 +246,7 @@ a { color: inherit; }
   position: relative;
   /* short of the fold so the ridge sits close under the copy and the
      credibility band peeks into the first viewport (the scroll cue) */
-  min-height: min(72vh, 46rem);
+  min-height: min(80vh, 50rem);
   display: flex;
   flex-direction: column;
   overflow: hidden;
