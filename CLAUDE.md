@@ -20,40 +20,14 @@
   without JS.
 - **Copy voice:** plain, first person, no em-dashes, no upsell framing;
   employers anonymized; "hand-coded" is the positioning word.
-- **Testing:** headless Chrome clamps window width to ~500px — verify real
-  mobile via an iframe wrapper; check fold-sensitive changes at several
-  viewport heights.
-
-## Code style
-- Prefer the simplest design that satisfies the current requirement. No premature
-  abstraction or generalization for hypothetical futures — a little duplication
-  beats the wrong abstraction. Code should read top-to-bottom.
-- Comments and docs are permanent artifacts written for a future maintainer with
-  no knowledge of any conversation. Document the why, invariants, and edge cases;
-  never reference the request, the change history, or restate the code.
-
-## Auto-commit at the end of each work tranche (durable authorization)
-At the **end of a tranche of work** (a prompt → response cycle that produced file
-changes forming a coherent unit), **proactively commit and push without waiting to be
-asked.** Specifically:
-1. Briefly summarize what changed in the chat.
-2. Stage the related files, write a clear conventional-commit message (end with the
-   `Co-Authored-By` trailer), and **commit + `git push origin main`.**
-3. Confirm the push in the response.
-
-Rules:
-- **Target branch = `main`.** It's the established convention here *and* the Amplify
-  deploy branch — see the deploy implication below. (Don't open a separate branch/PR
-  unless Kyle asks; this is a solo repo.)
-- **`main` auto-deploys to production.** A push to `main` triggers an Amplify build and
-  publishes to skudlabs.com. Changes to `index.html`/`assets/` go **live immediately**;
-  changes to docs/README/strategy do not affect the site (they aren't deployed).
-  If a site change isn't ready to be public, say so and **hold the commit** (or note it)
-  rather than auto-pushing.
-- **Skip** trivial/no-op turns, pure Q&A/strategy chats with no file changes, and
-  anything Kyle says to keep local. Never commit secrets or anything under "NOT
-  deployed" that contains private info you shouldn't push.
-- Kyle can always override per-change: "don't commit this" / "keep it local."
+## Deploy (the project specifics for the global auto-commit rule)
+- **Target branch = `main`** — the convention here *and* the Amplify deploy branch.
+  No separate branches/PRs unless Kyle asks; this is a solo repo.
+- **`main` auto-deploys to production.** A push triggers an Amplify build and
+  publishes to skudlabs.com. Changes to `index.html`/`assets/` go **live
+  immediately**; docs/README/strategy aren't deployed and don't affect the site.
+  If a site change isn't ready to be public, **hold the commit** (or note it).
+- Never commit secrets or anything private under the "NOT deployed" dirs.
 
 ## Site safety invariant
 Only `index.html` + `assets/` (minus `assets/inspiration/`) are ever deployed (see
@@ -61,10 +35,6 @@ Only `index.html` + `assets/` (minus `assets/inspiration/`) are ever deployed (s
 `cp` line in `amplify.yml`. Default is private — don't change `baseDirectory` to the repo
 root, which would publish `docs/`, `reference/`, etc.
 
-## Keeping this file current
-When a session hits a real gotcha (something that broke and cost time to diagnose)
-or locks a decision, record it **immediately** — don't wait for a wrap-up. Rule of
-thumb: would a fresh session make a mistake without knowing this? Short operational
-facts go here; design rationale and rejected directions go in docs/DESIGN.md. Keep
-this file lean — cut entries that stop being true. Open tasks live in README →
-Status, not here and not in a separate TODO file.
+## Doc routing (project-specific homes for the global keep-current rule)
+Short operational facts → this file. Design rationale and rejected directions →
+`docs/DESIGN.md`. Open tasks → README → Status (never a separate TODO file).
