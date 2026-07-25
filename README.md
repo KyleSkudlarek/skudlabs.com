@@ -32,7 +32,7 @@ reference/  resume/      research material (Oak Harbor scrape, résumé) — NOT
 ```
 
 **What ships publicly:** only `index.html` + `assets/` (minus `assets/inspiration/`).
-Everything else here (`docs/`, `reference/`, `resume/`, `TODO.md`, this README) lives
+Everything else here (`docs/`, `reference/`, this README) lives
 in the **private** GitHub repo but is never uploaded to the web server — see the
 `artifacts` block in `amplify.yml`.
 
