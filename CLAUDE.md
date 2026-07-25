@@ -24,6 +24,14 @@
   mobile via an iframe wrapper; check fold-sensitive changes at several
   viewport heights.
 
+## Code style
+- Prefer the simplest design that satisfies the current requirement. No premature
+  abstraction or generalization for hypothetical futures — a little duplication
+  beats the wrong abstraction. Code should read top-to-bottom.
+- Comments and docs are permanent artifacts written for a future maintainer with
+  no knowledge of any conversation. Document the why, invariants, and edge cases;
+  never reference the request, the change history, or restate the code.
+
 ## Auto-commit at the end of each work tranche (durable authorization)
 At the **end of a tranche of work** (a prompt → response cycle that produced file
 changes forming a coherent unit), **proactively commit and push without waiting to be
@@ -39,7 +47,7 @@ Rules:
   unless Kyle asks; this is a solo repo.)
 - **`main` auto-deploys to production.** A push to `main` triggers an Amplify build and
   publishes to skudlabs.com. Changes to `index.html`/`assets/` go **live immediately**;
-  changes to docs/README/TODO/strategy do not affect the site (they aren't deployed).
+  changes to docs/README/strategy do not affect the site (they aren't deployed).
   If a site change isn't ready to be public, say so and **hold the commit** (or note it)
   rather than auto-pushing.
 - **Skip** trivial/no-op turns, pure Q&A/strategy chats with no file changes, and
@@ -52,3 +60,11 @@ Only `index.html` + `assets/` (minus `assets/inspiration/`) are ever deployed (s
 `amplify.yml` `artifacts`). When adding files that should be **public**, add an explicit
 `cp` line in `amplify.yml`. Default is private — don't change `baseDirectory` to the repo
 root, which would publish `docs/`, `resume/`, etc.
+
+## Keeping this file current
+When a session hits a real gotcha (something that broke and cost time to diagnose)
+or locks a decision, record it **immediately** — don't wait for a wrap-up. Rule of
+thumb: would a fresh session make a mistake without knowing this? Short operational
+facts go here; design rationale and rejected directions go in docs/DESIGN.md. Keep
+this file lean — cut entries that stop being true. Open tasks live in README →
+Status, not here and not in a separate TODO file.

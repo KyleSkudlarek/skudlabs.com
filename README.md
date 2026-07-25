@@ -11,7 +11,6 @@ pricing → contact). **Live at [skudlabs.com](https://skudlabs.com)** (see
 |------|------------|
 | `README.md` | This file — the map to everything else. |
 | `CLAUDE.md` | Working agreement + the load-bearing site conventions. |
-| `TODO.md` | The live task queue. |
 | [`docs/DESIGN.md`](docs/DESIGN.md) | The **design reference**: palette, type, frozen assets, motion/copy rules, rejected directions. Read before design work. Copy source of truth is `index.html`. |
 | [`docs/skudlabs-STRATEGY.md`](docs/skudlabs-STRATEGY.md) | The **business strategy**: who Kyle is, the offer ladder + pricing, target clients, acquisition channels, revenue projection. **Read first for any strategy/positioning/pricing chat** (not a coding task). |
 | `docs/skudworks_docs/` | Kyle's business-formation study space (LLC, taxes, timeline). Not build docs — leave alone. |
@@ -41,9 +40,16 @@ in the **private** GitHub repo but is never uploaded to the web server — see t
 
 - **🚀 LIVE on [skudlabs.com](https://skudlabs.com) (2026-06-22)** — deployed via AWS
   Amplify with auto-deploy on every push to `main`. See [Deployment](#deployment).
-- **Placeholders to fill** (see `TODO.md`): real contact email/phone, form backend
-  (Lambda+SES), the real chatbot, real client work — Recent-work cards still use
-  **mock testimonials**.
+- **Open items** (rough priority — the conversion path first):
+  1. **Contact-form backend** — front-end is wired and gracefully inert; deploy the
+     Lambda + SES per `aws/contact-lambda/README.md`, then paste the Function URL
+     into `CONTACT_ENDPOINT` in `assets/js/main.js`. (Calendly booking already works.)
+  2. **Real contact details** — placeholders live on the site: `hello@skudlabs.com`
+     and `(512) 555-1234`.
+  3. **Mock testimonials are public** — replace with real ones, soften to "sample
+     work," or remove. Credibility risk on a trust-artifact site.
+  4. Later: live chatbot (styled "coming soon" placeholder), real client work,
+     confirm final prices ($4k site / $8k+ app / $3.5k chatbot, $175/mo, $100/mo care).
 - Build history lives in git (commit log + one tag per approved state — see
   [docs/DESIGN.md](docs/DESIGN.md) → "Rollback points").
 
