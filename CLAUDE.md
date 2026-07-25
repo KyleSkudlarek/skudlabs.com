@@ -59,7 +59,7 @@ Rules:
 Only `index.html` + `assets/` (minus `assets/inspiration/`) are ever deployed (see
 `amplify.yml` `artifacts`). When adding files that should be **public**, add an explicit
 `cp` line in `amplify.yml`. Default is private — don't change `baseDirectory` to the repo
-root, which would publish `docs/`, `resume/`, etc.
+root, which would publish `docs/`, `reference/`, etc.
 
 ## Keeping this file current
 When a session hits a real gotcha (something that broke and cost time to diagnose)

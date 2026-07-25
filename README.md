@@ -28,7 +28,7 @@ assets/
   fonts/                offline woff2 (Oswald, Space Grotesk, Caveat)
   img/                  production SVGs (logo, desert ridge, illustration, satellite)
   inspiration/          source/mood references (logo/, hero/) — NOT deployed
-reference/  resume/      research material (Oak Harbor scrape, résumé) — NOT deployed
+reference/              research material (Oak Harbor scrape, résumé) — NOT deployed
 ```
 
 **What ships publicly:** only `index.html` + `assets/` (minus `assets/inspiration/`).
