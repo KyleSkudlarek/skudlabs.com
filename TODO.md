@@ -20,7 +20,6 @@ the form posts nowhere and contact details are fake. In rough priority:
 3. **Mock testimonials are now public.** Live site is showing **fake** Recent-Work
    testimonials — decide: replace with real ones, soften to "sample work," or remove
    until real ones exist. Fake testimonials on a trust-artifact site are a credibility risk.
-4. **(Parallel design track)** Fable 5 hero replay — see `docs/PROCESS.md → Replay`.
 
 ## Done — 2026-06-22
 - [x] **Deployed to production** — AWS Amplify, git-connected CI/CD, custom domain

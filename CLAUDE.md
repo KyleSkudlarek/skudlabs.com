@@ -8,8 +8,21 @@
   the source of truth for who Kyle is, the offer ladder, target clients, and goals.
   Be a direct strategist: push back, prevent over-engineering/under-pricing, no
   cheerleading.
-- For **build/design** work: `docs/prompt.md` (brief), `docs/content.md` (approved
-  copy), `docs/NOTES.md` (build log), `docs/PROCESS.md` (method + Fable 5 replay).
+- For **build/design** work: read **[docs/DESIGN.md](docs/DESIGN.md)** (palette,
+  type, frozen assets, motion/copy rules, rejected directions). The copy source
+  of truth is `index.html` itself.
+
+## Site conventions (the load-bearing ones — details in docs/DESIGN.md)
+- **Frozen art:** the SVGs in `assets/img/` (logo, desert ridge, automation
+  flow, satellite, favicon) are approved — never regenerate or edit without asking.
+- **Fonts are offline** woff2 in `assets/fonts/` — no CDN loads anywhere.
+- **Motion:** transform/opacity only; honor `prefers-reduced-motion`; degrade
+  without JS.
+- **Copy voice:** plain, first person, no em-dashes, no upsell framing;
+  employers anonymized; "hand-coded" is the positioning word.
+- **Testing:** headless Chrome clamps window width to ~500px — verify real
+  mobile via an iframe wrapper; check fold-sensitive changes at several
+  viewport heights.
 
 ## Auto-commit at the end of each work tranche (durable authorization)
 At the **end of a tranche of work** (a prompt → response cycle that produced file

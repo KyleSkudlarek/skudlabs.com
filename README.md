@@ -10,19 +10,20 @@ pricing → contact). **Live at [skudlabs.com](https://skudlabs.com)** (see
 | File | What it is |
 |------|------------|
 | `README.md` | This file — the map to everything else. |
-| [`docs/prompt.md`](docs/prompt.md) | The **brief**: goals, audience, visual direction, palette, copy guardrails, and the fidelity-layer working method. The spec everything follows. |
-| [`docs/content.md`](docs/content.md) | Approved **page structure + hero copy**. Source of truth for the words. |
-| [`docs/NOTES.md`](docs/NOTES.md) | Running **build log**: which layer is approved, decisions made, directions rejected. |
-| [`docs/PROCESS.md`](docs/PROCESS.md) | The **build method** (generalized) + **exactly how to replay it with Fable 5**. |
+| `CLAUDE.md` | Working agreement + the load-bearing site conventions. |
+| `TODO.md` | The live task queue. |
+| [`docs/DESIGN.md`](docs/DESIGN.md) | The **design reference**: palette, type, frozen assets, motion/copy rules, rejected directions. Read before design work. Copy source of truth is `index.html`. |
 | [`docs/skudlabs-STRATEGY.md`](docs/skudlabs-STRATEGY.md) | The **business strategy**: who Kyle is, the offer ladder + pricing, target clients, acquisition channels, revenue projection. **Read first for any strategy/positioning/pricing chat** (not a coding task). |
+| `docs/skudworks_docs/` | Kyle's business-formation study space (LLC, taxes, timeline). Not build docs — leave alone. |
+| `docs/How to Design a Website for Beginners.md` | Kyle's personal design-learning notes. |
 
 ## Project layout
 
 ```
 README.md               this file (start here)
-index.html              the full single-page site
+index.html              the full single-page site (also the copy source of truth)
 amplify.yml             build spec — deploys ONLY index.html + assets/ (see Deployment)
-docs/                   project docs (prompt, content, NOTES, PROCESS, STRATEGY — see table above)
+docs/                   project docs (DESIGN, STRATEGY, Kyle's business/study notes — see table above)
 assets/
   css/                  styles.css
   fonts/                offline woff2 (Oswald, Space Grotesk, Caveat)
@@ -40,10 +41,11 @@ in the **private** GitHub repo but is never uploaded to the web server — see t
 
 - **🚀 LIVE on [skudlabs.com](https://skudlabs.com) (2026-06-22)** — deployed via AWS
   Amplify with auto-deploy on every push to `main`. See [Deployment](#deployment).
-- **Websites-first + contact/polish pass.** Latest: **`hero-cascade-v1`** — hero back to a staggered cascade (big website top-left, smaller assistant beneath-right, document/automation tile bottom-left). Before that: **`todo-batch-v3`** — hero triangled (website + chatbot on top, big document/automation tile bottom), pricing restructured (one $4k lump-sum site + $25/mo hosting, $175/mo most-popular plan, new Custom AI chatbot card, web app $8k+). Earlier: `todo-batch-v2` (triangle hero, emblem favicon), `todo-batch-v1` (contact section, chat launcher, hi-fi portfolio, nav/hero), `websites-led-v1`, `motion-v1`, `layout-v1`, `copy-fullpage`, `hero-v7`.
-- **Placeholders to fill** (see `TODO.md`): real contact email/phone, form backend, the real chatbot, real client work.
-- **Still to come:** Phase 5 — wire the `#book` contact/booking destination (the real conversion dependency). Recent-work cards use **mock testimonials** — replace with real ones. Optional: hidden comet easter egg (logo click).
-- Rollback points: one git tag per approved layer (`layer-1-approved` … `layer-6-approved`), `hero-v1` … `hero-v7`, `copy-fullpage`, `layout-v1`, `motion-v1`. Restore any with `git checkout <tag>`.
+- **Placeholders to fill** (see `TODO.md`): real contact email/phone, form backend
+  (Lambda+SES), the real chatbot, real client work — Recent-work cards still use
+  **mock testimonials**.
+- Build history lives in git (commit log + one tag per approved state — see
+  [docs/DESIGN.md](docs/DESIGN.md) → "Rollback points").
 
 ## Deployment
 
@@ -61,7 +63,3 @@ to this repo for CI/CD.
   (minus `inspiration/`) and deploys that. To publish a new top-level file/folder, add
   a `cp` line there — publishing is opt-in, so dev/strategy files stay private by default.
 - **Cost:** ~pennies/month at this traffic (Amplify free tier).
-
-## Replaying the build (e.g., with Fable 5)
-
-See **[`docs/PROCESS.md`](docs/PROCESS.md) → "Replay"** for the exact prompt to paste and the branch step.
