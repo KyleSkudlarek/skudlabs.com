@@ -244,7 +244,9 @@ a { color: inherit; }
 
 .hero {
   position: relative;
-  min-height: 96vh;
+  /* short of the fold so the ridge sits close under the copy and the
+     credibility band peeks into the first viewport (the scroll cue) */
+  min-height: min(72vh, 46rem);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -343,7 +345,7 @@ a { color: inherit; }
   width: 100%;
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: clamp(2.5rem, 6vw, 6rem) var(--gutter) clamp(3rem, 8vw, 6rem);
+  padding: clamp(2.5rem, 6vw, 6rem) var(--gutter) clamp(1.75rem, 3vw, 2.5rem);
   flex: 1;
   display: flex;
   align-items: flex-start;   /* lift the hero content up into the sky */
@@ -469,7 +471,6 @@ a { color: inherit; }
     .section > .statement,
     .section > .statement-support,
     .section > .problem-close,
-    .cred-item,
     .tell,
     .card,
     .step,
@@ -491,7 +492,6 @@ a { color: inherit; }
     .section > .statement,
     .section > .statement-support,
     .section > .problem-close,
-    .cred-item,
     .tell,
     .card,
     .step,
@@ -511,12 +511,10 @@ a { color: inherit; }
   /* gentle stagger for items revealed together in a row/list */
   .js .card-grid > *:nth-child(2),
   .js .tells > *:nth-child(2),
-  .js .steps > *:nth-child(2),
-  .js .cred-inner > *:nth-child(2) { transition-delay: .08s; }
+  .js .steps > *:nth-child(2) { transition-delay: .08s; }
   .js .card-grid > *:nth-child(3),
   .js .tells > *:nth-child(3),
-  .js .steps > *:nth-child(3),
-  .js .cred-inner > *:nth-child(3) { transition-delay: .16s; }
+  .js .steps > *:nth-child(3) { transition-delay: .16s; }
   .js .tells > *:nth-child(4),
   .js .steps > *:nth-child(4),
   .js .card-grid > *:nth-child(4),
@@ -534,7 +532,7 @@ a { color: inherit; }
 .cred-inner {
   max-width: var(--maxw);
   margin-inline: auto;
-  padding: clamp(1.5rem, 3vw, 2.25rem) var(--gutter);
+  padding: clamp(1.25rem, 2.5vw, 1.75rem) var(--gutter);
   margin: 0 auto;
   list-style: none;
   display: grid;

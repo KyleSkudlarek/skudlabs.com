@@ -67,7 +67,9 @@
           }
         });
       },
-      { threshold: 0.6 }
+      /* fire as soon as any of it peeks above the fold — the cred band sits
+         right at the fold now, and a stalled "0+ years" reads as bad copy */
+      { threshold: 0.01 }
     );
     counts.forEach(function (el) {
       el.textContent = "0";
@@ -164,7 +166,6 @@
     ".section > .statement",
     ".section > .statement-support",
     ".section > .problem-close",
-    ".cred-item",
     ".tell",
     ".card",
     ".step",
